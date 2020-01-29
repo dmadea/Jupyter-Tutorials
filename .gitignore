@@ -1,0 +1,12 @@
+# gitignore all files and all subsubfolders
+
+*.*
+*/*
+
+# Whitelist some files
+!.gitignore
+!README.md
+
+!*.ipynb
+!*.png
+!*.gif
