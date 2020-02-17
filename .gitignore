@@ -8,5 +8,6 @@
 !README.md
 
 !*.ipynb
+!*.py
 !*.png
 !*.gif
