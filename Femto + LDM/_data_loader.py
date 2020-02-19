@@ -1,17 +1,19 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import math
-from matplotlib.ticker import Locator
+from matplotlib.ticker import Locator, MaxNLocator
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib import cm
+import math
 import os
 from copy import deepcopy
 import glob
 from scipy.interpolate import interp1d
-
+from scipy.special import erfc
+from scipy.linalg import lstsq
 
 from sklearn import linear_model as lm
-from numba import njit, prange
+# from numba import njit, prange
+
 
 
 
@@ -103,6 +105,8 @@ class MinorSymLogLocator(Locator):
 
 # nice colormap for heat maps, this ensures that zero is always white color
 def register_div_cmap(zmin, zmax):
+    """Registers `diverging` diverging color map just suited for data."""
+
     diff = zmax - zmin
     w = np.abs(zmin / diff)  # white color point set to zero z value
 
@@ -132,7 +136,9 @@ def register_div_cmap(zmin, zmax):
     cm.register_cmap('diverging', custom_cmap)
 
 # seismic heatmap suited for data similar as above
-def register_seismic_cmap(zmin, zmax):
+def register_seismic__cmap(zmin, zmax):
+    """Registers `seismic_` diverging color map just suited for data."""
+
     diff = zmax - zmin
     w = np.abs(zmin / diff)  # white color point set to zero z value
 
@@ -283,8 +289,8 @@ def plot_matrix(data, t_axis_mul=1, t_unit='$ps$', cmap='diverging', z_unit='$\D
 
 
 def plot_data(data, symlog=False, title='TA data', t_unit='$ps$',
-              z_unit='$\Delta A$ (mOD)', cmap='diverging', zmin=None, zmax=None,
-              w0=None, w1=None, t0=None, t1=None, fig_size=(6, 4), dpi=500, filepath=None, transparent=True,
+              z_unit='$\Delta A$ (mOD)', cmap='diverging', z_lim=(None, None),
+              t_lim=(None, None), w_lim=(None, None), fig_size=(6, 4), dpi=500, filepath=None, transparent=True,
               linthresh=10, linscale=1, D_mul_factor=1e3):
     """data is individual dataset"""
 
@@ -299,19 +305,23 @@ def plot_data(data, symlog=False, title='TA data', t_unit='$ps$',
 
     # cut data if necessary
 
-    t_idx_start = find_nearest_idx(times, t0) if t0 is not None else 0
-    t_idx_end = find_nearest_idx(times, t1) + 1 if t1 is not None else D.shape[0]
+    t_lim = (data.times[0] if t_lim[0] is None else t_lim[0], data.times[-1] if t_lim[1] is None else t_lim[1])
+    w_lim = (
+        data.wavelengths[0] if w_lim[0] is None else w_lim[0], data.wavelengths[-1] if w_lim[1] is None else w_lim[1])
 
-    wl_idx_start = find_nearest_idx(wavelengths, w0) if w0 is not None else 0
-    wl_idx_end = find_nearest_idx(wavelengths, w1) + 1 if w1 is not None else D.shape[1]
+    # t_idx_start = find_nearest_idx(times, t0) if t0 is not None else 0
+    # t_idx_end = find_nearest_idx(times, t1) + 1 if t1 is not None else D.shape[0]
+    #
+    # wl_idx_start = find_nearest_idx(wavelengths, w0) if w0 is not None else 0
+    # wl_idx_end = find_nearest_idx(wavelengths, w1) + 1 if w1 is not None else D.shape[1]
+    #
+    # # crop the data if necessary
+    # D = D[t_idx_start:t_idx_end, wl_idx_start:wl_idx_end]
+    # times = times[t_idx_start:t_idx_end]
+    # wavelengths = wavelengths[wl_idx_start:wl_idx_end]
 
-    # crop the data if necessary
-    D = D[t_idx_start:t_idx_end, wl_idx_start:wl_idx_end]
-    times = times[t_idx_start:t_idx_end]
-    wavelengths = wavelengths[wl_idx_start:wl_idx_end]
-
-    zmin = np.min(D) if zmin is None else zmin
-    zmax = np.max(D) if zmax is None else zmax
+    zmin = np.min(D) if z_lim[0] is None else z_lim[0]
+    zmax = np.max(D) if z_lim[1] is None else z_lim[1]
 
     register_div_cmap(zmin, zmax)
 
@@ -325,6 +335,9 @@ def plot_data(data, symlog=False, title='TA data', t_unit='$ps$',
     plt.title(title)
     plt.ylabel(f'$\leftarrow$ Time delay ({t_unit})')
     plt.xlabel(r'Wavelength ($nm$) $\rightarrow$')
+
+    plt.ylim(t_lim)
+    plt.xlim(w_lim)
 
     plt.gca().invert_yaxis()
 
@@ -364,9 +377,9 @@ def average(data, keepdims=True):
 
 
 def merge(data_avrg):
-    """Merges multiple datasets"""
+    """Merges multiple datasets and returns one matrix as Data object"""
 
-    assert isinstance(data, np.ndarray)
+    assert isinstance(data_avrg, np.ndarray)
     _data_avrg = deepcopy(data_avrg.squeeze())
 
     final_data = _data_avrg[0]
@@ -404,7 +417,8 @@ def merge(data_avrg):
 
 
 
-def save_matrix_to_Glotaran(data, fname='output-GLOTARAN-long.ascii', delimiter='\t', encoding='utf8'):
+def save_matrix_to_Glotaran(data, fname='output-GLOTARAN.ascii', delimiter='\t', encoding='utf8'):
+    assert type(data) == Data
     mat = np.vstack((data.wavelengths, data.D))
     buffer = f'Header\nOriginal filename: fname\nTime explicit\nintervalnr {data.times.shape[0]}\n'
     buffer += delimiter + delimiter.join(f"{num}" for num in data.times) + '\n'
@@ -416,6 +430,7 @@ def save_matrix_to_Glotaran(data, fname='output-GLOTARAN-long.ascii', delimiter=
 
 def save_matrix(data, fname='output.txt', delimiter='\t', encoding='utf8', t0=None, t1=None, w0=None, w1=None):
     # cut data if necessary
+    assert type(data) == Data
 
     t_idx_start = find_nearest_idx(data.times, t0) if t0 is not None else 0
     t_idx_end = find_nearest_idx(data.times, t1) + 1 if t1 is not None else data.D.shape[0]
@@ -437,22 +452,25 @@ def save_matrix(data, fname='output.txt', delimiter='\t', encoding='utf8', t0=No
 
 
 def baseline_corr(data, t0=0, t1=200):
-    t_idx_start = find_nearest_idx(data.times, t0) if t0 is not None else 0
-    t_idx_end = find_nearest_idx(data.times, t1) + 1 if t1 is not None else data.D.shape[0]
+    """Subtracts a average of specified time range from all data.
+    Deep copies the object and new averaged one is returned."""
 
-    # crop the data if necessary
-    D_cut = data.D[t_idx_start:t_idx_end, :]
-    avrg = np.average(D_cut, axis=0)
+    assert type(data) == Data
 
-    data.D -= avrg
+    _data = deepcopy(data)
 
-    return data
+    t_idx_start = find_nearest_idx(_data.times, t0) if t0 is not None else 0
+    t_idx_end = find_nearest_idx(_data.times, t1) + 1 if t1 is not None else _data.D.shape[0]
 
+    D_selection = _data.D[t_idx_start:t_idx_end, :]
+    _data.D -= D_selection.mean(axis=0)
 
+    return _data
 
 
 def chirp_correct(data, lambda_c=388, mu=(1,), time_offset=0.2):
     """Time offset from zero, if """
+
     assert isinstance(mu, tuple) and isinstance(lambda_c, (int, float)) and len(mu) >= 1
 
     _data = deepcopy(data)
@@ -467,7 +485,7 @@ def chirp_correct(data, lambda_c=388, mu=(1,), time_offset=0.2):
 
     max_u = u.max()
 
-    plt.plot(_data.wavelengths, u)
+    # plt.plot(_data.wavelengths, u)
 
     # crop wavelengths data from idx0 to end
     _data.D = _data.D[:, idx0:]
@@ -494,41 +512,59 @@ def chirp_correct(data, lambda_c=388, mu=(1,), time_offset=0.2):
 
 
 
+# # generates the matrix of folded exponentials for corresponding lifetimes
+# @njit(parallel=True, fastmath=True)  # speed up the calculation with numba, ~3 orders of magnitude of improvement
+# def _X(taus, times, sigma=0):
+#     # time zero mu is hardcoded to 0! so chirped data must be used
+#     # C is t x n matrix
+#     X = np.zeros((times.shape[0], taus.shape[0]))
+#     #     w = FWHM / (2 * np.sqrt(np.log(2)))
+#     w = sigma / np.sqrt(2)
+#     ks = 1 / taus
+#     for i in prange(X.shape[0]):
+#         for j in prange(X.shape[1]):
+#             t = times[i]
+#             k = ks[j]
+#             if w != 0:
+#                 X[i, j] = 0.5 * np.exp(k * (k * w * w / 4 - t)) * math.erfc(w * k / 2 - t / w)
+#             else:
+#                 X[i, j] = np.exp(-k * t) if t >= 0 else 0
+#     return X
 
 
-# generates the matrix of folded exponentials for corresponding lifetimes
-@njit(parallel=True, fastmath=True)  # speed up the calculation with numba, ~3 orders of magnitude of improvement
-def _X(taus, times, sigma=0):
-    # time zero mu is hardcoded to 0! so chirped data must be used
-    # C is t x n matrix
-    X = np.zeros((times.shape[0], taus.shape[0]))
-    #     w = FWHM / (2 * np.sqrt(np.log(2)))
-    w = sigma / np.sqrt(2)
-    ks = 1 / taus
-    for i in prange(X.shape[0]):
-        for j in prange(X.shape[1]):
-            t = times[i]
-            k = ks[j]
-            if w != 0:
-                X[i, j] = 0.5 * np.exp(k * (k * w * w / 4 - t)) * math.erfc(w * k / 2 - t / w)
-            else:
-                X[i, j] = np.exp(-k * t) if t >= 0 else 0
+
+def _X(taus, times, irf_fwhm=0):
+    """Calculates the X matrix (time x tau) for LDM analysis."""
+    # X = np.zeros((times.shape[0], taus.shape[0]))
+    w = irf_fwhm / (2 * np.sqrt(np.log(2)))
+
+    ks = 1 / taus[None, :]
+    ts = times[:, None]
+
+    if w > 0:
+        X = 0.5 * np.exp(ks * (ks * w * w / 4 - ts)) * erfc(w * ks / 2 - ts / w)
+    else:
+        X = np.exp(-ts * ks) * np.heaviside(ts, 1)
+
     return X
 
+# TODO: CV estimation of best alpha
+def LDM(data, irf_fwhm=0.1, n_taus=None, alpha=1, p=0, cv=False, max_iter=1e4, lim_log=(None, None)):
 
-def LDM(data, FWHM=0, alpha=1, p=0.5, cv=True, max_iter=1e4, lim_log=(None, None)):
-    n = 50
-    #     taus = np.logspace(-1.2, 3, n) # n lifetimes in logspace
+    """irf_fwhm=0.1 is in ps in default, the same as data time units """
+
+    assert type(data) == Data
 
     dt = data.times[1] - data.times[0]
     max_t = data.times[-1]
     start = np.floor(np.log10(dt))
     end = np.ceil(np.log10(max_t))
-    n = int(30 * (end - start))
+    n = int(30 * (end - start)) if n_taus is None else n_taus
     lim_log = (start if lim_log[0] is None else lim_log[0], end if lim_log[1] is None else lim_log[1])
+
     taus = np.logspace(lim_log[0], lim_log[1], n, endpoint=True)
 
-    X = _X(taus, data.times, FWHM)
+    X = _X(taus, data.times, irf_fwhm)
 
     if p == 0:
         if not cv:
@@ -559,14 +595,160 @@ def LDM(data, FWHM=0, alpha=1, p=0.5, cv=True, max_iter=1e4, lim_log=(None, None
     fit = mod.predict(X)
     if hasattr(mod, 'alpha_'):
         alpha = mod.alpha_
-    return alpha, mod.coef_.T, Data.from_matrix(fit, data.times, data.wavelengths), taus
+    return mod.coef_.T, Data.from_matrix(fit, data.times, data.wavelengths), taus
 
 
+def _convert_lifetime(tau):
+    """Converts lifetime in ps to fs, ns or keeps it in ps and returns its corresponding unit."""
+    unit = 'ps'
+    tau_ = tau
+    if tau < 1:
+        tau_, unit = tau * 1e3, 'fs'
+    elif tau >= 1e3:
+        tau_, unit = tau * 1e-3, 'ns'
+    return tau_, unit
 
 
+def _x_symlog(start, end, n, linscale=1, linthresh=1):
+    """Generates n points from symlog space given start and end points
+     as used in matplotlib."""
+    start = np.sign(start) * linthresh * ((np.log10(np.abs(start)) - np.log10(linthresh)) / linscale + 1) if np.abs(start) >= linthresh else start
+    end = np.sign(end) * linthresh * ((np.log10(np.abs(end)) - np.log10(linthresh)) / linscale + 1) if np.abs(end) >= linthresh else end
+    lin = np.linspace(start, end, n)
+    symlog = np.empty_like(lin)
+
+    for i in range(lin.shape[0]):
+        symlog[i] = lin[i] if np.abs(lin[i]) < linthresh else np.sign(lin[i]) * 10 ** (linscale * (np.abs(lin[i]) / linthresh - 1) + np.log10(linthresh))
+    return symlog
 
 
+def plot_LDA_data(data, taus, s_opt, symlog=False, title='Transient Absorption Data', t_unit='$ps$',
+                  z_unit='$\Delta A$ ($m$OD)', cmap='diverging', z_lim=(None, None),
+                  fig_size=(12, 16), dpi=500, filepath=None, transparent=True, t_lim=(-0.3, 70), w_lim=(350, 800),
+                  linthresh=10, linscale=1, D_mul_factor=1e3, lifetimes=None, tidx_animate=None, FWHM=0.1):
 
+    # NO tidx_animate is a tuple, fist element is all indexes of shown spectra, the second element is index of bolded spectrum
+    # cmap for LDA is custom made `seismic_` cmap
+
+    t_lim = (data.times[0] if t_lim[0] is None else t_lim[0], data.times[-1] if t_lim[1] is None else t_lim[1])
+    w_lim = (
+    data.wavelengths[0] if w_lim[0] is None else w_lim[0], data.wavelengths[-1] if w_lim[1] is None else w_lim[1])
+
+    fig, ax = plt.subplots(2, 2 if tidx_animate is not None else 1, figsize=fig_size)
+    ax = ax.reshape((ax.shape[0], -1))
+
+    D = data.D * D_mul_factor
+
+    zmin = np.min(D) if z_lim[0] is None else z_lim[0]
+    zmax = np.max(D) if z_lim[1] is None else z_lim[1]
+
+    register_div_cmap(zmin, zmax)
+
+    x, y = np.meshgrid(data.wavelengths, data.times)  # needed for pcolormesh to correctly scale the image
+
+    # plot data matrix D
+
+    mappable = ax[0, 0].pcolormesh(x, y, D, cmap=cmap, vmin=zmin, vmax=zmax)
+
+    fig.colorbar(mappable, ax=ax[0, 0], label=z_unit)
+    ax[0, 0].set_title(title)
+    ax[0, 0].set_ylabel(f'$\leftarrow$ Time delay ({t_unit})')
+    ax[0, 0].set_xlabel(r'Wavelength ($nm$) $\rightarrow$')
+    ax[0, 0].set_ylim(t_lim)
+    ax[0, 0].set_xlim(w_lim)
+
+    ax[0, 0].invert_yaxis()
+
+    if tidx_animate is not None:
+        assert isinstance(tidx_animate, np.ndarray)
+        ax[0, 0].axhline(y=data.times[tidx_animate[-1]], color='black', ls='-', linewidth=1)
+
+    #     ax[0].xaxis.set_ticks([])
+
+    if symlog:
+        ax[0, 0].set_yscale('symlog', subsy=[2, 3, 4, 5, 6, 7, 8, 9], linscaley=linscale, linthreshy=linthresh)
+        ax[0, 0].yaxis.set_minor_locator(MinorSymLogLocator(linthresh))
+
+    # LDM plot
+
+    x, y = np.meshgrid(data.wavelengths, taus)  # needed for pcolormesh to correctly scale the image
+
+    register_seismic__cmap(s_opt.min(), s_opt.max())
+
+    #     levels = MaxNLocator(nbins=30).tick_values(-zlim, +zlim)
+    #     plt.contourf(x, y, s_opt, cmap='seismic', levels=levels)
+
+    mappable = ax[1, 0].pcolormesh(x, y, s_opt, cmap='seismic_', vmin=s_opt.min(), vmax=+s_opt.max())
+
+    fig.colorbar(mappable, ax=ax[1, 0], label='Amplitude')
+
+    ax[1, 0].set_title("Lifetime Density Map")
+    ax[1, 0].set_ylabel(r'Lifetime ({}) $\rightarrow$'.format(t_unit))
+    ax[1, 0].set_xlabel(r'Wavelength ($nm$) $\rightarrow$')
+
+    if lifetimes is not None:  # lifetimes are in ps
+        lifetimes_text = []
+        for i, tau in enumerate(lifetimes):
+            ax[1, 0].axhline(y=tau, color='black', ls='--', linewidth=1)
+            x_text = data.wavelengths[0] + (data.wavelengths[-1] - data.wavelengths[0]) * 0.71
+            tau_, unit = _convert_lifetime(tau)
+            lifetimes_text.append(f'$\\tau_{i + 1} = {tau_:.3g}\\ {unit}$')
+            ax[1, 0].text(x_text, tau * 1.3, lifetimes_text[i])
+
+    ax[1, 0].set_yscale('log')
+    ax[1, 0].set_xlim(w_lim)
+
+    if tidx_animate is not None:
+        # spectrum plot
+        ax[0, 1].set_title("Spectrum")
+
+        props = dict(boxstyle='round', facecolor='white', alpha=0.5)
+        # place a text box in upper left in axes coords
+        tau_, unit = _convert_lifetime(data.times[tidx_animate[-1]])
+        ax[0, 1].text(0.05, 0.90, f'$t={tau_:.3g}\\ {unit}$', transform=ax[0, 1].transAxes,
+                      verticalalignment='top', bbox=props, size=12)
+
+        ax[0, 1].set_ylabel(z_unit)
+        ax[0, 1].set_xlabel(r'Wavelength ($nm$) $\rightarrow$')
+        ax[0, 1].set_ylim(D.min() - 0.1 * np.abs(D.min()), D.max() + 0.1 * np.abs(D.max()))
+        ax[0, 1].set_xlim(w_lim)
+
+        # plot all spectra in gray
+        #         spectrum_cmap = cm.get_cmap(spectrum_cmap)
+        #         num = 10
+        #         end = tidx_animate[1]
+        #         start = end - num if end - num >= 0 else 0
+        for i in range(tidx_animate.shape[0]):
+            ax[0, 1].plot(data.wavelengths, D[tidx_animate[i]], color='grey', lw=0.2)
+        # plot bold one
+        ax[0, 1].plot(data.wavelengths, D[tidx_animate[-1]], color='black', lw=2)
+
+        if lifetimes is not None:
+            # DADS plot
+
+            ax[1, 1].set_title("Decay Associated Difference Spectra (DADS)")
+            ax[1, 1].set_ylabel('Amplitude')
+            ax[1, 1].set_xlabel(r'Wavelength ($nm$) $\rightarrow$')
+            ax[1, 1].set_xlim(w_lim)
+
+            # DADS calculation
+            C = _X(np.asarray(lifetimes), data.times, FWHM)
+            S_T = lstsq(C, data.D)[0]
+
+            for i in range(S_T.shape[0]):
+                ax[1, 1].plot(data.wavelengths, S_T[i], label=lifetimes_text[i])
+
+            ax[1, 1].legend(prop={'size': 10})
+
+    fig.subplots_adjust(wspace=0, hspace=0)
+    plt.tight_layout()
+
+    if filepath:
+        plt.savefig(fname=filepath, format='png', transparent=transparent, dpi=dpi)
+        plt.close(fig)
+        return
+
+    plt.show()
 
 
 
