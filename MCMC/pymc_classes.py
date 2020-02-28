@@ -77,12 +77,16 @@ class LogLike(T.Op):
         return odeint(dc_dt, c0, times)
     
         
-    def log_likelihood(self, params, n_MCR_iter=10):
+    def log_likelihood(self, params, n_MCR_iter=5):
         
         # optimize spectra for curent C params by MCR-ALS style
         
-        phi = self.Phi([params[0]], lambda_C=400)
-        sigma = params[1]
+        phi = self.Phi([params[0], params[1]], lambda_C=400)
+        
+        if any(phi < 0) or any(phi > 1):
+            return -np.inf
+        
+        sigma = 0.01
         
         K = np.asarray([[-phi,  self._0],
                         [+phi,  self._0]])
@@ -90,15 +94,17 @@ class LogLike(T.Op):
         K = np.transpose(K, (2, 0, 1))
         C = np.zeros((self.times.shape[0], K.shape[0]))
         
+        eps_est = self.eps_est.copy()
+        
         for i in range(n_MCR_iter):
             # calc C
-            C = self.simulate(self.times, K, self.eps_est, self.q_tot, self.c0, self.V, self.I_source)
+            C = self.simulate(self.times, K, eps_est, self.q_tot, self.c0, self.V, self.I_source)
             
             # calc ST by lstsq
-            self.eps_est = lstsq(C, self.D)[0]
+            eps_est = lstsq(C, self.D)[0]
             
             # apply non-negative contraints on spectra
-            self.eps_est *= (self.eps_est > 0)
+            eps_est *= (eps_est > 0)
             
 #         self.calls.append([params[0], self.eps_est])
         D_sim = C.dot(self.eps_est)
@@ -107,6 +113,8 @@ class LogLike(T.Op):
         # calculate the log of gaussian likelihood
         N = 1 #D.size
 #         LL = -0.5*N*np.log(2*np.pi*sigma**2) - (0.5/sigma**2) * (residuals**2).sum()
+
+
         LL =  - (0.5/sigma**2) * (residuals**2).sum()
 
         
