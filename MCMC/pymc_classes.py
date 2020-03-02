@@ -48,18 +48,20 @@ def simulate_no_wl_depend(times, K, eps, q_tot, c0, V, I_source):
 
     return odeint(dc_dt, c0, times)
 
-def log_likelihood(params, D, times, wavelengths, eps_est, q_tot, c0, V, I_source, n_MCR_iter=5, no_wl_dependence=True):
+def log_likelihood(params, D, times, wavelengths, eps_est, q_tot, c0, V, I_sources, n_MCR_iter=5, no_wl_dependence=False):
 
     # optimize spectra for curent C params by MCR-ALS style
     if no_wl_dependence:
         phi_ZE = params[0]
         phi_EZ = params[1]
     else:
-        phi = Phi([params[0], 0, params[1]], wavelengths, lambda_C=400)
+#         phi = Phi([params[0], 0, params[1]], wavelengths, lambda_C=400)
+        phi_ZE = Phi([params[0], params[1]], wavelengths, lambda_C=400)
+        phi_EZ = Phi([params[2], params[3]], wavelengths, lambda_C=400)
         
         # add potential
-        if any(phi < 0) or any(phi > 1):
-            return -1.7976931348623157e+10
+#         if any(phi_ZE < 0) or any(phi_ZE > 1):
+#             return -1.7976931348623157e+10
 
     _0 = 0 if no_wl_dependence else np.zeros_like(wavelengths)
 
@@ -76,22 +78,25 @@ def log_likelihood(params, D, times, wavelengths, eps_est, q_tot, c0, V, I_sourc
 
     eps_opt = eps_est.copy()
 
-    for i in range(n_MCR_iter):
+#     for i in range(n_MCR_iter):
         # calc C
 #         eps_opt[0] = eps_est[0].copy()
         
 #         C1 = simulate_no_wl_depend(times, K, eps_opt, q_tot, c0, V, I_source) if no_wl_dependence else simulate(times, K, eps_opt, q_tot, c0, V, I_source)
         
-        C1 = simulate_no_wl_depend(times, K, eps_opt, q_tot, [c0, 0], V, I_source)
-        C2 = simulate_no_wl_depend(times, K, eps_opt, q_tot, [0, c0], V, I_source) 
+#     C1 = simulate_no_wl_depend(times, K, eps_opt, q_tot, [c0, 0], V, I_source[0])
+#     C2 = simulate_no_wl_depend(times, K, eps_opt, q_tot, [0, c0], V, I_source[1]) 
+    
+    C1 = simulate(times, K, eps_opt, q_tot, [c0, 0], V, I_sources[0])
+    C2 = simulate(times, K, eps_opt, q_tot, [0, c0], V, I_sources[1]) 
         
-        C = np.vstack((C1, C2))
+    C = np.vstack((C1, C2))
 
-        # calc ST by lstsq
-        eps_opt = lstsq(C, D)[0]
+    # calc ST by lstsq
+#     eps_opt = lstsq(C, D)[0]
 
-        # apply non-negative contraints on spectra
-        eps_opt *= (eps_opt > 0)
+    # apply non-negative contraints on spectra
+#     eps_opt *= (eps_opt > 0)
         
 #         eps_opt[0] = eps_est[0].copy()
 
@@ -106,7 +111,7 @@ def log_likelihood(params, D, times, wavelengths, eps_est, q_tot, c0, V, I_sourc
     sigma = 0.01
 
     LL = - (0.5 / sigma ** 2) * (residuals ** 2).sum()
-    return LL, eps_opt
+    return LL
 
 
 
@@ -125,7 +130,7 @@ class LogLike(T.Op):
     
     # imputs phi, sigma
 
-    def __init__(self, log_like, D, times, wavelengths, eps_est, I_source, q_tot, V, c0):
+    def __init__(self, log_like, D, times, wavelengths, eps_est, I_sources, q_tot, V, c0):
         """
         Initialise the Op with various things that our log-likelihood function
         requires. Below are the things that are needed in this particular
@@ -147,15 +152,15 @@ class LogLike(T.Op):
         self.D = D.copy()
         self.times = times.copy()
         self.wavelengths = wavelengths.copy()
-        self.I_source = I_source.copy()
+        self.I_sources = I_sources
         self.q_tot = q_tot
         self.V = V
         self.c0 = c0  # initial conditions
-        self.eps_est = eps_est  # estimate of spectra == ST
+        self.eps_est = eps_est.copy()  # estimate of spectra == ST
 #         self.calls = []
         self.log_like = log_like
         self.logpgrad = LogLikeGrad(self.log_like, self.D, self.times, self.wavelengths, self.eps_est, 
-                              self.I_source, self.q_tot, self.V, self.c0)
+                              self.I_sources, self.q_tot, self.V, self.c0)
 
         
     def perform(self, node, inputs, outputs):
@@ -163,14 +168,14 @@ class LogLike(T.Op):
         params, = inputs  # this will contain my variables
  
         # call the log-likelihood function
-        logl, _ = self.log_like(params, self.D, self.times, self.wavelengths, self.eps_est, 
-                              self.q_tot, self.c0, self.V, self.I_source, n_MCR_iter=5)
+        logl = self.log_like(params, self.D, self.times, self.wavelengths, self.eps_est, 
+                              self.q_tot, self.c0, self.V, self.I_sources, n_MCR_iter=5)
 
         outputs[0][0] = np.array(logl) # output the log-likelihood
     
     def _log_like(self, params):
         return self.log_like(params, self.D, self.times, self.wavelengths, self.eps_est, 
-                              self.q_tot, self.c0, self.V, self.I_source, n_MCR_iter=5)
+                              self.q_tot, self.c0, self.V, self.I_sources, n_MCR_iter=5)
         
     
     def _grads(self, params):
@@ -193,7 +198,7 @@ class LogLikeGrad(T.Op):
     itypes = [T.dvector]
     otypes = [T.dvector]
 
-    def __init__(self, log_like, D, times, wavelengths, eps_est, I_source, q_tot, V, c0):
+    def __init__(self, log_like, D, times, wavelengths, eps_est, I_sources, q_tot, V, c0):
         """
         Initialise with various things that the function requires. Below
         are the things that are needed in this particular example.
@@ -215,19 +220,19 @@ class LogLikeGrad(T.Op):
         self.D = D.copy()
         self.times = times.copy()
         self.wavelengths = wavelengths.copy()
-        self.I_source = I_source.copy()
+        self.I_sources = I_sources
         self.q_tot = q_tot
         self.V = V
         self.c0 = c0  # initial conditions
-        self.eps_est = eps_est  # estimate of spectra == ST
+        self.eps_est = eps_est.copy()  # estimate of spectra == ST
 
     def perform(self, node, inputs, outputs):
         theta, = inputs
 
         # define version of likelihood function to pass to derivative function
         def lnlike(params):
-            ll, _ = self.log_like(params, self.D, self.times, self.wavelengths, self.eps_est, self.q_tot, self.c0, self.V, self.I_source, n_MCR_iter=5)
-            return ll 
+            ll = self.log_like(params, self.D, self.times, self.wavelengths, self.eps_est, self.q_tot, self.c0, self.V, self.I_sources, n_MCR_iter=5)
+            return ll
 
         # calculate gradients
         grads = approx_fprime(theta, lnlike, 1e-4)
