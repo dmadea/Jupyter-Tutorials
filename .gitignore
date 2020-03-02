@@ -10,4 +10,7 @@
 !*.ipynb
 !*.py
 !*.png
-!*.gif
+!*.c
+!*.cpp
+!*.so
+!*.f
