@@ -224,6 +224,21 @@ class Data:
         _data.times = times
         _data.wavelengths = wavelengths
         return _data
+    
+    def crop(self, t_lim=(None, None), w_lim=(None, None)):
+        
+        t_start = t_lim[0] if t_lim[0] is not None else self.times[0]
+        t_stop = t_lim[1] if t_lim[1] is not None else self.times[-1]
+        t_idxs = find_nearest_idx(self.times, [t_start, t_stop])
+        
+        w_start = w_lim[0] if w_lim[0] is not None else self.wavelengths[0]
+        w_stop = w_lim[1] if w_lim[1] is not None else self.wavelengths[-1]
+        w_idxs = find_nearest_idx(self.wavelengths, [w_start, w_stop])
+        
+        self.times = self.times[t_idxs[0]:t_idxs[1] + 1]
+        self.wavelengths = self.wavelengths[w_idxs[0]:w_idxs[1] + 1]
+        
+        self.D = self.D[t_idxs[0]:t_idxs[1] + 1, w_idxs[0]:w_idxs[1] + 1]
 
     def __str__(self):
         if self.D is not None:
