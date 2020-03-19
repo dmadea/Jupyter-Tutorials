@@ -1,0 +1,27 @@
+	
+# Phi_ZE = 0.2
+# Phi_EZ = 0.25
+# Phi_ZHL = 0.005
+# Phi_HLZ = 0.001
+
+Z_cut355.txt, 1st dataset, Z start
+
+c0 = 5e-5
+355 nm LED irr
+q0 = 5e-8, V = 0.003
+
+
+
+E_cut355.txt, 2nd dataset, E start
+
+c0 = 2e-5
+355 nm LED irr
+q0 = 5e-8, V = 0.003
+
+
+
+Z_cut370.txt, 2nd dataset, Z start
+
+c0 = 4e-5
+370 nm LED irr
+q0 = 2e-6, V = 0.003
