@@ -1,0 +1,2977 @@
+﻿TY  - JOUR
+AB  - The presence of rotation ambiguities and unique solutions in Multivariate Curve Resolution (MCR) chemometric methods is discussed in detail. Using recently proposed graphical approaches to display the bands and areas of feasible solutions in a subspace of reduced dimensions, the results obtained by different MCR methods are compared. These results show that in the presence of rotation ambiguities and under a particular set of constraints, the solutions obtained by the different MCR methods can differ among them and also from the true solution depending on initial estimates and on the applied algorithm. In absence of rotational ambiguities, all MCR methods should give the same unique solution which should be equal to the true one. Many of the MCR methods proposed in the literature like MCR-ALS, REA, MCR-FMIN or MCR-BANDS are confirmed to give a valid solution within the band or area of feasible solutions. On the contrary, and according to the results of this study, in its present implementation, the minimum volume simplex analysis. MVSA method can give unfeasible solutions when resolving bilinear data systems with more than two components, because it only applies non-negativity constraints to concentration profiles and not to spectral profiles. (C) 2011 Elsevier B.V. All rights reserved.
+AD  - IDAEA CSIC, Inst Environm Res & Water Studies, Barcelona, Spain
+Inst Adv Studies Basic Sci, Dept Chem, Zanjan, Iran
+AN  - WOS:000295310000003
+AU  - Abdollahi, H.
+AU  - Tauler, R.
+DA  - Oct 15
+DO  - 10.1016/j.chemolab.2011.05.009
+IS  - 2
+J2  - Chemometr Intell Lab
+KW  - multivariate curve resolution
+rotation ambiguities
+feasible solutions
+accurate chemometric characterization
+minimum volume criterion
+feasible band boundaries
+local rank
+LA  - English
+N1  - 825vk
+Times Cited:102
+Cited References Count:45
+PY  - 2011
+SN  - 0169-7439
+SP  - 100-111
+ST  - Uniqueness and rotation ambiguities in Multivariate Curve Resolution methods
+T2  - Chemometrics and Intelligent Laboratory Systems
+TI  - Uniqueness and rotation ambiguities in Multivariate Curve Resolution methods
+UR  - <Go to ISI>://WOS:000295310000003
+VL  - 108
+ID  - 88
+ER  - 
+
+TY  - JOUR
+AB  - Photocyclization of bilirubin to lumirubin in the skin of jaundiced infants exposed to blue-green light irradiation is considered to be the most important process for bilirubin elimination from the organism. The quantum yield phi(LR) of the bilirubin --> lumirubin photoreaction has been recently measured and found to vary with the excitation wavelength, with a peak at about 520 nm. The quantum yield phi(ZE) for the strongly competing reversible configurational photoisomerization of bilirubin has also been recently shown to be wavelength dependent and to decrease significantly in the long-wavelength part of the absorption band of bilirubin. These new data are taken into account to model the bilirubin photochemistry in vivo by using a simplified skin optical model based on the Kubelka-Munk theory. The rate k(LR) of formation of lumirubin has been evaluated for the case of a four-layer skin and for monochromatic and narrow-band coloured fluorescent lamps. The effects of long-wavelength increase in phi(LR), decrease in phi(ZE) and skin optical losses all combine to shift significantly the optimal rate of formation of lumirubin towards the green. These results suggest that a significant improvement in phototherapy might be obtained with the introduction of new lamps emitting in the blue-green spectral region between 490 and 510 nm.
+AD  - Univ Florence,Dipartimento Pediat,I-50121 Florence,Italy
+Univ Florence,Dipartimento Fis,I-50121 Florence,Italy
+AN  - WOS:A1993LD61800012
+AU  - Agati, G.
+AU  - Fusi, F.
+AU  - Donzelli, G. P.
+AU  - Pratesi, R.
+DA  - May
+DO  - Doi 10.1016/1011-1344(93)80063-F
+IS  - 2-3
+J2  - J Photoch Photobio B
+KW  - bilirubin
+photoisomerization
+phototherapy for neonatal jaundice
+skin optical losses
+action spectrum
+neonatal jaundice
+white-light
+bilirubin
+phototherapy
+wavelength
+dependence
+invitro
+albumin
+isomer
+optics
+LA  - English
+N1  - Ld618
+Times Cited:25
+Cited References Count:30
+PY  - 1993
+SN  - 1011-1344
+SP  - 197-203
+ST  - Quantum Yield and Skin Filtering Effects on the Formation Rate of Lumirubin
+T2  - Journal of Photochemistry and Photobiology B: Biology
+TI  - Quantum Yield and Skin Filtering Effects on the Formation Rate of Lumirubin
+UR  - <Go to ISI>://WOS:A1993LD61800012
+VL  - 18
+ID  - 33
+ER  - 
+
+TY  - JOUR
+AB  - The quantum yield (phi zz) for the E--> photoisomerization of bilirubin (BR) bound to human serum albumin (HSA) under laser light irradiation has been evaluated with absorbance spectroscopy implemented by the high-performance liquid chromatography technique. The value at 458 nm is about 0.2, four times smaller than the value previously reported in the literature. As for the Z-->E configurational and the structural photoisomerization processes, the quantum yield varies with excitation wavelength, from 0.23 in the blue to 0.16 in the green. The sum of the quantum yields of the Z<-->E configurational photoisomerization reactions is 0.2-0.3 in the blue-green spectral region, thus giving direct evidence of the existence of internal conversion processes of the BR-HSA complex which compete with configurational photoisomerization. An evaluation of the quantum yields of the Z<-->E reactions for filtered broad-band light excitation in the 390-530 nm spectral region from data already published in the literature is also reported. Good agreement with our data of the quantum yields phi ZZ and phi ZE is found, despite the diversity of the experimental procedures in the two cases.
+AD  - Istituto di Elettronica Quantistica, Consiglio Nazionale delle Recerche, Firenze, Italy.
+AN  - 8459318
+AU  - Agati, G.
+AU  - Fusi, F.
+AU  - Pratesi, R.
+DA  - Feb
+DO  - 10.1016/1011-1344(93)80010-7
+ET  - 1993/02/01
+IS  - 2
+KW  - Bilirubin/*blood/chemistry/radiation effects
+Humans
+Isomerism
+Kinetics
+Light
+Mathematics
+Models, Theoretical
+Quantum Theory
+Serum Albumin/*metabolism
+N1  - Agati, G
+Fusi, F
+Pratesi, R
+eng
+Switzerland
+J Photochem Photobiol B. 1993 Feb;17(2):173-80. doi: 10.1016/1011-1344(93)80010-7.
+PY  - 1993
+SN  - 1011-1344 (Print)
+1011-1344 (Linking)
+SP  - 173-80
+ST  - Evaluation of the Quantum Yield for E->Z Isomerization of Bilirubin Bound to Human Serum Albumin. Evidence of Internal Conversion Processes Competing with Configurational Photoisomerization
+T2  - Journal of Photochemistry and Photobiology B: Biology
+TI  - Evaluation of the Quantum Yield for E->Z Isomerization of Bilirubin Bound to Human Serum Albumin. Evidence of Internal Conversion Processes Competing with Configurational Photoisomerization
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/8459318
+VL  - 17
+ID  - 34
+ER  - 
+
+TY  - JOUR
+AB  - The quantum yield, PHI(ZE), for configurational photoisomerization (4Z,15Z --> 4Z,15E) of bilirubin bound non-covalently to human serum albumin was determined (at 23 +/- 2-degrees-C) by laser excitation and chromatographic analysis of products. Values obtained for photoexcitation at 465 nm were about one-half those previously reported. The quantum yield was dependent on excitation wavelength, decreasing from a value of 0.109 +/- 0.010 for excitation at 457.9 nm to a value of 0.054 +/- 0.005 for excitation at 514.5 nm. The wavelength dependence is consistent with rapid transfer of excitation energy between the two non-identical pyrromethenone chromophores of bilirubin in the singlet excited state. Since the quantum yields for photoisomerization and luminescence of bilirubin bound to serum albumin at room temperature are both low, internal conversion processes, rather than Z --> E configurational isomerizations, are probably the major pathways for deactivation of photoexcited bilirubin.
+AD  - Univ Calif San Francisco,Gastroenterol Res Unit,San Francisco,Ca 94143
+Univ Calif San Francisco,Ctr Liver,San Francisco,Ca 94143
+AN  - WOS:A1992HA87200004
+AU  - Agati, G.
+AU  - Fusi, F.
+AU  - Pratesi, R.
+AU  - Mcdonagh, A. F.
+DA  - Feb
+DO  - DOI 10.1111/j.1751-1097.1992.tb04226.x
+IS  - 2
+J2  - Photochem Photobiol
+KW  - time-resolved observation
+bile-pigments
+anaerobic photochemistry
+photo-isomerization
+circular-dichroism
+pyrrole pigments
+dimethyl ester
+photoisomerization
+photophysics
+phototherapy
+LA  - English
+N1  - Ha872
+Times Cited:27
+Cited References Count:36
+PY  - 1992
+SN  - 0031-8655
+SP  - 185-190
+ST  - Wavelength-Dependent Quantum Yield for Z-E Isomerization of Bilirubin Complexed with Human Serum-Albumin
+T2  - Photochemistry and Photobiology
+TI  - Wavelength-Dependent Quantum Yield for Z-E Isomerization of Bilirubin Complexed with Human Serum-Albumin
+UR  - <Go to ISI>://WOS:A1992HA87200004
+VL  - 55
+ID  - 31
+ER  - 
+
+TY  - JOUR
+AB  - Dipyrrinones are nonfluorescent yellow-pigmented constituents of bilirubin that undergo Z to E isomerization when excited with UV/blue light. Mechanical restriction of the E/Z isomerization process results in highly fluorescent compounds such as N,N-methylene-bridged dipyrrinones and xanthoglows. This manuscript describes the first examples of dipyrrinone analogues, which exhibit fluorescence without covalently linking the pyrole- pyrrolidine nitrogen atoms. Instead these analogues restrict E/Z isomerization through intramolecular hydrogen bonding, resulting in mild to moderately fluorescent compounds (Phi(F) = 0.01-0.30). Further, in basic solutions (pH > 12), the dipyrrinone analogues readily deprotonate and absorption/emission profiles of the fluorophores red-shifts by 10-49 nm. Directly from commercial materials, 10 analogues were prepared in 41-96% yields in one step. To estimate the capacity of which intramolecular hydrogen bonding has upon restricting the E/Z isomerization process, conformational energies of all analogues, in both the protonated and deprotonated species, were explored by using quantum-mechanical density functional theory (DFT) and time-dependent DFT calculations. The computed strengths of the intramolecular hydrogen bonds are related to the barriers of rotation about the 5-6 bond and both correlate with the experimentally measured fluorescence quantum yields.
+AD  - Nevada State Coll, Dept Phys & Life Sci, Henderson, NV 89002 USA
+Univ Nevada, Dept Chem, Reno, NV 89557 USA
+AN  - WOS:000487576900044
+AU  - Benson, N.
+AU  - Suleiman, O.
+AU  - Odoh, S. O.
+AU  - Woydziak, Z. R.
+DA  - Sep 20
+DO  - 10.1021/acs.joc.9b01708
+IS  - 18
+J2  - J Org Chem
+KW  - spectroscopic properties
+carboxylic-acid
+fluorescence
+bilirubin
+energies
+bodipy
+probes
+LA  - English
+N1  - Ja1kw
+Times Cited:0
+Cited References Count:32
+PY  - 2019
+SN  - 0022-3263
+SP  - 11856-11862
+ST  - Pyrazole, Imidazole, and Isoindolone Dipyrrinone Analogues: pH-Dependent Fluorophores That Red-Shift Emission Frequencies in a Basic Solution
+T2  - Journal of Organic Chemistry
+TI  - Pyrazole, Imidazole, and Isoindolone Dipyrrinone Analogues: pH-Dependent Fluorophores That Red-Shift Emission Frequencies in a Basic Solution
+UR  - <Go to ISI>://WOS:000487576900044
+VL  - 84
+ID  - 74
+ER  - 
+
+TY  - JOUR
+AB  - (4Z)-Dipyrrinones, which are the component chromophores of yellow pigment of jaundice, are known to self-associate strongly in nonpolar solvents (K-assoc similar or equal to 25 000 M at 25 degrees C in CHCl3), forming planar dimers in which the monomers are linked tightly by four intermolecular hydrogen bonds. When the chromophore has an attached propionic or longer chain acid group, it forms a new type of stacked dimer through a network of six hydrogen bonds in which the carboxyl,stoup of one dipyrrinone is tethered to the other dipyrrinone. Thus, xanthobilirubic acid and its homologs strongly self-associate as stacked dimers in contrast to its methyl ester, which forms planar dimers. The stacked dimers are recognized by large (1 ppm) shieldings of their NH resonances in their H-1-NMR spectra, as compared with planar dimers. They are also recognized by unusually large optical rotations and exciton coupling in the circular dichroism spectra when a stereogenic center is present in the alkanoic acid chain. In CHCl3, (beta S)- methylxanthobilirubic acid (1) has [alpha]D-20 = -314 degrees and Delta epsilon(434)(max) = -10.9, Delta epsilon(388)(max) = +5.7, whereas its methyl ester (6) has [alpha]D-20 = +62 degrees; Delta epsilon(370)(max) < 1.
+AD  - Univ Nevada,Dept Chem,Reno,Nv 89557
+AN  - WOS:A1995RR73500005
+AU  - Boiadjiev, S. E.
+AU  - Anstine, D. T.
+AU  - Lightner, D. A.
+DA  - Aug 30
+DO  - DOI 10.1021/ja00139a005
+IS  - 34
+J2  - J Am Chem Soc
+KW  - nuclear magnetic-resonance
+human-serum albumin
+conformational enantiomers
+bilirubin
+acid
+nmr
+mesobilirubin
+recognition
+crystal
+models
+LA  - English
+N1  - Rr735
+Times Cited:59
+Cited References Count:39
+PY  - 1995
+SN  - 0002-7863
+SP  - 8727-8736
+ST  - Intermolecular Hydrogen-Bonding in Pi-Facial Dipyrrinone Dimers as Molecular Capsules
+T2  - Journal of the American Chemical Society
+TI  - Intermolecular Hydrogen-Bonding in Pi-Facial Dipyrrinone Dimers as Molecular Capsules
+UR  - <Go to ISI>://WOS:A1995RR73500005
+VL  - 117
+ID  - 39
+ER  - 
+
+TY  - JOUR
+AB  - Dipyrrinones formed by DBU and n-Bu3P-promoted condensation of 5-p-toluene-sulfonylpyrrolinones with pyrrole 2-aldehydes, gave high yields of product with predominantly the E-configuration when the aldehyde had a 5-carboethoxy group. The 4E-dipyrrinones were readily purified by chromatography and were stable in solutions shielded from light. (C) 1999 Elsevier Science Ltd. All rights reserved.
+AD  - Univ Nevada, Dept Chem, Reno, NV 89557 USA
+AN  - WOS:000082200000002
+AU  - Boiadjiev, S. E.
+AU  - Lightner, D. A.
+DA  - Sep 3
+DO  - Doi 10.1016/S0040-4020(99)00617-1
+IS  - 36
+J2  - Tetrahedron
+KW  - pyrroles
+stereoselection
+stereoisomerism
+hydrogen bonding
+human-serum albumin
+neonatal jaundice
+xanthobilirubic acid
+bilirubin
+alpha
+phototherapy
+nmr
+pyrromethenone
+spectroscopy
+dipyrrinones
+LA  - English
+N1  - 229ne
+Times Cited:9
+Cited References Count:47
+PY  - 1999
+SN  - 0040-4020
+SP  - 10871-10886
+ST  - Stable 4E-dipyrrinones
+T2  - Tetrahedron
+TI  - Stable 4E-dipyrrinones
+UR  - <Go to ISI>://WOS:000082200000002
+VL  - 55
+ID  - 44
+ER  - 
+
+TY  - JOUR
+AB  - Bright yellow N,N'-carbonyl-bridged dipyrrinones (substituted 3H,5H-dipyrrolo[1,2-c:2',1'-f]pyrimidine-3,5-diones) were synthesized by reaction of the parent dipyrrinone with carbonyldiimidazole. Their solutions in organic solvents fluoresced strongly, with fluorescent quantum yields (phi(F)) 0.32-0.92.
+AD  - Univ Nevada, Dept Chem, Reno, NV 89557 USA
+AN  - WOS:000226357900031
+AU  - Boiadjiev, S. E.
+AU  - Lightner, D. A.
+DA  - Nov-Dec
+DO  - DOI 10.1002/jhet.5570410631
+IS  - 6
+J2  - J Heterocyclic Chem
+KW  - spectroscopic properties
+pigments
+LA  - English
+N1  - 888ev
+Times Cited:7
+Cited References Count:11
+PY  - 2004
+SN  - 0022-152x
+SP  - 1033-1037
+ST  - Strongly fluorescent dipyrrinones - Substituent effects
+T2  - Journal of Heterocyclic Chemistry
+TI  - Strongly fluorescent dipyrrinones - Substituent effects
+UR  - <Go to ISI>://WOS:000226357900031
+VL  - 41
+ID  - 49
+ER  - 
+
+TY  - JOUR
+AB  - Intense fluorescence from a new, more highly conjugated (benzannelated) xanthoglow analog, 9,11-dimethyl-10-[2-(methoxycarbonyl)ethyl]-5H,7H-pyrrolo[2',1':6,1]pyrimidino[3,4-a]isoindole-5,7-dione (1), was determined. accurately and compared with fluorescence from the parent xanthoglow, 1-ethyl-8-[2-(methoxycarbonyl) ethyl]-2,7,9-trimethyl-3H,5H-dipyrrolo[1,2-c: 2',1'-f]pyrimidine-3,5-dione (2). Benzoxanthoglow (1) gave a quantum yield for fluorescence (phi(F)) of 0.78 in cyclohexane (lambda(exc) 412 run, lambda(em) 487 nm), whereas xanthoglow methyl ester (2) gave phiF = 0.80 in cyclohexane (lambda(exc) 410 nm, lambda(em) 473 nm). In DMSO, 1 gave phi(F) = 0.55 (lambda(exc) 419 nm, lambda(em) 530 nm) and 2 gave phi(F) = 0.65 (lambda(exc) 419 nm, lambda(em) 508 nm), illustrating the large Stokes shifts and strong fluorescence properties of these easily synthesized yellow pigments. Copyright (C) 2004 John Wiley Sons, Ltd.
+AD  - Univ Nevada, Dept Chem, Reno, NV 89557 USA
+AN  - WOS:000222883700004
+AU  - Boiadjiev, S. E.
+AU  - Lightner, D. A.
+DA  - Aug
+DO  - 10.1002/poc.755
+IS  - 8
+J2  - J Phys Org Chem
+KW  - fluorescence
+xanthoglow
+dipyrrinones
+spectroscopic properties
+LA  - English
+N1  - 840tv
+Times Cited:15
+Cited References Count:12
+PY  - 2004
+SN  - 0894-3230
+SP  - 675-679
+ST  - Intensely fluorescent dipyrrinones
+T2  - Journal of Physical Organic Chemistry
+TI  - Intensely fluorescent dipyrrinones
+UR  - <Go to ISI>://WOS:000222883700004
+VL  - 17
+ID  - 50
+ER  - 
+
+TY  - JOUR
+AB  - A new, highly fluorescent (phi(F) up to 0.85) rigid anti-Z-dipyrrinone chromophore has been synthesized in high yield in a one-pot reaction by condensing two monopyrroles in the presence of DBU to form the pyrrolo[3,2-f]indolizine-4,6-dione nucleus.
+AD  - Univ Nevada, Dept Chem, Reno, NV 89557 USA
+AN  - WOS:000226313600042
+AU  - Boiadjiev, S. E.
+AU  - Lightner, D. A.
+DA  - Jan 21
+DO  - 10.1021/jo040183y
+IS  - 2
+J2  - J Org Chem
+KW  - spectroscopic properties
+pyrroles
+methyl
+LA  - English
+N1  - 887nu
+Times Cited:9
+Cited References Count:16
+PY  - 2005
+SN  - 0022-3263
+SP  - 688-691
+ST  - Readily synthesized novel fluorescent dipyrrinones
+T2  - Journal of Organic Chemistry
+TI  - Readily synthesized novel fluorescent dipyrrinones
+UR  - <Go to ISI>://WOS:000226313600042
+VL  - 70
+ID  - 52
+ER  - 
+
+TY  - JOUR
+AB  - Yellow N,N'-carbonyl-bridged dipyrrinones can generally be prepared from dipyrrinones simply by reaction with N,N'-carbonyldiimidazole in the presence of a strong, non-nucleophilic base. They are typically intensely fluorescent, with fluorescent quantum yields approaching 1.0. In an effort to shift the excitation wavelength, and thus the fluorescence emissions, strongly to the red, we prepared bridged dipyrrinones conjugated with thiobarbituric acid and Meldrum's acid substituents at C-9. Such conjugation causes the dipyrrinones to have a magenta color (absorption wavelength shifted from similar to 400 nm of a typical dipyrrinone to similar to 550 nm of the dipyrrinone conjugate). For comparison, we also prepared analogs with formyl, carboxyl, acrylate, and acetyl substituents at C-9. Unexpectedly and uniquely, the 9-CHO substituent caused the fluorescence quantum yield to drop to similar to 10(-3) while carboethoxy substituent exerted only a minor influence.
+AD  - Univ Nevada, Dept Chem, Reno, NV 89557 USA
+AN  - WOS:000255411800005
+AU  - Boiadjiev, S. E.
+AU  - Lightner, D. A.
+DA  - May
+DO  - 10.1007/s00706-007-0719-x
+IS  - 5
+J2  - Monatsh Chem
+KW  - pyrrole
+synthesis
+fluorescence
+exciton chirality
+chromophores
+derivatives
+LA  - English
+N1  - 294nc
+Times Cited:8
+Cited References Count:20
+PY  - 2008
+SN  - 0026-9247
+SP  - 503-511
+ST  - Strongly fluorescent dipyrrinones. Internal quenching
+T2  - Monatshefte fuer Chemie
+TI  - Strongly fluorescent dipyrrinones. Internal quenching
+UR  - <Go to ISI>://WOS:000255411800005
+VL  - 139
+ID  - 56
+ER  - 
+
+TY  - JOUR
+AD  - Clin Res Ctr,Div Clin Chem,Harrow Ha1 3uj,Middx,England
+AN  - WOS:A1984SQ61800049
+AU  - Bonnett, R.
+AU  - Buckley, D. G.
+AU  - Hamzetash, D.
+AU  - Hawkes, G. E.
+AU  - Ioannou, S.
+AU  - Stoll, M. S.
+DO  - DOI 10.1042/bj2191053
+IS  - 3
+J2  - Biochem J
+LA  - English
+N1  - Sq618
+Times Cited:17
+Cited References Count:13
+PY  - 1984
+SN  - 0264-6021
+SP  - 1053-1056
+ST  - Photobilirubin-II
+T2  - Biochemical Journal
+TI  - Photobilirubin-II
+UR  - <Go to ISI>://WOS:A1984SQ61800049
+VL  - 219
+ID  - 17
+ER  - 
+
+TY  - JOUR
+AN  - 958385
+AU  - Bonnett, R.
+AU  - Davies, J. E.
+AU  - Hursthouse, M. B.
+DA  - Jul 22
+DO  - 10.1038/262326a0
+ET  - 1976/07/22
+IS  - 5566
+KW  - *Bilirubin
+Hydrogen Bonding
+Molecular Conformation
+X-Ray Diffraction
+N1  - Bonnett, R
+Davies, J E
+Hursthouse, M B
+eng
+England
+Nature. 1976 Jul 22;262(5566):327-8. doi: 10.1038/262326a0.
+PY  - 1976
+SN  - 0028-0836 (Print)
+0028-0836 (Linking)
+SP  - 327-8
+ST  - Structure of bilirubin
+T2  - Nature
+TI  - Structure of bilirubin
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/958385
+VL  - 262
+ID  - 3
+ER  - 
+
+TY  - JOUR
+AD  - Univ London Queen Mary Coll,Dept Chem,London E1 4ns,England
+AN  - WOS:A1987J276100005
+AU  - Bonnett, R.
+AU  - Ioannou, S.
+DO  - Doi 10.1016/0098-2997(87)90008-2
+IS  - 5
+J2  - Mol Aspects Med
+LA  - English
+N1  - J2761
+Times Cited:14
+Cited References Count:26
+PY  - 1987
+SN  - 0098-2997
+SP  - 457-471
+ST  - Phototherapy and the Chemistry of Bilirubin
+T2  - Mol. Asp. Med.
+TI  - Phototherapy and the Chemistry of Bilirubin
+UR  - <Go to ISI>://WOS:A1987J276100005
+VL  - 9
+ID  - 22
+ER  - 
+
+TY  - JOUR
+AB  - A new, highly fluorescent (Phi(F) greater than or equal to 0.8) chromophore has been synthesized in one step from dipyrrinones by reaction with N,N-carbonyldiimidazole to form the 3H,5H-dipyrrolo[1,2-c:2',1'-f]pyrimidine-3,5-dione nucleus.
+AD  - Univ Nevada, Dept Chem, Reno, NV 89557 USA
+AN  - WOS:000175169000048
+AU  - Brower, J. O.
+AU  - Lightner, D. A.
+DA  - Apr 19
+DO  - 10.1021/jo0110505
+IS  - 8
+J2  - J Org Chem
+KW  - xanthobilirubic acid
+bilirubin
+LA  - English
+N1  - 544pk
+Times Cited:24
+Cited References Count:14
+PY  - 2002
+SN  - 0022-3263
+SP  - 2713-2716
+ST  - Synthesis and spectroscopic properties of a new class of strongly fluorescent dipyrrinones
+T2  - Journal of Organic Chemistry
+TI  - Synthesis and spectroscopic properties of a new class of strongly fluorescent dipyrrinones
+UR  - <Go to ISI>://WOS:000175169000048
+VL  - 67
+ID  - 47
+ER  - 
+
+TY  - JOUR
+AB  - Bilin chromophores and bilirubin are involved in relevant biological functions such as light perception in plants and as protective agents against Alzheimer and other diseases. Despite their extensive use, a deep rationalization of the main factors controlling the thermal and photochemical properties has not been performed yet, which in turn hampers further applications of these versatile molecules. In an effort to understand those factors and allow control of the relevant properties, a combined experimental and computational study has been carried out for diverse model systems to understand the interconversion between Z and E isomers. In this study, we have demonstrated the crucial role of steric hindrance and hydrogen-bond interactions in thermal stability and the ability to control them by designing novel compounds. We also determined several photochemical properties and studied the photodynamics of two model systems in more detail, observing a fast relaxation of the excited state shorter than 2 ps in both cases. Finally, the computational study allowed us to rationalize the experimental evidence.
+AD  - Univ La Rioja, CISQ, Dept Quim, Madre Dios 53, E-26006 Logrono, Spain
+Univ Alcala De Henares, Unidad Docente Quim Fis, E-28871 Madrid, Spain
+Karlsruhe Inst Technol, Inst Phys Chem, D-76128 Karlsruhe, Germany
+AN  - WOS:000381236000015
+AU  - Carcia-Iriepa, C.
+AU  - Ernst, H. A.
+AU  - Liang, Y.
+AU  - Unterreiner, A. N.
+AU  - Frutos, L. M.
+AU  - Sampedro, D.
+DA  - Aug 5
+DO  - 10.1021/acs.joc.6b00892
+IS  - 15
+J2  - J Org Chem
+KW  - fluorescent protein chromophore
+human-serum-albumin
+neonatal jaundice
+excited-state
+e photoisomerization
+ground-state
+phytochrome
+phototherapy
+light
+isomerization
+LA  - English
+N1  - Dt1ix
+Times Cited:0
+Cited References Count:63
+PY  - 2016
+SN  - 0022-3263
+SP  - 6292-6302
+ST  - Study of Model Systems for Bilirubin and Bilin Chromophores: Determination and Modification of Thermal and Photochemical Properties
+T2  - Journal of Organic Chemistry
+TI  - Study of Model Systems for Bilirubin and Bilin Chromophores: Determination and Modification of Thermal and Photochemical Properties
+UR  - <Go to ISI>://WOS:000381236000015
+VL  - 81
+ID  - 66
+ER  - 
+
+TY  - JOUR
+AB  - A high-yield straightforward conversion of lactams to lactim ethers is shown by the conversion of (10H)-dipyrrin-1-ones to (11H)-dipyrrin-1-ol methyl and ethyl ethers in 90% yield from heating in neat trimethyl or triethyl phosphite at 160 degrees C. Unlike the parent dipyrrinones, which form intermolecularly hydrogen-bonded dimers in CHCl3, their lactim ethers are shown to be monomeric by vapor pressure osmometry. The latter react with boron trifluoride etherate to N,N'-bridged BF2 derivatives that exhibit strong fluorescence (phi(F) 0.6-0.8) near 535 nm. X-Ray crystal structures were obtained of the lactim ethyl ether of kryptopyrromethenone and the BF2 derivative of the lactim ethyl ether 2,3-diethyl-7,8-dimethyl-(10H)dipyrrin-1-one.
+AD  - Univ Nevada, Dept Chem, Reno, NV 89557 USA
+AN  - WOS:000262613000018
+AU  - Datta, S.
+AU  - Lightner, D. A.
+DA  - Dec
+DO  - 10.1007/s00706-008-0943-z
+IS  - 12
+J2  - Monatsh Chem
+KW  - dipyrroles
+lactim
+difluoroboryl
+fluorescence
+x-ray crystallography
+acid methyl-ester
+pyrrole pigments
+bile-pigments
+bodipy dyes
+chemistry
+pyrromethenones
+complexes
+LA  - English
+N1  - 396tc
+Times Cited:3
+Cited References Count:26
+PY  - 2008
+SN  - 0026-9247
+SP  - 1519-1529
+ST  - Converting dipyrrinones to lactim ethers to fluorescent N,N '-difluoroboryl derivatives
+T2  - Monatshefte fuer Chemie
+TI  - Converting dipyrrinones to lactim ethers to fluorescent N,N '-difluoroboryl derivatives
+UR  - <Go to ISI>://WOS:000262613000018
+VL  - 139
+ID  - 57
+ER  - 
+
+TY  - JOUR
+AN  - WOS:A1983QF01800010
+AU  - Degroot, J. A.
+AU  - Jansen, H.
+AU  - Fokkens, R.
+AU  - Lugtenburg, J.
+IS  - 2
+J2  - Recl Trav Chim Pay B
+LA  - English
+N1  - Qf018
+Times Cited:7
+Cited References Count:7
+PY  - 1983
+SN  - 0165-0513
+SP  - 114-118
+ST  - Synthesis and Properties of 2,2'-Pyrromethene-5[1h]-One Analogs - the Furan, Thiophene, Benzene, 4-Methoxybenzene, 2-Pyridine and 4-Pyridine Analogs
+T2  - Rec. Trav. Chim.
+TI  - Synthesis and Properties of 2,2'-Pyrromethene-5[1h]-One Analogs - the Furan, Thiophene, Benzene, 4-Methoxybenzene, 2-Pyridine and 4-Pyridine Analogs
+UR  - <Go to ISI>://WOS:A1983QF01800010
+VL  - 102
+ID  - 15
+ER  - 
+
+TY  - JOUR
+AN  - WOS:A1982PR68500002
+AU  - Degroot, J. A.
+AU  - Lugtenburg, J.
+IS  - 10
+J2  - Recl Trav Chim Pay B
+LA  - English
+N1  - Pr685
+Times Cited:3
+Cited References Count:8
+PY  - 1982
+SN  - 0165-0513
+SP  - 333-336
+ST  - 1,3,4-Trimethyl-2,2'-Pyrromethen-5[1h]-One and Its 1'-Methyl Derivative - Synthesis, Thermal and Photochemical Reactivity
+T2  - Rec. Trav. Chim.
+TI  - 1,3,4-Trimethyl-2,2'-Pyrromethen-5[1h]-One and Its 1'-Methyl Derivative - Synthesis, Thermal and Photochemical Reactivity
+UR  - <Go to ISI>://WOS:A1982PR68500002
+VL  - 101
+ID  - 11
+ER  - 
+
+TY  - JOUR
+AB  - We propose a multivariate curve resolution approach for the investigation of photochromic systems using UV-Visible spectroscopy. The incorporation of photochemical hard-models as constraints in multivariate curve resolution alternating least squares (MCR-ALS) allows extracting reaction quantum yields in situations where a complete knowledge of the system is not available. We apply this approach to the study of the photochromism of CMTE (cis-1,2-dicyano-1,2-bis(2,4,5-trimethyl-3-thienyl) ethene) under continuous monochromatic irradiation. The mechanism, involving 3 species and 2 reversible reactions, is written and translated into a kinetic constraint that can be applied to the concentration profiles within ALS. First, ambiguity of the solution obtained for photochemical model(s) is calculated and discussed for single set analysis. Multiset analysis is then proposed combining data obtained under different irradiation wavelengths to provide more reliable results. Finally, the photochemical reactivity of CMTE is widely unraveled, and some description of the mechanism observed under irradiation at 365 nm is given. (C) 2018 Elsevier B.V. All rights reserved.
+AD  - Univ Lille, CNRS, UMR 8516, LASIR,Lab Spectrochim Infrarouge & Raman, F-59000 Lille, France
+Univ Rostock, Inst Math, Ulmenstr 69, D-18057 Rostock, Germany
+Leibniz Inst Katalyse, Albert Einstein Str 29a, D-18059 Rostock, Germany
+Univ Paris Saclay, CNRS, ENS Cachan, PPSM, Cachan, France
+AN  - WOS:000457201600003
+AU  - Devos, O.
+AU  - Schroder, H.
+AU  - Sliwa, M.
+AU  - Placial, J. P.
+AU  - Neymeyr, K.
+AU  - Metivier, R.
+AU  - Ruckebusch, C.
+DA  - Apr 11
+DO  - 10.1016/j.aca.2018.12.004
+J2  - Anal Chim Acta
+KW  - photochemical reaction
+quantum yield
+multivariate curve resolution
+parameter ambiguity
+hard-soft modelling
+alternating least-squares
+data fusion
+diarylethene
+LA  - English
+N1  - Hj5ep
+Times Cited:1
+Cited References Count:35
+PY  - 2019
+SN  - 0003-2670
+SP  - 32-42
+ST  - Photochemical multivariate curve resolution models for the investigation of photochromic systems under continuous irradiation
+T2  - Analytica Chimica Acta
+TI  - Photochemical multivariate curve resolution models for the investigation of photochromic systems under continuous irradiation
+UR  - <Go to ISI>://WOS:000457201600003
+VL  - 1053
+ID  - 75
+ER  - 
+
+TY  - JOUR
+AB  - Extraction of a solution of bilirubin configurational isomers in chloroform with an aqueous solution of human serum albumin was found to remove selectively the 4Z,15E-isomer. This phenomenon was used to develop a method for the purification of the 4E,15Z-isomer of bilirubin. The quantum yield for the cyclization and configurational isomerization of the 4E,15Z-isomer bound to a molar excess of human serum albumin was measured at 450 and 510 nm. The quantum yield for cyclization to form lumirubin was 0.12 and 0.19 at 450 and 510 nm, respectively. The quantum yield for configurational isomerization to form 4Z,15Z-bilirubin was 0.03 and 0.05 at 450 and 510 nm. An analysis of previously published data on the quantum yield for the formation of lumirubin from 4Z, 15Z-bilirubin bound to human serum albumin suggests that all of the formation of lumirubin may occur via consecutive photochemical processes with the 4E,15Z-isomer as an intermediate.
+AD  - Department of Pediatrics, Rainbow Babies and Children's Hospital, Case Western Reserve University, Cleveland, OH 44106.
+AN  - 2027905
+AU  - Ennever, J. F.
+AU  - Dresing, T. J.
+DA  - Jan
+DO  - 10.1111/j.1751-1097.1991.tb08463.x
+ET  - 1991/01/01
+IS  - 1
+KW  - Bilirubin/*chemistry
+Chromatography, High Pressure Liquid
+Humans
+Infant, Newborn
+Isomerism
+Luminol
+Molecular Structure
+Quantum Theory
+N1  - Ennever, J F
+Dresing, T J
+eng
+DK-38575/DK/NIDDK NIH HHS/
+Research Support, U.S. Gov't, P.H.S.
+Photochem Photobiol. 1991 Jan;53(1):25-32. doi: 10.1111/j.1751-1097.1991.tb08463.x.
+PY  - 1991
+SN  - 0031-8655 (Print)
+0031-8655 (Linking)
+SP  - 25-32
+ST  - Quantum yields for the cyclization and configurational isomerization of 4E,15Z-bilirubin
+T2  - Photochemistry and Photobiology
+TI  - Quantum yields for the cyclization and configurational isomerization of 4E,15Z-bilirubin
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/2027905
+VL  - 53
+ID  - 29
+ER  - 
+
+TY  - JOUR
+AB  - Phototherapy results in the conversion of bilirubin to more water-soluble isomers. Six clinically used phototherapy lamps which differ in their emission spectra have been compared in their ability to produce configurational and structural isomers of bilirubin in vitro. For all of the lamps, the initial rate of configurational isomerization was highly correlated (r = 0.969) with the intensity of irradiation falling within the bilirubin absorption band. The percentage of the total bilirubin converted to the configurational isomer at equilibrium was dependent upon the spectral distribution of the lamp, and was greatest (26.2 +/- 1.3%) with the special blue lamp, which has a narrow spectral output centered at 445 nm. The rate of formation of the structural isomer, lumirubin, was generally dependent upon the intensity of irradiation within the bilirubin absorption band.
+AN  - 6540860
+AU  - Ennever, J. F.
+AU  - Sobel, M.
+AU  - McDonagh, A. F.
+AU  - Speck, W. T.
+DA  - Jul
+DO  - 10.1203/00006450-198407000-00021
+ET  - 1984/07/01
+IS  - 7
+KW  - Bilirubin/metabolism
+Fluorescence
+Humans
+In Vitro Techniques
+Infant, Newborn
+Isomerism
+Jaundice, Neonatal/*therapy
+Phototherapy/*instrumentation
+Serum Albumin/metabolism
+N1  - Ennever, J F
+Sobel, M
+McDonagh, A F
+Speck, W T
+eng
+AM-11275/AM/NIADDK NIH HHS/
+AM-26307/AM/NIADDK NIH HHS/
+CA-23692/CA/NCI NIH HHS/
+Research Support, Non-U.S. Gov't
+Research Support, U.S. Gov't, P.H.S.
+Pediatr Res. 1984 Jul;18(7):667-70. doi: 10.1203/00006450-198407000-00021.
+PY  - 1984
+SN  - 0031-3998 (Print)
+0031-3998 (Linking)
+SP  - 667-70
+ST  - Phototherapy for neonatal jaundice: in vitro comparison of light sources
+T2  - Pediatric Research
+TI  - Phototherapy for neonatal jaundice: in vitro comparison of light sources
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/6540860
+VL  - 18
+ID  - 18
+ER  - 
+
+TY  - BOOK
+AU  - Falk, Heinz
+CY  - Wien; New York
+DB  - /z-wcorg/
+DP  - http://worldcat.org
+LA  - English
+PB  - Springer-Verlag
+PY  - 1989
+SN  - 0387821120 9780387821122 0387821252 9780387821252 3211821252 9783211821251 3211821120 9783211821121
+ST  - The chemistry of linear oligopyrroles and bile pigments
+TI  - The chemistry of linear oligopyrroles and bile pigments
+ID  - 26
+ER  - 
+
+TY  - JOUR
+AN  - WOS:A1979HR06100023
+AU  - Falk, H.
+AU  - Neufingerl, F.
+DO  - Doi 10.1007/Bf00910973
+IS  - 5
+J2  - Monatsh Chem
+LA  - German
+N1  - Hr061
+Times Cited:20
+Cited References Count:37
+PY  - 1979
+SN  - 0026-9247
+SP  - 1243-1255
+ST  - Chemistry of Pyrrole Pigments .29. Anaerobic Photochemistry of Bile-Pigments - Mechanism of the Photoisomerization at Exocyclic Double-Bonds
+T2  - Monatshefte fuer Chemie
+TI  - Chemistry of Pyrrole Pigments .29. Anaerobic Photochemistry of Bile-Pigments - Mechanism of the Photoisomerization at Exocyclic Double-Bonds
+UR  - <Go to ISI>://WOS:A1979HR06100023
+VL  - 110
+ID  - 5
+ER  - 
+
+TY  - JOUR
+AD  - Department of Chemistry, Bar-Ilan University, Ramat-Gan 52900, Israel.
+AN  - 11671879
+AU  - Gottlieb, H. E.
+AU  - Kotlyar, V.
+AU  - Nudelman, A.
+DA  - Oct 17
+DO  - 10.1021/jo971176v
+ET  - 2001/10/24
+IS  - 21
+N1  - Gottlieb, Hugo E.
+Kotlyar, Vadim
+Nudelman, Abraham
+eng
+J Org Chem. 1997 Oct 17;62(21):7512-7515. doi: 10.1021/jo971176v.
+PY  - 1997
+SN  - 1520-6904 (Electronic)
+0022-3263 (Linking)
+SP  - 7512-7515
+ST  - NMR Chemical Shifts of Common Laboratory Solvents as Trace Impurities
+T2  - Journal of Organic Chemistry
+TI  - NMR Chemical Shifts of Common Laboratory Solvents as Trace Impurities
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/11671879
+VL  - 62
+ID  - 40
+ER  - 
+
+TY  - JOUR
+AN  - 3423118
+AU  - Greenberg, J. W.
+AU  - Malhotra, V.
+AU  - Ennever, J. F.
+DA  - Oct
+DO  - 10.1111/j.1751-1097.1987.tb04794.x
+ET  - 1987/10/01
+IS  - 4
+KW  - Bilirubin/blood/*radiation effects
+Humans
+Isomerism
+*Light
+Quantum Theory
+Serum Albumin/metabolism
+N1  - Greenberg, J W
+Malhotra, V
+Ennever, J F
+eng
+DK-36517/DK/NIDDK NIH HHS/
+Research Support, U.S. Gov't, P.H.S.
+Photochem Photobiol. 1987 Oct;46(4):453-6. doi: 10.1111/j.1751-1097.1987.tb04794.x.
+PY  - 1987
+SN  - 0031-8655 (Print)
+0031-8655 (Linking)
+SP  - 453-6
+ST  - Wavelength dependence of the quantum yield for the structural isomerization of bilirubin
+T2  - Photochemistry and Photobiology
+TI  - Wavelength dependence of the quantum yield for the structural isomerization of bilirubin
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/3423118
+VL  - 46
+ID  - 23
+ER  - 
+
+TY  - JOUR
+AB  - A sterically locked biliverdin derivative was synthesized by developing an efficient method for the preparation of Z-anti C/D-ring component toward investigation of the stereochemistry and function of the phytochrome chromophores.
+AU  - Hammam, Mostafa A. S.
+AU  - Murata, Yasue
+AU  - Kinoshita, Hideki
+AU  - Inomata, Katsuhiko
+DA  - 2004/10/01
+DO  - 10.1246/cl.2004.1258
+IS  - 10
+PY  - 2004
+SN  - 0366-7022
+SP  - 1258-1259
+ST  - Synthesis of the Sterically Fixed Biliverdin Derivative Bearing the Z-anti C/D-Ring Component
+T2  - Chemistry Letters
+TI  - Synthesis of the Sterically Fixed Biliverdin Derivative Bearing the Z-anti C/D-Ring Component
+UR  - https://doi.org/10.1246/cl.2004.1258
+VL  - 33
+Y2  - 2020/06/27
+ID  - 51
+ER  - 
+
+TY  - JOUR
+AB  - We present our investigations of 2-ethyl-3-methyl-(10H)-dipyrrin-1-one, its self-association, and anion binding properties. This receptor is easily accessible in a facile single step synthesis with a straightforward workup. An examination of the concentration dependence of the dipyrrinone NH chemical shifts in CDCl3 and (CDCl2)(2) over the temperature range from -20 degrees C to 100 degrees C determined the self-association constant to be 3850 M-1. Molecular recognition studies have shown that it has a preference for guests with an OH moiety, such as hydrogen sulfate (HSO4-) and carboxylic acids (RCO2H). (c) 2007 Elsevier Ltd. All rights reserved.
+AD  - Univ W Florida, Dept Chem, Pensacola, FL 32514 USA
+Univ Nevada, Dept Chem, Reno, NV 89557 USA
+AN  - WOS:000252235900023
+AU  - Huggins, M. T.
+AU  - Musto, C.
+AU  - Munro, L.
+AU  - Catalano, V. J.
+DA  - Dec 24
+DO  - 10.1016/j.tet.2007.10.033
+IS  - 52
+J2  - Tetrahedron
+KW  - anion coordination
+bilirubin
+esters
+pyrromethenones
+stereochemistry
+phototherapy
+highlights
+semirubin
+chemistry
+jaundice
+LA  - English
+N1  - 249nq
+Times Cited:13
+Cited References Count:33
+PY  - 2007
+SN  - 0040-4020
+SP  - 12994-12999
+ST  - Molecular recognition studies with a simple dipyrrinone
+T2  - Tetrahedron
+TI  - Molecular recognition studies with a simple dipyrrinone
+UR  - <Go to ISI>://WOS:000252235900023
+VL  - 63
+ID  - 55
+ER  - 
+
+TY  - JOUR
+AB  - The introduction of hydroxy group to the 3- or 5-position of 4,4-difluoro-4-bora-3a,4a-diazaindacene (BODIPY) results in unexpected tautomerization to BDPONa with interesting structural and photophysical properties. The core of BDPONa is an anion with sodium cation as counter-ion. BDPONa displays strong fluorescence in organic solvents. (C) 2015 Chinese Chemical Society and Institute of Materia Medica, Chinese Academy of Medical Sciences. Published by Elsevier B.V. All rights reserved.
+AD  - Chinese Acad Sci, Tech Inst Phys & Chem, Key Lab Photochem Convers & Optoelect Mat, Beijing 100190, Peoples R China
+Univ Chinese Acad Sci, Beijing 100049, Peoples R China
+Beijing Normal Univ, Coll Chem, Beijing 100875, Peoples R China
+AN  - WOS:000357224900001
+AU  - Chen, P. Z.
+AU  - Zheng, H. R.
+AU  - Niu, L. Y.
+AU  - Chen, Y. Z.
+AU  - Wu, L. Z.
+AU  - Tung, C. H.
+AU  - Yang, Q. Z.
+DA  - Jun
+DO  - 10.1016/j.cclet.2015.04.018
+IS  - 6
+J2  - Chinese Chem Lett
+KW  - bodipy
+substitution reaction
+tautomerization
+sodium salt
+fluorescent-probe
+living cells
+sensor array
+dyes
+derivatives
+emission
+functionalization
+glutathione
+discrimination
+cysteine
+LA  - English
+N1  - Cl8kz
+Times Cited:11
+Cited References Count:50
+PY  - 2015
+SN  - 1001-8417
+SP  - 631-635
+ST  - A BODIPY analogue from the tautomerization of sodium 3-oxide BODIPY
+T2  - Chinese Chemical Letters
+TI  - A BODIPY analogue from the tautomerization of sodium 3-oxide BODIPY
+UR  - <Go to ISI>://WOS:000357224900001
+VL  - 26
+ID  - 65
+ER  - 
+
+TY  - JOUR
+AB  - We studied on the syntheses of linear tetrapyrrole (bilin) chromophores including the sterically locked derivatives toward the investigation of structure and function of phytochromes as photoreceptors. The synthesized chromophores were successfully assembled with bacterial and plant apophytochromes in vitro and/or in vivo to demonstrate that they are valuable tools for studies on phytochromes.
+AN  - WOS:000312688800002
+AU  - Inomata, K.
+DA  - Dec
+DO  - 10.3987/rev-12-750
+IS  - 12
+N1  - Inomata, Katsuhiko
+1881-0942
+PY  - 2012
+SN  - 0385-5414
+SP  - 2879-2926
+ST  - Syntheses of Bilin Chromophores Toward the Investigation of Structure and Function of Phytochromes
+T2  - Heterocycles
+TI  - Syntheses of Bilin Chromophores Toward the Investigation of Structure and Function of Phytochromes
+UR  - <Go to ISI>://WOS:000312688800002
+VL  - 85
+ID  - 62
+ER  - 
+
+TY  - JOUR
+AD  - Rikkyo Univ, Res Ctr Smart Mol, Toshima Ku, Tokyo 1718501, Japan
+Hokkaido Univ, Res Inst Elect Sci, Kita Ku, Sapporo, Hokkaido 0010020, Japan
+Kyoto Univ, Grad Sch Engn, Dept Synthet Chem & Biol Chem, Nishikyo Ku, Kyoto 6158510, Japan
+Osaka City Univ, Grad Sch Engn, Dept Appl Chem, Sumiyoshi Ku, Osaka 5588585, Japan
+AN  - WOS:000347139900007
+AU  - Irie, M.
+AU  - Fukaminato, T.
+AU  - Matsuda, K.
+AU  - Kobatake, S.
+DA  - Dec 24
+DO  - 10.1021/cr500249p
+IS  - 24
+J2  - Chem Rev
+KW  - nonlinear-optical properties
+picosecond laser photolysis
+refractive-index change
+unsymmetrical isomeric diarylethenes
+selective metal-deposition
+resonance energy-transfer
+2 nitronyl nitroxides
+reversible diastereoselective photocyclization
+photoswitchable fluorescent diarylethene
+photoreversible supramolecular polymer
+LA  - English
+N1  - Ax8df
+Times Cited:1026
+Cited References Count:938
+PY  - 2014
+SN  - 0009-2665
+SP  - 12174-12277
+ST  - Photochromism of Diarylethene Molecules and Crystals: Memories, Switches, and Actuators
+T2  - Chemical Reviews
+TI  - Photochromism of Diarylethene Molecules and Crystals: Memories, Switches, and Actuators
+UR  - <Go to ISI>://WOS:000347139900007
+VL  - 114
+ID  - 63
+ER  - 
+
+TY  - JOUR
+AD  - Kagawa Med Sch,Dept Pediat,Miki,Kagawa 76107,Japan
+AN  - WOS:A1987G021800003
+AU  - Itoh, S.
+AU  - Onishi, S.
+AU  - Isobe, K.
+AU  - Manabe, M.
+AU  - Yamakawa, T.
+DA  - Jan
+IS  - 1
+J2  - Biol Neonate
+LA  - English
+N1  - G0218
+Times Cited:24
+Cited References Count:32
+PY  - 1987
+SN  - 0006-3126
+SP  - 10-17
+ST  - Wavelength Dependence of the Geometric and Structural Photoisomerization of Bilirubin Bound to Human-Serum Albumin
+T2  - Biol. Neonate
+TI  - Wavelength Dependence of the Geometric and Structural Photoisomerization of Bilirubin Bound to Human-Serum Albumin
+UR  - <Go to ISI>://WOS:A1987G021800003
+VL  - 51
+ID  - 24
+ER  - 
+
+TY  - JOUR
+AB  - Dypiridamole is a highly efficient chain breaking antioxidant (Iuliano et al., Free Radic. Biol. Med. 18 (1995) 239-247) with an aromatic ring system responsible for an intense absorption band in the 400-480-nm region and for an intense fluorescence. Dipyridamole fluorescence is quantitatively quenched upon reaction with peroxyl radicals. In the presence of a flux of peroxyl radicals generated by thermal dissociation of azo-initiators, dipyridamole fluorescence decays linearly, showing a first-order reaction with respect to peroxyl radicals, and zero-order with respect to dipyridamole. The pH optimum for the fluorescence quenching is in the 7-8 range, from pH 7 to 6, the decay of fluorescence rapidly decreases to became negligible below pH 5.5. Dipyridamole consumption is blocked in the presence of an added chain breaking antioxidant for a time that is proportional to the antioxidant concentration. This effect is shown for ascorbic acid, trolox, vitamin E, uric acid, and N, N'-diphenyl-p-phenylenediamine. The slope of the linear correlation relative to trolox allows calculation of the bimolecular rate constant for a given molecule and peroxyl radicals. Comparison of data obtained by the dipyridamole consumption are comparable to values obtained by the oxygen consumption method.
+AD  - Institute of Clinical Medicine I, University La Sapienza, via del Policlinico, 00185, Rome, Italy. iuliano@uniroma1.it
+AN  - 10742597
+AU  - Iuliano, L.
+AU  - Piccheri, C.
+AU  - Coppola, I.
+AU  - Pratico, D.
+AU  - Micheletta, F.
+AU  - Violi, F.
+DA  - Apr 6
+DO  - 10.1016/s0304-4165(00)00017-9
+ET  - 2000/04/01
+IS  - 2
+KW  - Antioxidants/*pharmacology
+Dipyridamole/*pharmacology
+Fluorescent Dyes/*chemistry
+Free Radical Scavengers/*pharmacology
+Humans
+Hydrogen-Ion Concentration
+Lipid Peroxidation
+Peroxides/*chemistry
+Spectrometry, Fluorescence
+N1  - Iuliano, L
+Piccheri, C
+Coppola, I
+Pratico, D
+Micheletta, F
+Violi, F
+eng
+Netherlands
+Biochim Biophys Acta. 2000 Apr 6;1474(2):177-82. doi: 10.1016/s0304-4165(00)00017-9.
+PY  - 2000
+SN  - 0006-3002 (Print)
+0006-3002 (Linking)
+SP  - 177-82
+ST  - Fluorescence quenching of dipyridamole associated to peroxyl radical scavenging: a versatile probe to measure the chain breaking antioxidant activity of biomolecules
+T2  - Biochimica et Biophysica Acta
+TI  - Fluorescence quenching of dipyridamole associated to peroxyl radical scavenging: a versatile probe to measure the chain breaking antioxidant activity of biomolecules
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/10742597
+VL  - 1474
+ID  - 46
+ER  - 
+
+TY  - JOUR
+AN  - WOS:A1981MH87900028
+AU  - Jacobs, H. J. C.
+AU  - Gielen, J. W. J.
+AU  - Havinga, E.
+DO  - Doi 10.1016/S0040-4039(01)82052-9
+IS  - 40
+J2  - Tetrahedron Lett
+LA  - English
+N1  - Mh879
+Times Cited:56
+Cited References Count:11
+PY  - 1981
+SN  - 0040-4039
+SP  - 4013-4016
+ST  - Studies on Vitamin-D and Related-Compounds .29. Effects of Wavelength and Conformation on the Photochemistry of Vitamin-D and Related Conjugated Trienes
+T2  - Tetrahedron Letters
+TI  - Studies on Vitamin-D and Related-Compounds .29. Effects of Wavelength and Conformation on the Photochemistry of Vitamin-D and Related Conjugated Trienes
+UR  - <Go to ISI>://WOS:A1981MH87900028
+VL  - 22
+ID  - 7
+ER  - 
+
+TY  - JOUR
+AB  - Although phototherapy (PT) is a standard treatment for neonatal jaundice, no validated clinical methods for determination of bilirubin phototherapy products are available. Thus, the aim of our study was to establish a such method for clinical use. To achieve this aim, a LC-MS/MS assay for simultaneous determination of Z-lumirubin (LR) and unconjugated bilirubin (UCB) was conducted. LR was purified after irradiation of UCB at 460 nm. The assay was tested on human sera from PT-treated neonates. Samples were separated on a HPLC system with a triple quadrupole mass spectrometer detector. The instrument response was linear up to 5.8 and 23.4 mg/dL for LR and UCB, respectively, with submicromolar limits of detection and validity parameters relevant for use in clinical medicine. Exposure of newborns to PT raised serum LR concentrations three-fold (p < 0.01), but the absolute concentrations were low (0.37 +/- 0.16 mg/dL), despite a dramatic decrease of serum UCB concentrations (13.6 +/- 2.2 vs. 10.3 +/- 3.3 mg/dL, p < 0.01). A LC-MS/MS method for the simultaneous determination of LR and UCB in human serum was established and validated for clinical use. This method should help to monitor neonates on PT, as well as to improve our understanding of both the kinetics and biology of bilirubin phototherapy products.
+AD  - Institute of Medical Biochemistry and Laboratory Diagnostics, Faculty General Hospital and 1st Faculty of Medicine, Charles University, Prague, Czech Republic.
+HPST, s.r.o., Prague, Czech Republic.
+Department of Pediatrics and Neonatology, Faculty General Hospital and 1st Faculty of Medicine, Charles University, Prague, Czech Republic.
+Department of Chemistry and Recetox, Faculty of Science, Masaryk University, Brno, Czech Republic.
+Institute of Medical Biochemistry and Laboratory Diagnostics, Faculty General Hospital and 1st Faculty of Medicine, Charles University, Prague, Czech Republic. vitek@cesnet.cz.
+4th Department of Internal Medicine, Faculty General Hospital and 1st Faculty of Medicine, Charles University, Prague, Czech Republic. vitek@cesnet.cz.
+AN  - 32157102
+AU  - Jasprova, J.
+AU  - Dvorak, A.
+AU  - Vecka, M.
+AU  - Lenicek, M.
+AU  - Lacina, O.
+AU  - Valaskova, P.
+AU  - Zapadlo, M.
+AU  - Plavka, R.
+AU  - Klan, P.
+AU  - Vitek, L.
+C2  - PMC7064611
+DA  - Mar 10
+DO  - 10.1038/s41598-020-61280-z
+ET  - 2020/03/12
+IS  - 1
+N1  - Jasprova, Jana
+Dvorak, Ales
+Vecka, Marek
+Lenicek, Martin
+Lacina, Ondrej
+Valaskova, Petra
+Zapadlo, Milos
+Plavka, Richard
+Klan, Petr
+Vitek, Libor
+eng
+NV18-07-00342/Ministerstvo ZdravotnictvA- CeskA(c) Republiky
+RVO-VFN64165/2019/Ministerstvo ZdravotnictvA- CeskA(c) Republiky
+England
+Sci Rep. 2020 Mar 10;10(1):4411. doi: 10.1038/s41598-020-61280-z.
+PY  - 2020
+SN  - 2045-2322 (Electronic)
+2045-2322 (Linking)
+SP  - 4411
+ST  - A novel accurate LC-MS/MS method for quantitative determination of Z-lumirubin
+T2  - Scientific Reports
+TI  - A novel accurate LC-MS/MS method for quantitative determination of Z-lumirubin
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/32157102
+VL  - 10
+ID  - 80
+ER  - 
+
+TY  - JOUR
+AB  - (+/-)-Phytochromobilin was synthesized as an acid form by developing a convenient method for the preparation of A- and D-rings starting from a 2-tosylpyrrole derivative, followed by efficient construction of A/B- and C/D-ring components via Wittig-type coupling reaction of 5-tosylpyrrolinones with 2-formylpyrrole, and palladium catalyzed deprotection of allyl esters of propanoic acid side chains at C-8 and C-12.
+AN  - WOS:000081569000018
+AU  - Kakiuchi, T.
+AU  - Kinoshita, H.
+AU  - Inomata, K.
+N1  - Kakiuchi, T Kinoshita, H Inomata, K
+Si
+PY  - 1999
+SN  - 0936-5214
+SP  - 901-904
+ST  - Total synthesis of (+/-)-phytochromobilin starting from two pyrrole derivatives
+T2  - Synlett
+TI  - Total synthesis of (+/-)-phytochromobilin starting from two pyrrole derivatives
+UR  - <Go to ISI>://WOS:000081569000018
+ID  - 45
+ER  - 
+
+TY  - JOUR
+AB  - The quantum yields of the isomerization and photostationary state isomer ratios of the photoisomerization of (4Z,15Z)-bilirubin IXalpha (ZZ-BR) were determined in an aqueous buffered solution in the presence of human serum albumin (HSA) at a molar ratio of [ZZ-BR[/[HSA] from 0.5 to 2. The BR isomer compositions in the photostationary state were constant at [BR]/[HSA] = 0.5-0.7. With increasing [ZZ-BR]/[HSA] from 0.8 to 2, the ZZ-BR composition in the photostationary state increased from 58 to 75%, but the ZE-BR composition decreased from 39 to 22%. The quantum yields in the isomerization of ZZ-BR to ZE-BR (PHI(ZZ --> ZE) and a cyclized product, lumirubin (LR), (PHI(ZZ --> LR), remained unvaried up to [ZZ-BR]/[HSA] = 1, but PHI(ZZ --> ZE) decreased while PHI(ZZ --> LR) increased along with a further increase of [ZZ-BR]/[HSA]. These results are explained by the existence of two binding sites, a first-class site and a second-class site, for bilirubin binding to HSA; PHI(ZZ --> ZE) in the second-class site (= 0.035) was as low as 1/3 of that in the first-class site (= 0.11), but PHI(ZZ --> LR) in the second-class site (= 4.2 x 10(-3)) was nearly two-times higher than that in the first-class site (= 2.4 x 10(-3)).
+AD  - Univ Tsukuba, Dept Chem, Tsukuba, Ibaraki 305, Japan
+AN  - WOS:A1994PP61900023
+AU  - Kanna, Y.
+AU  - Arai, T.
+AU  - Tokumaru, K.
+DA  - Oct
+DO  - DOI 10.1246/bcsj.67.2758
+IS  - 10
+J2  - B Chem Soc Jpn
+KW  - (ez)-cyclobilirubin ix-alpha
+nuclear magnetic-resonance
+quantum yield
+neonatal jaundice
+wavelength-dependence
+photochemical changes
+photo-isomerization
+phototherapy
+interconversion
+photoproducts
+LA  - English
+N1  - Pp619
+Times Cited:7
+Cited References Count:33
+PY  - 1994
+SN  - 0009-2673
+SP  - 2758-2762
+ST  - Effect of the Binding-Sites of Human Serum-Albumin on the Efficiency and Photostationary State Isomer-Ratios of the Photoisomerization of Bilirubin
+T2  - Bulletin of the Chemical Society of Japan
+TI  - Effect of the Binding-Sites of Human Serum-Albumin on the Efficiency and Photostationary State Isomer-Ratios of the Photoisomerization of Bilirubin
+UR  - <Go to ISI>://WOS:A1994PP61900023
+VL  - 67
+ID  - 37
+ER  - 
+
+TY  - JOUR
+AD  - Tel Aviv Univ,Dept Chem,Ramat Aviv 69978,Israel
+AN  - WOS:A1981MM62900001
+AU  - Kaplan, D.
+AU  - Navon, G.
+DO  - DOI 10.1002/mrc.1270170202
+IS  - 2
+J2  - Org Magn Resonance
+LA  - English
+N1  - Mm629
+Times Cited:25
+Cited References Count:28
+PY  - 1981
+SN  - 0030-4921
+SP  - 79-87
+ST  - C-13 Nuclear Magnetic-Resonance Study of the Motional Behavior of Bilirubin and of Some of Its Derivatives
+T2  - Magn. Reson.
+TI  - C-13 Nuclear Magnetic-Resonance Study of the Motional Behavior of Bilirubin and of Some of Its Derivatives
+UR  - <Go to ISI>://WOS:A1981MM62900001
+VL  - 17
+ID  - 8
+ER  - 
+
+TY  - JOUR
+AB  - Selective and non-selective spin–lattice relaxation times (), nuclear Overhauser enhancements (NOE), and rates of exchange of protons in bilirubin and related compounds in chloroform solutions were measured. The NOE observed between methyl and methine protons and between lactam and pyrrole NH protons indicate that the configuration within the pyrromethenone units is exclusively -. An NOE was also observed between the protons of the carboxylic acid and the lactam NH groups of mesobilirubin. The selective relaxation times, NOE values of the protons, and correlation times calculated from carbon-13 relaxation data were used for the calculation of interproton distances. These distances, as well as the extremely slow rates of exchange of the pyrrole NH protons, establish the presence of hydrogen bonds between the carboxy-residues and the lactam and pyrrole NH groups of mesobilirubin in chloroform solutions. The values, chemical shifts, and rates of proton exchange in bilirubin are similar to those of mesobilirubin, indicating that the same conformation occurs for the two compounds. The conformation of bilirubin dimethyl ester is very different from that of bilirubin and mesobilirubin. It is present as a dimer even at concentrations as high as 0.17. The proton exchange rates of both the lactam and pyrrole NH groups of bilirubin dimethyl ester are slightly slower than in a model pyrromethenone compound.
+AU  - Kaplan, Doron
+AU  - Navon, Gil
+DO  - 10.1039/P29810001374
+IS  - 10
+M3  - 10.1039/P29810001374
+PY  - 1981
+SN  - 0300-9580
+SP  - 1374-1383
+ST  - Nuclear magnetic resonance studies of the conformation of bilirubin and its derivatives in solution
+T2  - Journal of the Chemical Society, Perkin Transactions 2
+TI  - Nuclear magnetic resonance studies of the conformation of bilirubin and its derivatives in solution
+UR  - http://dx.doi.org/10.1039/P29810001374
+ID  - 9
+ER  - 
+
+TY  - JOUR
+AU  - Kinoshita, Hideki
+AU  - Ngwe, Hla
+AU  - Kobori, Kazuhiro
+AU  - Inomata, Katsuhiko
+DO  - 10.1246/cl.1993.1441
+IS  - 8
+PY  - 1993
+SP  - 1441-1442
+ST  - A New and Convenient Wittig-type Reaction for the Preparation of Pyrromethenone Derivative
+T2  - Chemistry Letters
+TI  - A New and Convenient Wittig-type Reaction for the Preparation of Pyrromethenone Derivative
+VL  - 22
+ID  - 35
+ER  - 
+
+TY  - BOOK
+AU  - Klán, Petr
+AU  - Wirz, Jakob
+CY  - Chichester
+DB  - /z-wcorg/
+DP  - http://worldcat.org
+LA  - English
+PB  - Wiley
+PY  - 2011
+SN  - 9781282013261 1282013262 9781444300000 1444300008
+ST  - Photochemistry of Organic Compounds
+TI  - Photochemistry of Organic Compounds
+ID  - 61
+ER  - 
+
+TY  - JOUR
+AU  - Kohori, Kazuhiro
+AU  - Hashimoto, Masami
+AU  - Kinoshita, Hideki
+AU  - Inomata, Katsuhiko
+DO  - 10.1246/bcsj.67.3088
+IS  - 11
+PY  - 1994
+SP  - 3088-3093
+ST  - A Novel Synthesis of C/D-Rings Component of Phytochromobilin Dimethyl Ester
+T2  - Bulletin of the Chemical Society of Japan
+TI  - A Novel Synthesis of C/D-Rings Component of Phytochromobilin Dimethyl Ester
+VL  - 67
+ID  - 38
+ER  - 
+
+TY  - JOUR
+AD  - Univ Munich,Inst Bot,D-8000 Munich 19,Fed Rep Ger
+Tech Univ Munich,Inst Phys & Theoret Chem,D-8046 Garching,Fed Rep Ger
+AN  - WOS:A1982PT05800016
+AU  - Kufer, W.
+AU  - Cmiel, E.
+AU  - Thummler, F.
+AU  - Rudiger, W.
+AU  - Schneider, S.
+AU  - Scheer, H.
+DO  - DOI 10.1111/j.1751-1097.1982.tb04423.x
+IS  - 5
+J2  - Photochem Photobiol
+LA  - English
+N1  - Pt058
+Times Cited:18
+Cited References Count:32
+PY  - 1982
+SN  - 0031-8655
+SP  - 603-607
+ST  - Studies on Plant Bile-Pigments .2. Regioselective Photochemical and Acid-Catalyzed Z,E Isomerization of Dihydrobilindione as Phytochrome Model
+T2  - Photochemistry and Photobiology
+TI  - Studies on Plant Bile-Pigments .2. Regioselective Photochemical and Acid-Catalyzed Z,E Isomerization of Dihydrobilindione as Phytochrome Model
+UR  - <Go to ISI>://WOS:A1982PT05800016
+VL  - 36
+ID  - 12
+ER  - 
+
+TY  - JOUR
+AD  - Univ Nevada,Dept Chem,Reno,Nv 89557
+Max Planck Inst Strahlenchem,D-4330 Mulheim,Fed Rep Ger
+AN  - WOS:A1983QG04700003
+AU  - Lamola, A. A.
+AU  - Braslavsky, S. E.
+AU  - Schaffner, K.
+AU  - Lightner, D. A.
+DO  - DOI 10.1111/j.1751-1097.1983.tb04471.x
+IS  - 3
+J2  - Photochem Photobiol
+LA  - English
+N1  - Qg047
+Times Cited:39
+Cited References Count:34
+PY  - 1983
+SN  - 0031-8655
+SP  - 263-270
+ST  - Spectral Study of the Photochemistry of Dipyrrole Models for Bilirubin Bound to Human-Serum Albumin
+T2  - Photochemistry and Photobiology
+TI  - Spectral Study of the Photochemistry of Dipyrrole Models for Bilirubin Bound to Human-Serum Albumin
+UR  - <Go to ISI>://WOS:A1983QG04700003
+VL  - 37
+ID  - 16
+ER  - 
+
+TY  - JOUR
+AD  - Univ Calif San Francisco,Dept Chem,San Francisco,Ca 94143
+Univ Calif San Francisco,Ctr Liver,San Francisco,Ca 94143
+Univ Nevada,Ctr Adv Study,Reno,Nv 89557
+AN  - WOS:A1984AAE2600003
+AU  - Lightner, D. A.
+AU  - Mcdonagh, A. F.
+DO  - DOI 10.1021/ar00108a002
+IS  - 12
+J2  - Accounts Chem Res
+LA  - English
+N1  - Aae26
+Times Cited:187
+Cited References Count:53
+PY  - 1984
+SN  - 0001-4842
+SP  - 417-424
+ST  - Molecular Mechanisms of Phototherapy for Neonatal Jaundice
+T2  - Accounts of Chemical Research
+TI  - Molecular Mechanisms of Phototherapy for Neonatal Jaundice
+UR  - <Go to ISI>://WOS:A1984AAE2600003
+VL  - 17
+ID  - 19
+ER  - 
+
+TY  - JOUR
+AD  - Univ Nevada,Dept Chem,Reno,Nv 89557
+AN  - WOS:A1977DG78500011
+AU  - Lightner, D. A.
+AU  - Park, Y. T.
+DO  - DOI 10.1002/jhet.5570140311
+IS  - 3
+J2  - J Heterocyclic Chem
+LA  - English
+N1  - Dg785
+Times Cited:29
+Cited References Count:22
+PY  - 1977
+SN  - 0022-152x
+SP  - 415-422
+ST  - Synthesis, Photooxidation and Z Reversible E Photoisomerization of Benzalpyrrolinones
+T2  - Journal of Heterocyclic Chemistry
+TI  - Synthesis, Photooxidation and Z Reversible E Photoisomerization of Benzalpyrrolinones
+UR  - <Go to ISI>://WOS:A1977DG78500011
+VL  - 14
+ID  - 4
+ER  - 
+
+TY  - JOUR
+AB  - Weakly fluorescing (phi-F congruent-to 10(-4), hexane) dipyrrinone analogs of bilirubin, methyl xanthobilirubinate and kryptopyrromethenone, exhibit intense room temperature fluorescence (phi-F congruent-to 0.85, cyclohexane) after conversion to their N-10-N-11 methano-bridged derivatives 1 and 2.
+AD  - Univ Nevada,Dept Chem,Reno,Nv 89557
+Chinese Acad Sci,Inst Photog Chem,Beijing,Peoples R China
+AN  - WOS:A1991FJ58500003
+AU  - Ma, J. S.
+AU  - Lightner, D. A.
+DA  - Jun 3
+DO  - Doi 10.1016/S0040-4020(01)80898-X
+IS  - 23
+J2  - Tetrahedron
+KW  - human-serum albumin
+bile-pigments
+iv-gamma
+bilirubin
+models
+LA  - English
+N1  - Fj585
+Times Cited:9
+Cited References Count:19
+PY  - 1991
+SN  - 0040-4020
+SP  - 3719-3726
+ST  - Restricted Bond Rotation and Fluorescence Following Photoexcitation of Dipyrrinones
+T2  - Tetrahedron
+TI  - Restricted Bond Rotation and Fluorescence Following Photoexcitation of Dipyrrinones
+UR  - <Go to ISI>://WOS:A1991FJ58500003
+VL  - 47
+ID  - 30
+ER  - 
+
+TY  - JOUR
+AB  - A male infant weighing 3400 g was born at 37 weeks' gestation after an uncomplicated pregnancy. The mother is a 24-year-old primipara who has type A Rh-positive blood. The infant's course in the hospital nursery was uncomplicated. Although his mother needed considerable help in establishing effective breast-feeding, he was exclusively breast-fed. Jaundice was noted at the age of 34 hours. The total serum bilirubin level was 7.5 mg per deciliter (128 mu mol per liter). The infant was discharged at the age of 40 hours and is seen in the pediatrician's office 2 days later, now with marked jaundice. The results of his physical examination are otherwise normal, but his weight, at 3020 g, is 11% below his birth weight. His total serum bilirubin level is 19.5 mg per deciliter (333 mu mol per liter), and his conjugated (direct) bilirubin level 0.6 mg per deciliter (10 mu mol per liter). The complete blood count and peripheral-blood smear are normal. The infant has type A Rh-positive blood. The pediatrician consults a neonatologist regarding the need for phototherapy.
+AD  - William Beaumont Hosp, Dept Pediat, Royal Oak, MI 48073 USA
+Univ Calif San Francisco, Dept Med, Div Gastroenterol, San Francisco, CA USA
+AN  - WOS:000253430200007
+AU  - Maisels, M. J.
+AU  - McDonagh, A. F.
+DA  - Feb 28
+DO  - DOI 10.1056/NEJMct0708376
+IS  - 9
+J2  - New Engl J Med
+KW  - blue-light phototherapy
+bronze baby syndrome
+bilirubin levels
+controlled-trial
+hyperbilirubinemia
+risk
+intensity
+infants
+home
+morbidity
+LA  - English
+N1  - 266jd
+Times Cited:238
+Cited References Count:67
+PY  - 2008
+SN  - 0028-4793
+SP  - 920-928
+ST  - Phototherapy for neonatal jaundice
+T2  - New England Journal of Medicine
+TI  - Phototherapy for neonatal jaundice
+UR  - <Go to ISI>://WOS:000253430200007
+VL  - 358
+ID  - 58
+ER  - 
+
+TY  - JOUR
+AB  - A chemometric procedure to deal with spectroscopically monitored processes involving photochemical steps is fully described. The methodology makes it possible to work with reactions that involve several components with unknown ( and eventually overlapping) spectra and provides a tool for the simultaneous determination of both the quantum yields of the reaction and the spectra of all the species present in a multi-step photochemical process. As a benchmark, we apply these ideas to extract the quantum yields of photodetachment of coordinated ligands employing data recorded over the course of the decomposition of [Ru(tpm)(bpy)( CH3CN)](2+) and cis-[Ru(bpy)(2)(CH3CN)(2)](2+) under stationary photolysis conditions. The approach is fast and robust and it is easily implemented in scientific programming languages.
+AD  - Univ Buenos Aires, Fac Ciencias Exactas & Nat, Dept Quim Inorganica Analitica & Quim Fis, Pabellon 2,3er Piso,Ciudad Univ,C1428EHA Ciudad A, Buenos Aires, DF, Argentina
+AN  - WOS:000407765900016
+AU  - Marcolongo, J. P.
+AU  - Schmidt, J.
+AU  - Levin, N.
+AU  - Slep, L. D.
+DA  - Aug 28
+DO  - 10.1039/c7cp03619a
+IS  - 32
+J2  - Phys Chem Chem Phys
+KW  - multiwavelength spectroscopic data
+equilibrium-constants
+ruthenium(ii)
+complexes
+photodelivery
+ferrioxalate
+error
+gaba
+no
+LA  - English
+N1  - Fd8hn
+Times Cited:3
+Cited References Count:37
+PY  - 2017
+SN  - 1463-9076
+SP  - 21373-21381
+ST  - A chemometric approach for determining the reaction quantum yields in consecutive photochemical processes
+T2  - Physical Chemistry Chemical Physics
+TI  - A chemometric approach for determining the reaction quantum yields in consecutive photochemical processes
+UR  - <Go to ISI>://WOS:000407765900016
+VL  - 19
+ID  - 70
+ER  - 
+
+TY  - JOUR
+AB  - Bilinear data matrices may be resolved into abstract factors by factor analysis. The underlying chemical processes that generated the data may be deduced from the abstract factors by hard (model fitting) or soft (model-free) analyses. We propose a novel approach that combines the advantages of both hard and soft methods, in that only a few parameters have to be fitted, but the assumptions made about the system are very general and common to a range of possible models: The true chemical factors span the same space as the abstract factors and may be mapped onto the abstract factors by a transformation matrix T, since they are a linear combination of the abstract factors, The difference between the true factors and any other linear combination of the abstract factors is that the true factors conform to known chemical constraints (for instance, nonnegativity of absorbance spectra or monomodality of chromatographic peaks). Thus, by excluding linear combinations of the abs bract factors that are not physically possible (assuming a unique solution), we can find the true chemical factors. This is achieved by passing the elements of a transformation matrix to a nonlinear optimization routine, to find the best estimate of T that fits the criteria. The optimization routine usually converges to the correct minimum with random starting parameters, but more difficult problems require starting parameters based on some other method, for instance EFA. We call the new method resolving factor analysis (RFA). The use of RFA is demonstrated with computer-generated kinetic and chromatographic data and with real chromatographic (HPLC) data. RFA produces correct solutions with data sets that are refractory to other methods, for instance, data with an embedded nonconstant baseline.
+AD  - Univ Newcastle, Dept Chem, Callaghan, NSW 2308, Australia
+AN  - WOS:000167841900040
+AU  - Mason, C.
+AU  - Maeder, M.
+AU  - Whitson, A.
+DA  - Apr 1
+DO  - DOI 10.1021/ac991141q
+IS  - 7
+J2  - Anal Chem
+KW  - overlapping chromatographic peaks
+evolving factor-analysis
+resolution
+spectra
+LA  - English
+N1  - 417nw
+Times Cited:50
+Cited References Count:18
+PY  - 2001
+SN  - 0003-2700
+SP  - 1587-1594
+ST  - Resolving Factor Analysis
+T2  - Analytical Chemistry
+TI  - Resolving Factor Analysis
+UR  - <Go to ISI>://WOS:000167841900040
+VL  - 73
+ID  - 86
+ER  - 
+
+TY  - BOOK
+AU  - Mauser, H.
+AU  - Gauglitz, G.
+CY  - Amsterdam; New York
+DB  - /z-wcorg/
+DP  - http://worldcat.org
+LA  - English
+PB  - Elsevier
+PY  - 1998
+SN  - 0444825363 9780444825360
+ST  - Photokinetics : theoretical fundamentals and applications
+TI  - Photokinetics : theoretical fundamentals and applications
+ID  - 41
+ER  - 
+
+TY  - JOUR
+AB  - The wavelength-dependent photoisomerizations of the asymmetric bilirubin BR-IX alpha and of the symmetric bilirubin-III alpha (BR-III) and mesobilirubin-XIII alpha (MBR-XIII) bound to human serum albumin (HSA) in aqueous solution were analysed with the help of an exciton coupling model. The modelling was based on the absorption and circular dichroism (CD) spectra (bisignate Cotton effect). Time-dependent density functional theory (TD-DFT) of the free BR-IX molecule suggested the presence of two main bands of exciton coupling character in the blue region of the spectrum, and other weaker bands of charge transfer character at longer wavelengths. These peculiarities were taken into account to fit the photoisomerization quantum yields in the blue-green region as functions of the wavelength, obtaining the bandshape of the exciton coupling bands from the experimental CD spectra. The other excitons were extracted from the decomposition of the band resulting from the difference between the absorption spectrum and the sum (normalized-to-absorption) of the two CD excitons. We expressed photoisomerization quantum yields in terms of the sum of the contributions to photon absorption deriving from all the exciton states normalized to total absorption. For all the reversible photoprocesses of bilirubins and for the irreversible one of BR-IX alpha in HSA (i.e. lumirubin formation), we give reliable mean values of the individual state excitation probabilities and photoisomerization efficiencies in the pigment-protein complex.
+AD  - CNR, EQ, Ist Fis Applicata Nello Carrara, I-50019 Sesto Fiorentino, Italy
+INFM, Sez A, I-50019 Sesto Fiorentino, Italy
+Univ Florence, Dipartimento Fis, I-50019 Sesto Fiorentino, Italy
+Univ Pisa, Dipartimento Chim & Chim Ind, I-56126 Pisa, Italy
+AN  - WOS:000234182700006
+AU  - Mazzoni, M.
+AU  - Agati, G.
+AU  - Pratesi, R.
+AU  - Persico, M.
+DA  - Dec
+DO  - 10.1088/1464-4258/7/12/006
+IS  - 12
+J2  - J Opt a-Pure Appl Op
+KW  - photoisomerization
+circular dichroism
+exciton coupling
+bilirubin complexation
+excited-states
+quantum yields
+absorption
+complexes
+LA  - English
+N1  - 996oe
+Times Cited:3
+Cited References Count:15
+PY  - 2005
+SN  - 1464-4258
+SP  - 742-747
+ST  - A spectroscopic study of the wavelength-dependent photoisomerizations of bilirubins bound to human serum albumin
+T2  - J. Opt. A: Pure Appl. Opt.
+TI  - A spectroscopic study of the wavelength-dependent photoisomerizations of bilirubins bound to human serum albumin
+UR  - <Go to ISI>://WOS:000234182700006
+VL  - 7
+ID  - 53
+ER  - 
+
+TY  - JOUR
+AB  - The absorption spectra of bilirubins were deconvoluted by two Gaussian curves of equal width representing the exciton bands of the non-degenerate molecular system. The two bands were used to study the wavelength dependence of the (4Z, 15Z) --> (4Z, 15E) configurational photoisomerization quantum yield of the bichromophoric bilirubin-IXalpha (BR-IX), the intrinsically asymmetric bile pigment associated with jaundice and the symmetrically substituted bilirubins (bilirubin-IIIalpha and mesobilirubin-XIIIalpha), when they are irradiated in aqueous solution bound to human serum albumin (HSA). The same study was performed for BR-IX in ammoniacal methanol solution (NH4OH/MeOH). The quantum yields of the configurational photoprocesses were fitted with a combination function of the two Gaussian bands normalized to the total absorption, using the proportionality coefficients and a scaling factor as parameters. The decrease of the (4Z, 15Z) --> (4Z, 15E) quantum yield with increasing wavelength, which occurs for wavelengths longer than the most probable Franck-Condon transition of the molecule, did not result in a unique function of the exciton absorptions. In particular we found two ranges corresponding to different exciton interactions with different proportionality coefficients and scaling factors. The wavelength-dependent photoisomerization of bilirubins was described as an abrupt change in quantum yield as soon as the resulting excitation was strongly localized in each chromophore. The change was correlated to a variation of the interaction between the two chromophores when the short-wavelength exciton absorption became vanishingly small. With the help of the circular dichroism (CD) spectrum of BR-IX in HSA, a small band was resolved in the bilirubin absorption spectrum, delivering part of the energy required for the (4Z, 15Z) --> (4Z, 15E) photoisomerization of the molecule.
+AD  - CNR, Ist Fis Applicata Nello Carrara, I-50127 Florence, Italy
+Univ Florence, Dipartimento Fis, Sez A, INFM, I-50125 Florence, Italy
+Monash Univ, Sch Phys & Mat Engn, Clayton, Vic 3800, Australia
+Univ Florence, Dipartimento Fis, I-50125 Florence, Italy
+AN  - WOS:000185764600063
+AU  - Mazzoni, M.
+AU  - Agati, G.
+AU  - Troup, G. J.
+AU  - Pratesi, R.
+DA  - Sep
+DO  - Pii S1464-4258(03)56781-2
+Doi 10.1088/1464-4258/5/5/395
+IS  - 5
+J2  - J Opt a-Pure Appl Op
+KW  - photoisomerization
+circular dichroism
+exciton coupling
+bilirubins
+human-serum-albumin
+circular-dichroism
+photochemistry
+model
+bacteriorhodopsin
+isomerization
+spectroscopy
+complexes
+binding
+LA  - English
+N1  - 729gj
+Times Cited:11
+Cited References Count:26
+PY  - 2003
+SN  - 1464-4258
+SP  - S374-S380
+ST  - Analysis of wavelength-dependent photoisomerization quantum yields in bilirubins by fitting two exciton absorption bands
+T2  - J. Opt. A: Pure Appl. Opt.
+TI  - Analysis of wavelength-dependent photoisomerization quantum yields in bilirubins by fitting two exciton absorption bands
+UR  - <Go to ISI>://WOS:000185764600063
+VL  - 5
+ID  - 48
+ER  - 
+
+TY  - JOUR
+AB  - The quantum yield for laser photocyclization of bilirubin to lumirubin in the presence of human serum albumin (phi LR) was measured at five monochromatic excitation wavelengths in the range 450-530 nm. Solutions used were optically thin throughout the wavelength range and precautions were taken to exclude contributions from photocyclization of bilirubin XIII alpha impurities. The values obtained (7.2-18 x 10(-4] were lower than those previously reported and showed the following wavelength dependence: 457.9 less than 488.0 less than 501.7 less than 514.5 approximately equal to 528.7. However, the rate of lumirubin formation, normalized to constant fluence, decreased with wavelength over the same wavelength range and no evidence was found that photoisomerization of bilirubin to lumirubin is faster with green (514.5 or 528.7 nm) than with blue (457.9 or 488.0 nm) light. The stereoselectivity of the configurational isomerization of bilirubin to 4Z,15E and 4E,15Z isomers also was studied. This reaction became less regioselective for the 4Z,15E isomer with increasing wavelength. The observed wavelength dependence of phi LR and of the [4E,15Z]: [4Z,15E] ratio at photoequilibrium are consistent with an exciton coupling model in which intramolecular energy transfer can occur between the two pyrromethenone chromophores of the bilirubin molecule in the excited state. Relative rates of lumirubin formation in vivo at different excitation wavelengths and constant fluence were estimated for different optical thicknesses and for different skin thicknesses. These estimates suggest that the recently reported clinical equivalence of blue and green phototherapy lights probably reflects the marked variation of skin transmittance with wavelength more than wavelength-dependent photochemistry. The calculations also indicated that the optimal wavelength for phototherapy is probably on the long wavelength side of the bilirubin absorption maximum.
+AN  - 2780821
+AU  - McDonagh, A. F.
+AU  - Agati, G.
+AU  - Fusi, F.
+AU  - Pratesi, R.
+DA  - Sep
+DO  - 10.1111/j.1751-1097.1989.tb04164.x
+ET  - 1989/09/01
+IS  - 3
+KW  - Bilirubin/*radiation effects
+Humans
+In Vitro Techniques
+Lasers
+Photochemistry
+Serum Albumin
+Skin Physiological Phenomena
+N1  - McDonagh, A F
+Agati, G
+Fusi, F
+Pratesi, R
+eng
+DK26307/DK/NIDDK NIH HHS/
+DK26743/DK/NIDDK NIH HHS/
+HD20551/HD/NICHD NIH HHS/
+Research Support, Non-U.S. Gov't
+Research Support, U.S. Gov't, P.H.S.
+Photochem Photobiol. 1989 Sep;50(3):305-19. doi: 10.1111/j.1751-1097.1989.tb04164.x.
+PY  - 1989
+SN  - 0031-8655 (Print)
+0031-8655 (Linking)
+SP  - 305-19
+ST  - Quantum yields for laser photocyclization of bilirubin in the presence of human serum albumin. Dependence of quantum yield on excitation wavelength
+T2  - Photochemistry and Photobiology
+TI  - Quantum yields for laser photocyclization of bilirubin in the presence of human serum albumin. Dependence of quantum yield on excitation wavelength
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/2780821
+VL  - 50
+ID  - 27
+ER  - 
+
+TY  - JOUR
+AB  - Quantum yields for Z reversible arrow E photoisomerization of the natural bi-chromophore bilirubin IX alpha in ammoniacal methanol solution were found to vary with excitation wavelength, whereas no variation (within experimental error) was observed for xanthobilirubic acid and for symmetrically substituted bilirubins (bilirubin III alpha, bilirubin XIII alpha, and mesobilirubin XIII alpha) in the same solvent. The quantum yield for Z reversible arrow?E photoisomerization of xanthobilirubic acid bound to human serum albumin was also invariant with excitation wavelength. In contrast, quantum yields for Z reversible arrow E photoisomerization of the symmetrically-substituted bilirubins did show marked excitation wavelength dependency when they were bound to human serum albumin. These results show that quantum yields for Z reversible arrow E photoisomerization of bilirubins are markedly sensitive to protein binding and to the nature of pyrrole ring beta-substituents. They also demonstrate that wavelength-dependent photochemistry is characteristic of bilirubins with non-identical pyrromethenone chromophores, as expected from exciton coupling theory, and that complexation with albumin induces wavelength-dependent photochemistry in symmetrically substituted bilirubins.
+AD  - Univ Calif San Francisco, Div Gastroenterol, San Francisco, CA 94143 USA
+CNR, INFM, Ist Elettron Quantist, Sez Firenze, I-50127 Florence, Italy
+Univ Nevada, Dept Chem, Reno, NV 89557 USA
+AN  - WOS:000074834400011
+AU  - McDonagh, A. F.
+AU  - Agati, G.
+AU  - Lightner, D. A.
+DA  - Jun-Jul
+DO  - Doi 10.1007/Pl00013473
+IS  - 6-7
+J2  - Monatsh Chem
+KW  - bile pigments
+exciton coupling
+human serum albumin
+phototherapy
+pyrromethenone
+time-resolved observation
+exocyclic double-bonds
+bile-pigments
+anaerobic photochemistry
+conformational-analysis
+neonatal jaundice
+pyrrole pigments
+quantum yields
+photoisomerization
+phototherapy
+LA  - English
+N1  - 100uu
+Times Cited:19
+Cited References Count:33
+PY  - 1998
+SN  - 0026-9247
+SP  - 649-660
+ST  - Induction of wavelength-dependent photochemistry in bilirubins by serum albumin
+T2  - Monatshefte fuer Chemie
+TI  - Induction of wavelength-dependent photochemistry in bilirubins by serum albumin
+UR  - <Go to ISI>://WOS:000074834400011
+VL  - 129
+ID  - 42
+ER  - 
+
+TY  - JOUR
+AN  - 4659001
+AU  - McDonagh, A. F.
+AU  - Assisi, F.
+C2  - PMC1174183
+DA  - Sep
+DO  - 10.1042/bj1290797
+ET  - 1972/09/01
+IS  - 3
+KW  - *Bilirubin
+Buffers
+*Chemistry, Organic
+Chloroform
+Hydrogen-Ion Concentration
+Isomerism
+Organic Chemistry Phenomena
+Solutions
+Spectrophotometry
+Water
+N1  - McDonagh, A F
+Assisi, F
+eng
+England
+Biochem J. 1972 Sep;129(3):797-800. doi: 10.1042/bj1290797.
+PY  - 1972
+SN  - 0264-6021 (Print)
+0264-6021 (Linking)
+SP  - 797-800
+ST  - The ready isomerization of bilirubin IX- in aqueous solution
+T2  - Biochemical Journal
+TI  - The ready isomerization of bilirubin IX- in aqueous solution
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/4659001
+VL  - 129
+ID  - 1
+ER  - 
+
+TY  - JOUR
+AB  - Blue light converts bilirubin in the skin of jaundiced rats to metastable geometric isomers that are transported in blood and excreted in bile. The same reaction probably occurs in jaundiced babies exposed to light, particularly during treatment with phototherapy. Excretion of unisomerized bilirubin is prevented by intramolecular hydrogen bonding, and the pigment has to be metabolized to more polar derivatives to be excreted efficiently.
+AN  - 7361112
+AU  - McDonagh, A. F.
+AU  - Palma, L. A.
+AU  - Lightner, D. A.
+DA  - Apr 11
+DO  - 10.1126/science.7361112
+ET  - 1980/04/11
+IS  - 4440
+KW  - Animals
+Bile/analysis
+Bilirubin/*blood/metabolism
+Humans
+Infant, Newborn
+Jaundice, Neonatal/therapy
+Liver/metabolism
+Models, Biological
+Molecular Conformation
+*Phototherapy
+Rats
+Skin/*radiation effects
+Spectrophotometry
+Stereoisomerism
+N1  - McDonagh, A F
+Palma, L A
+Lightner, D A
+eng
+Research Support, U.S. Gov't, P.H.S.
+Science. 1980 Apr 11;208(4440):145-51. doi: 10.1126/science.7361112.
+PY  - 1980
+SN  - 0036-8075 (Print)
+0036-8075 (Linking)
+SP  - 145-51
+ST  - Blue light and bilirubin excretion
+T2  - Science
+TI  - Blue light and bilirubin excretion
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/7361112
+VL  - 208
+ID  - 6
+ER  - 
+
+TY  - JOUR
+AD  - Univ Calif San Francisco,Ctr Liver,San Francisco,Ca 94143
+Univ Nevada,Dept Chem,Reno,Nv 89557
+AN  - WOS:A1982PT03000104
+AU  - Mcdonagh, A. F.
+AU  - Palma, L. A.
+AU  - Lightner, D. A.
+DO  - DOI 10.1021/ja00388a104
+IS  - 24
+J2  - J Am Chem Soc
+LA  - English
+N1  - Pt030
+Times Cited:108
+Cited References Count:11
+PY  - 1982
+SN  - 0002-7863
+SP  - 6867-6869
+ST  - Phototherapy for Neonatal Jaundice - Stereospecific and Regioselective Photo-Isomerization of Bilirubin Bound to Human-Serum Albumin and Nmr Characterization of Intramolecularly Cyclized Photoproducts
+T2  - Journal of the American Chemical Society
+TI  - Phototherapy for Neonatal Jaundice - Stereospecific and Regioselective Photo-Isomerization of Bilirubin Bound to Human-Serum Albumin and Nmr Characterization of Intramolecularly Cyclized Photoproducts
+UR  - <Go to ISI>://WOS:A1982PT03000104
+VL  - 104
+ID  - 13
+ER  - 
+
+TY  - JOUR
+AB  - Background: Correct aqueous pKa values of unconjugated bilirubin (UCB), a poorly-soluble, unstable substance, are essential for understanding its functions. Our prior solvent partition studies, of unlabeled and [C-14] UCB, indicated pKa values above 8.0. These high values were attributed to effects of internal H-bonding in UCB. Many earlier and subsequent studies have reported lower pKa values, some even below 5.0, which are often used to describe the behavior of UCB. We here review 18 published studies that assessed aqueous pKa values of UCB, critically evaluating their methodologies in relation to essential preconditions for valid pKa measurements (short-duration experiments with purified UCB below saturation and accounting for self-association of UCB).
+Results: These re-assessments identified major deficiencies that invalidate the results of all but our partition studies. New theoretical modeling of UCB titrations shows remarkable, unexpected effects of self-association, yielding falsely low pKa estimates, and provides some rationalization of the titration anomalies. The titration behavior reported for a soluble thioether conjugate of UCB at high aqueous concentrations is shown to be highly anomalous. Theoretical re-interpretations of data in DMSO and dimethylformamide show that those indirectly-derived aqueous pKa values are unacceptable, and indicate new, high average pKa values for UCB in non-aqueous media (>11 in DMSO and, probably, >10 in dimethylformamide).
+Conclusions: No reliable aqueous pKa values of UCB are available for comparison with our partition-derived results. A companion paper shows that only the high pKa values can explain the pH-dependence of UCB binding to phospholipids, cyclodextrins, and alkyl-glycoside and bile salt micelles.
+AD  - Univ Washington, Dept Med, GI Hepatol Div, Sch Med, Seattle, WA 98195 USA
+Univ Wisconsin, Sch Pharm, Madison, WI 53705 USA
+AN  - WOS:000277433600001
+AU  - Mukerjee, P.
+AU  - Ostrow, J. D.
+DA  - Mar 29
+DO  - Artn 15
+10.1186/1471-2091-11-15
+J2  - Bmc Biochem
+KW  - acid dissociation-constants
+unconjugated bilirubin
+self-association
+aqueous-solution
+dimethyl-sulfoxide
+c-13 nmr
+solvent partition
+carboxylic-acids
+methylene blue
+organic-acids
+LA  - English
+N1  - 593dw
+Times Cited:7
+Cited References Count:64
+PY  - 2010
+SN  - 1471-2091
+ST  - Review: Bilirubin pKa studies; new models and theories indicate high pKa values in water, dimethylformamide and DMSO
+T2  - Bmc Biochemistry
+TI  - Review: Bilirubin pKa studies; new models and theories indicate high pKa values in water, dimethylformamide and DMSO
+UR  - <Go to ISI>://WOS:000277433600001
+VL  - 11
+ID  - 60
+ER  - 
+
+TY  - COMP
+AU  - Newville, Matt
+AU  - Otten, Renee
+AU  - Nelson, Andrew
+AU  - Ingargiola, Antonino
+AU  - Stensitzki, Till
+AU  - Allan, Dan
+AU  - Fox, Austin
+AU  - Carter, Faustin
+AU  - Michał
+AU  - Pustakhod, Dima
+AU  - Ram, Yoav
+AU  - Glenn
+AU  - Deil, Christoph
+AU  - Stuermer
+AU  - Beelen, Alexandre
+AU  - Frost, Oliver
+AU  - Zobrist, Nicholas
+AU  - Pasquevich, Gustavo
+AU  - Hansen, Allan L. R.
+AU  - Spillane, Tim
+AU  - Caldwell, Shane
+AU  - Polloreno, Anthony
+AU  - andrewhannum
+AU  - Zimmermann, Julius
+AU  - Borreguero, Jose
+AU  - Fraine, Jonathan
+AU  - deep, thought
+AU  - Maier, Benjamin F.
+AU  - Gamari, Ben
+AU  - Almarza, Anthony
+DO  - 10.5281/zenodo.3588521
+PB  - Zenodo
+PY  - 2019
+ST  - LMFIT: Non-Linear Least-Square Minimization and Curve-Fitting for Python
+TI  - LMFIT: Non-Linear Least-Square Minimization and Curve-Fitting for Python
+UR  - https://doi.org/10.5281/zenodo.3588521
+ID  - 76
+ER  - 
+
+TY  - JOUR
+AB  - Methyl xanthobilirubinate (1) and methyl neoxanthobilirubinate (2) self associate, as seen by 2D-NOE NMR, to form hydrogen-bonded dimers in CDCl3. Association constants K(A) = 25,000 (1) and 12,000 M-1 (2) at 22-degrees-C are derived from analysis of concentration-dependent N-H chemical shifts.
+AD  - Chinese Acad Sci,Inst Photograph Chem,Beijing,Peoples R China
+AN  - WOS:A1993KT35800002
+AU  - Nogales, D. F.
+AU  - Ma, J. S.
+AU  - Lightner, D. A.
+DA  - Mar 19
+DO  - Doi 10.1016/S0040-4020(01)86316-X
+IS  - 12
+J2  - Tetrahedron
+KW  - nuclear magnetic-resonance
+xanthobilirubic acid
+bile-pigments
+bilirubin
+mesobilirubin
+phototherapy
+spectroscopy
+conformation
+jaundice
+amides
+LA  - English
+N1  - Kt358
+Times Cited:66
+Cited References Count:18
+PY  - 1993
+SN  - 0040-4020
+SP  - 2361-2372
+ST  - Self-Association of Dipyrrinones Observed by 2d-Noe Nmr and Dimerization Constants Calculated from H-1-Nmr Chemical-Shifts
+T2  - Tetrahedron
+TI  - Self-Association of Dipyrrinones Observed by 2d-Noe Nmr and Dimerization Constants Calculated from H-1-Nmr Chemical-Shifts
+UR  - <Go to ISI>://WOS:A1993KT35800002
+VL  - 49
+ID  - 36
+ER  - 
+
+TY  - JOUR
+AN  - WOS:A1986C420400003
+AU  - Onishi, S.
+AU  - Itoh, S.
+AU  - Isobe, K.
+DA  - May 15
+DO  - DOI 10.1042/bj2360023
+IS  - 1
+J2  - Biochem J
+LA  - English
+N1  - C4204
+Times Cited:41
+Cited References Count:38
+PY  - 1986
+SN  - 0264-6021
+SP  - 23-29
+ST  - Wavelength-Dependence of the Relative Rate Constants for the Main Geometric and Structural Photoisomerization of Bilirubin Ix-Alpha Bound to Human-Serum Albumin - Demonstration of Green Light at 510 Nm as the Most Effective Wavelength in Photochemical Changes from (Zz)-Bilirubin Ix-Alpha to (Ez)-Cyclobilirubin Ix-Alpha Via (Ez)-Bilirubins
+T2  - Biochemical Journal
+TI  - Wavelength-Dependence of the Relative Rate Constants for the Main Geometric and Structural Photoisomerization of Bilirubin Ix-Alpha Bound to Human-Serum Albumin - Demonstration of Green Light at 510 Nm as the Most Effective Wavelength in Photochemical Changes from (Zz)-Bilirubin Ix-Alpha to (Ez)-Cyclobilirubin Ix-Alpha Via (Ez)-Bilirubins
+UR  - <Go to ISI>://WOS:A1986C420400003
+VL  - 236
+ID  - 20
+ER  - 
+
+TY  - JOUR
+AN  - WOS:A1981LG46900006
+AU  - Onkenhout, W.
+AU  - Vankoeveringe, J. A.
+AU  - Lugtenburg, J.
+IS  - 3
+J2  - Recl Trav Chim Pay B
+LA  - English
+N1  - Lg469
+Times Cited:17
+Cited References Count:8
+PY  - 1981
+SN  - 0165-0513
+SP  - 106-109
+ST  - 2,2'-Pyrromethene-5[1h]-One, Its 1-Dimethyl and 1'-Mono-Dimethyl and 1,1'-Dimethyl Homologs - Synthesis, Thermal and Photochemical Reactivity
+T2  - Rec. Trav. Chim.
+TI  - 2,2'-Pyrromethene-5[1h]-One, Its 1-Dimethyl and 1'-Mono-Dimethyl and 1,1'-Dimethyl Homologs - Synthesis, Thermal and Photochemical Reactivity
+UR  - <Go to ISI>://WOS:A1981LG46900006
+VL  - 100
+ID  - 10
+ER  - 
+
+TY  - BOOK
+AB  - Resolving Spectral Mixtures: With Applications from Ultrafast Time-Resolved Spectroscopy to Super-resolution Imaging, Volume 30 in the Data Handling in Science and Technology Series, offers a comprehensive look into the most important models and frameworks essential to resolving the spectral unmixing problem in chemistry. This issue remains a hot issue in chemometrics, statistics and image processing. However, the diversity of disciplines and methods (multivariate curve resolution, mixture analysis, blind source separation, linear unmixing…) can be a serious impediment to wider understanding and dissemination of the spectral mixture problem. By taking a multi-angle and cross-disciplinary approach, this book provides a comprehensive and comprehensible description of the current state-of-the-art. The book is multi-authored, written as a collection of independent chapters. Basic concepts and main methods are presented in the first part of the book whereas the second part is more oriented towards applications in chemistry and remote sensing. Some chapters are written as tutorials, others are reviews. Expressed altogether, these chapters translate into a real interplay enabling the reader to understand the issues discussed and to enrich its own perspective.
+AU  - Ruckebusch, Cyril
+CY  - Elsevier
+PY  - 2016
+SN  - 9780444636386
+ST  - Resolving spectral mixtures
+TI  - Resolving spectral mixtures
+ID  - 67
+ER  - 
+
+TY  - JOUR
+AB  - A newly synthesized dipyrrinone derivative bearing an ethoxycarbonyl group at the pyrrolic-alpha position exhibited solvent-dependent dual-mode photochromism between T- and P-types. While this molecule underwent thermally reversible (T-type) photoresponsive reaction in chloroform, it became a thermally irreversible (P-type) system in methanol.
+AD  - Graduate School of Natural Science and Technology, Kanazawa University, Kakuma-machi, Kanazawa 920-1192, Japan. sakata@se.kanazawa-u.ac.jp.
+Department of Chemistry, Graduate School of Science, Kobe University, 1-1, Rokkodai-Cho, Nada-ku Kobe 657-8501, Japan.
+AN  - 26615770
+AU  - Sakata, Y.
+AU  - Fukushima, S.
+AU  - Akine, S.
+AU  - Setsune, J.
+DA  - Jan 21
+DO  - 10.1039/c5cc07625k
+ET  - 2015/12/01
+IS  - 6
+N1  - Sakata, Yoko
+Fukushima, Satomi
+Akine, Shigehisa
+Setsune, Jun-ichiro
+eng
+Research Support, Non-U.S. Gov't
+England
+Chem Commun (Camb). 2016 Jan 21;52(6):1278-81. doi: 10.1039/c5cc07625k.
+PY  - 2016
+SN  - 1364-548X (Electronic)
+1359-7345 (Linking)
+SP  - 1278-81
+ST  - Solvent-dependent dual-mode photochromism between T- and P-types in a dipyrrinone derivative
+T2  - Chemical Communications
+TI  - Solvent-dependent dual-mode photochromism between T- and P-types in a dipyrrinone derivative
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/26615770
+VL  - 52
+ID  - 68
+ER  - 
+
+TY  - JOUR
+AB  - Multivariate curve resolution (MCR) helps to uncover the spectra and concentration profiles of the pure components from sequences of spectra measured at a chemical reaction system. However, the underlying matrix factorization problem has often multiple solutions. This fact is known under the keyword rotational ambiguity and explains why different MCR methods can provide different decompositions for the same data. Kinetic reaction models can be used in order to constrain the feasible concentration profiles. This reduces the rotational ambiguity. Especially in the case that a first-order reaction model is assumed, the remaining ambiguity can be described completely analytically.
+A hard-model based MCR method is used for the simultaneous analysis of multiple data sets. The method is tested for a reversible two-step photokinetic model. The kinetic model cannot enforce a single, unique solution. Instead the remaining ambiguity is fully investigated. The practical benefit of the method is demonstrated for an experimental UV/Vis data set of a photoinduced isomerization.
+AD  - Univ Rostock, Inst Math, D-18057 Rostock, Germany
+Leibniz Inst Katalyse, D-18059 Rostock, Germany
+Univ Lille, CNRS, UMR 8516, LASIR Lab Spectrochim Infrarouge & Raman, F-59000 Lille, France
+Univ Paris Saclay, CNRS, ENS Cachan, PPSM, F-94235 Cachan, France
+AN  - WOS:000472240800009
+AU  - Schroder, H.
+AU  - Ruckebusch, C.
+AU  - Devos, O.
+AU  - Metivier, R.
+AU  - Sawall, M.
+AU  - Meinhardt, D.
+AU  - Neymeyr, K.
+DA  - Jun 15
+DO  - 10.1016/j.chemolab.2019.03.013
+J2  - Chemometr Intell Lab
+KW  - multivariate curve resolution
+kinetic modeling
+ambiguity of kinetic parameters
+multiset analysis
+multivariate curve resolution
+feasible solutions
+least-squares
+algorithm
+kinetics
+hard
+LA  - English
+N1  - Ie2uv
+Times Cited:0
+Cited References Count:27
+PY  - 2019
+SN  - 0169-7439
+SP  - 88-95
+ST  - Analysis of the ambiguity in the determination of quantum yields from spectral data on a photoinduced isomerization
+T2  - Chemom. Intell. Lab. Syst.
+TI  - Analysis of the ambiguity in the determination of quantum yields from spectral data on a photoinduced isomerization
+UR  - <Go to ISI>://WOS:000472240800009
+VL  - 189
+ID  - 77
+ER  - 
+
+TY  - JOUR
+AB  - Bilirubin, the end product of heme catabolism in mammals, is generally regarded as a potentially cytotoxic, lipid-soluble waste product that needs to be excreted. However, it is here that bilirubin, at micromolar concentrations in vitro, efficiently scavenges peroxyl radicals generated chemically in either homogeneous solution or multilamellar liposomes. The antioxidant activity of bilirubin increases as the experimental concentration of oxygen is decreased from 20% (that of normal air) to 2% (physiologically relevant concentration). Furthermore, under 2% oxygen, in liposomes, bilirubin suppresses the oxidation more than alpha-tocopherol, which is regarded as the best antioxidant of lipid peroxidation. The data support the idea of a "beneficial" role for bilirubin as a physiological, chain-breaking antioxidant.
+AN  - 3029864
+AU  - Stocker, R.
+AU  - Yamamoto, Y.
+AU  - McDonagh, A. F.
+AU  - Glazer, A. N.
+AU  - Ames, B. N.
+DA  - Feb 27
+DO  - 10.1126/science.3029864
+ET  - 1987/02/27
+IS  - 4792
+KW  - Animals
+Antioxidants
+Bilirubin/*physiology
+Biliverdine/metabolism
+Carotenoids/pharmacology
+Free Radicals
+Humans
+Hydrogen Peroxide
+Linoleic Acid
+Linoleic Acids/metabolism
+Liposomes/metabolism
+Oxidation-Reduction
+Oxygen/pharmacology
+Photochemistry
+Superoxides
+Vitamin E/pharmacology
+beta Carotene
+N1  - Stocker, R
+Yamamoto, Y
+McDonagh, A F
+Glazer, A N
+Ames, B N
+eng
+AM 26307/AM/NIADDK NIH HHS/
+CA 39910/CA/NCI NIH HHS/
+ES 01896/ES/NIEHS NIH HHS/
+etc.
+Comparative Study
+Research Support, Non-U.S. Gov't
+Research Support, U.S. Gov't, Non-P.H.S.
+Research Support, U.S. Gov't, P.H.S.
+Science. 1987 Feb 27;235(4792):1043-6. doi: 10.1126/science.3029864.
+PY  - 1987
+SN  - 0036-8075 (Print)
+0036-8075 (Linking)
+SP  - 1043-6
+ST  - Bilirubin is an antioxidant of possible physiological importance
+T2  - Science
+TI  - Bilirubin is an antioxidant of possible physiological importance
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/3029864
+VL  - 235
+ID  - 25
+ER  - 
+
+TY  - JOUR
+AD  - Univ London Queen Mary Coll,Dept Chem,London E1 4ns,England
+Clin Res Ctr,Div Clin Chem,Harrow Ha1 3uj,Middlesex,England
+AN  - WOS:A1982MX90900022
+AU  - Stoll, M. S.
+AU  - Vicker, N.
+AU  - Gray, C. H.
+AU  - Bonnett, R.
+DO  - DOI 10.1042/bj2010179
+IS  - 1
+J2  - Biochem J
+LA  - English
+N1  - Mx909
+Times Cited:39
+Cited References Count:31
+PY  - 1982
+SN  - 0264-6021
+SP  - 179-188
+ST  - Concerning the Structure of Photobilirubin-Ii
+T2  - Biochemical Journal
+TI  - Concerning the Structure of Photobilirubin-Ii
+UR  - <Go to ISI>://WOS:A1982MX90900022
+VL  - 201
+ID  - 14
+ER  - 
+
+TY  - JOUR
+AB  - The cycloreversion quantum yields of compounds 1b and 2b increased upon irradiation with light at shorter wavelengths. The irradiation wavelength dependence is ascribed to the energy barrier on the 2A potential energy surface in the excited electronic state.
+AD  - Rikkyo Univ, Dept Chem, Toshima Ku, Tokyo 1718501, Japan
+Rikkyo Univ, Res Ctr Smart Mol, Toshima Ku, Tokyo 1718501, Japan
+AN  - WOS:000333122300007
+AU  - Sumi, T.
+AU  - Takagi, Y.
+AU  - Yagi, A.
+AU  - Morimoto, M.
+AU  - Irie, M.
+DO  - 10.1039/c4cc00396a
+IS  - 30
+J2  - Chem Commun
+KW  - irreversible photochromic systems
+reaction-path
+reversible photocyclization
+reaction dynamics
+single-crystals
+dithienylethenes
+derivatives
+switches
+model
+LA  - English
+N1  - Ad3ey
+Times Cited:50
+Cited References Count:25
+PY  - 2014
+SN  - 1359-7345
+SP  - 3928-3930
+ST  - Photoirradiation wavelength dependence of cycloreversion quantum yields of diarylethenes
+T2  - Chemical Communications
+TI  - Photoirradiation wavelength dependence of cycloreversion quantum yields of diarylethenes
+UR  - <Go to ISI>://WOS:000333122300007
+VL  - 50
+ID  - 64
+ER  - 
+
+TY  - JOUR
+AB  - To understand how substituents can be used to increase the quantum yield of photochemical electrocyclic ring-closing of the Z-hexa-1,3,5-triene (HT) photoswitch forming cyclohexadiene (CHD), we investigate the S-1 photo dynamics of HT and its derivatives 2,5-dimethyl-HT (DMHT), 2-isopropyl-5-methyl- HT (2,5-IMHT), 1-isopropyl-4-methyl-HT (1,4-IMHT), and 2,5-diisopropyl-HT (DIHT) using time-dependent density functional theory surface hopping dynamics. We report detailed photoproduct distributions, formation mechanisms, branching ratios, and wavelength-dependent product quantum yields. Most products have been confirmed experimentally and include all-trans HT derivatives, cyclopropanes, cyclobutenes, cyclopentene, cyclohexadienes, and bicyclic compounds. Regarding CHD formation, we find that for the 2,5-substituted derivatives DMHT, 2,5-IMHT, and DIHT, the branching ratios increase with increasing size of the substituents. In contrast the branching ratios of the E/Z-isomerization decrease with increasing size of the substituents. Due to steric interactions, increasing the size of the substituents increases the amount of gZg rotamers in the ground state, which are prone to CHD formation and have lower E/Z-isomerization probability. Furthermore, we find [1,4], [1,5], and [1,6]-sigmatropic hydrogen shift reactions occurring at large percentages (5% to 15%); for sterical reasons these reactions stem from tZg conformers. DIHT shows the lowest percentage of side product formation among the 2,5-substituted molecules and highest CHD branching ratio; its CHD quantum yield can be increased up to more than 64%, by excitation of DIHT on the red tail of its absorption spectrum, whereas the Z/E-isomerization is reduced below 5% and side reactions practically vanish. This makes DIHT the best candidate for applications in molecular switches.
+AD  - Calif State Univ Long Beach, Dept Chem & Biochem, 1250 Bellflower Blvd, Long Beach, CA 90840 USA
+AN  - WOS:000449171800034
+AU  - Tapavicza, E.
+AU  - Thompson, T.
+AU  - Redd, K.
+AU  - Kim, D.
+DA  - Oct 14
+DO  - 10.1039/c8cp05181j
+IS  - 38
+J2  - Phys Chem Chem Phys
+KW  - density-functional theory
+vitamin-d photosynthesis
+basis-sets
+spiropyran
+photochemistry
+approximation
+excitation
+model
+cis-1,3,5-hexatriene
+equilibrium
+LA  - English
+N1  - Gz1yp
+Times Cited:2
+Cited References Count:74
+PY  - 2018
+SN  - 1463-9076
+SP  - 24807-24820
+ST  - Tuning the photoreactivity of Z-hexatriene photoswitches by substituents - a non-adiabatic molecular dynamics study
+T2  - Physical Chemistry Chemical Physics
+TI  - Tuning the photoreactivity of Z-hexatriene photoswitches by substituents - a non-adiabatic molecular dynamics study
+UR  - <Go to ISI>://WOS:000449171800034
+VL  - 20
+ID  - 71
+ER  - 
+
+TY  - JOUR
+AB  - Although alternating least squares algorithms have revealed extremely useful and flexible to solve multivariate curve resolution problems, other approaches based on non-linear optimization algorithms using non-linear constraints are possible. Once the subspaces defined by PCA solutions are identified, appropriate rotation and perturbation of these solutions can produce solutions fulfilling the constraints obeyed by the physical nature of the investigated systems. In order to perform such a rotation, an optimization algorithm based in the fulfilment of constraints and some examples of application in chemistry and environmental chemistry are given. It is shown that the solutions obtained either by alternating least squares or by the new proposed algorithm are rather similar and that they are both within the boundaries of the band of feasible solutions obtained by an algorithm previously developed to estimate them. (c) 2007 Elsevier B.V. All rights reserved.
+AD  - CSIC, IIQAB, Dept Environm Chem, ES-08034 Barcelona, Spain
+AN  - WOS:000248469000037
+AU  - Tauler, R.
+DA  - Jul 9
+DO  - 10.1016/j.aca.2006.12.043
+IS  - 1-2
+J2  - Anal Chim Acta
+KW  - multivariate curve resolution (mcr)
+rotation ambiguities
+feasible band boundaries
+non-linear constrained optimization
+diode-array detection
+alternating least-squares
+liquid-chromatography
+multiple runs
+mixtures
+maximum
+samples
+LA  - English
+N1  - 196gf
+Times Cited:57
+Cited References Count:31
+PY  - 2007
+SN  - 0003-2670
+SP  - 289-298
+ST  - Application of non-linear optimization methods to the estimation of multivariate curve resolution solutions and of their feasible band boundaries in the investigation of two chemical and environmental simulated data sets
+T2  - Analytica Chimica Acta
+TI  - Application of non-linear optimization methods to the estimation of multivariate curve resolution solutions and of their feasible band boundaries in the investigation of two chemical and environmental simulated data sets
+UR  - <Go to ISI>://WOS:000248469000037
+VL  - 595
+ID  - 87
+ER  - 
+
+TY  - JOUR
+AB  - We present a method to predict wavelength-dependent product quantum yields (PQYs) for photochemical reactions and applied it to Z/E-isomerization and several ring-closing reactions of Z-2,5-dimethy1-1,3,5-hexatriene and truncated previtamin D. Using branching ratios from surface hopping molecular dynamics, individual trajectories are correlated with the absorption spectra of their initial structures. The wavelength dependent PQYs are computed by dividing the average spectrum of the initial structures of the product-forming trajectories by the average spectrum of all initial structures. Accurate absorption spectra are calculated using the correlated ADC(2) method with an implicit solvent, Calculations reproduce the experimentally found trend of increasing six ring formation and decreasing Z/E-isomerization on the red side of the spectrum. Over all seven reactions studied, the mean absolute error (MAE) between experimental and calculated PQYs (MAE) amounts to 8.1%, and the largest MAE is 18.6%. For four reactions, predicted values agree quantitatively with experiments within 5.6%.
+AD  - Calif State Univ Long Beach, Dept Chem & Biochem, 1250 Bellflower Blvd, Long Beach, CA 90840 USA
+AN  - WOS:000442446900044
+AU  - Thompson, T.
+AU  - Tapavicza, E.
+DA  - Aug 16
+DO  - 10.1021/acs.jpclett.8b02048
+IS  - 16
+J2  - J Phys Chem Lett
+KW  - nonadiabatic molecular-dynamics
+density-functional theory
+vitamin-d photosynthesis
+excited-state properties
+ab-initio
+double excitations
+basis-sets
+model cc2
+approximation
+photochemistry
+LA  - English
+N1  - Gr2ws
+Times Cited:5
+Cited References Count:57
+PY  - 2018
+SN  - 1948-7185
+SP  - 4758-4764
+ST  - First-Principles Prediction of Wavelength-Dependent Product Quantum Yields
+T2  - Journal of Physical Chemistry Letters
+TI  - First-Principles Prediction of Wavelength-Dependent Product Quantum Yields
+UR  - <Go to ISI>://WOS:000442446900044
+VL  - 9
+ID  - 72
+ER  - 
+
+TY  - JOUR
+AB  - Decreased inflammatory status has been reported in subjects with mild unconjugated hyperbilirubinemia. However, mechanisms of the anti-inflammatory actions of bilirubin (BR) are not fully understood. The aim of this study is to assess the role of BR in systemic inflammation using hyperbilirubinemic Gunn rats as well as their normobilirubinemic littermates and further in primary hepatocytes. The rats were treated with lipopolysaccharide (LPS, 6 mg/kg intraperitoneally) for 12 h, their blood and liver were collected for analyses of inflammatory and hepatic injury markers. Primary hepatocytes were treated with BR and TNF-alpha. LPS-treated Gunn rats had a significantly decreased inflammatory response, as evidenced by the anti-inflammatory profile of white blood cell subsets, and lower hepatic and systemic expressions of IL-6, TNF-alpha, IL-1beta, and IL-10. Hepatic mRNA expression of LPS-binding protein was upregulated in Gunn rats before and after LPS treatment. In addition, liver injury markers were lower in Gunn rats as compared to in LPS-treated controls. The exposure of primary hepatocytes to TNF-alpha with BR led to a milder decrease in phosphorylation of the NF-kappaB p65 subunit compared to in cells without BR. In conclusion, hyperbilirubinemia in Gunn rats is associated with an attenuated systemic inflammatory response and decreased liver damage upon exposure to LPS.
+AD  - Institute of Medical Biochemistry and Laboratory Diagnostics, First Faculty of Medicine, Charles University and General University Hospital in Prague, Prague 12108, Czech Republic. petra.valaskova@lf1.cuni.cz.
+Institute of Medical Biochemistry and Laboratory Diagnostics, First Faculty of Medicine, Charles University and General University Hospital in Prague, Prague 12108, Czech Republic. aleshdvorak@gmail.com.
+Institute of Medical Biochemistry and Laboratory Diagnostics, First Faculty of Medicine, Charles University and General University Hospital in Prague, Prague 12108, Czech Republic. mleni@centrum.cz.
+Institute of Medical Biochemistry and Laboratory Diagnostics, First Faculty of Medicine, Charles University and General University Hospital in Prague, Prague 12108, Czech Republic. katka.ziza@seznam.cz.
+Institute of Pharmacology, First Faculty of Medicine, Charles University and General University Hospital in Prague, 12800 Prague, Czech Republic. Nikolina.Canova@lf1.cuni.cz.
+Department of Biochemistry and Microbiology, University of Chemistry and Technology, 16628 Prague, Czech Republic. jar.zelenka@gmail.com.
+Department of Experimental Diabetology, Institute of Clinical and Experimental Medicine, 14021 Prague, Czech Republic. moca@ikem.cz.
+Institute of Medical Biochemistry and Laboratory Diagnostics, First Faculty of Medicine, Charles University and General University Hospital in Prague, Prague 12108, Czech Republic. vitek@cesnet.cz.
+4th Department of Medicine-Department of Gastroenterology and Hepatology, First Faculty of Medicine, Charles University and General University Hospital in Prague, 12808 Prague, Czech Republic. vitek@cesnet.cz.
+Institute of Medical Biochemistry and Laboratory Diagnostics, First Faculty of Medicine, Charles University and General University Hospital in Prague, Prague 12108, Czech Republic. lucie.muchova@lf1.cuni.cz.
+AN  - 31075981
+AU  - Valaskova, P.
+AU  - Dvorak, A.
+AU  - Lenicek, M.
+AU  - Zizalova, K.
+AU  - Kutinova-Canova, N.
+AU  - Zelenka, J.
+AU  - Cahova, M.
+AU  - Vitek, L.
+AU  - Muchova, L.
+C2  - PMC6539717
+DA  - May 9
+DO  - 10.3390/ijms20092306
+ET  - 2019/05/12
+IS  - 9
+KW  - Animals
+Apoptosis/drug effects
+Bilirubin/pharmacology
+Biomarkers/blood
+Cells, Cultured
+Cytokines/blood/genetics/metabolism
+Cytoprotection/drug effects
+Female
+Hepatocytes/metabolism
+Hyperbilirubinemia/blood/*complications
+Inflammation/*complications
+Leukocytes/metabolism
+Lipopolysaccharides
+Liver/metabolism
+NF-kappa B/metabolism
+Phosphorylation/drug effects
+RNA, Messenger/genetics/metabolism
+Rats, Gunn
+Signal Transduction
+Gunn rats
+Lps
+NF-kappaB
+bilirubin
+hyperbilirubinemia
+inflammation
+N1  - Valaskova, Petra
+Dvorak, Ales
+Lenicek, Martin
+Zizalova, Katerina
+Kutinova-Canova, Nikolina
+Zelenka, Jaroslav
+Cahova, Monika
+Vitek, Libor
+Muchova, Lucie
+eng
+GAUK No. 168216 and SVV 260370/2018/Univerzita Karlova v Praze
+RVO-VFN64165/2018/Ministerstvo Zdravotnictvi Ceske Republiky
+Switzerland
+Int J Mol Sci. 2019 May 9;20(9). pii: ijms20092306. doi: 10.3390/ijms20092306.
+PY  - 2019
+SN  - 1422-0067 (Electronic)
+1422-0067 (Linking)
+ST  - Hyperbilirubinemia in Gunn Rats is Associated with Decreased Inflammatory Response in LPS-Mediated Systemic Inflammation
+T2  - Int. J. Mol. Sci.
+TI  - Hyperbilirubinemia in Gunn Rats is Associated with Decreased Inflammatory Response in LPS-Mediated Systemic Inflammation
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/31075981
+VL  - 20
+ID  - 78
+ER  - 
+
+TY  - JOUR
+AN  - WOS:A1986E900400005
+AU  - Vanes, J. J. G. S.
+AU  - Koek, J. H.
+AU  - Erkelens, C.
+AU  - Lugtenburg, J.
+DA  - Oct
+IS  - 10
+J2  - Recl Trav Chim Pay B
+LA  - English
+N1  - E9004
+Times Cited:13
+Cited References Count:10
+PY  - 1986
+SN  - 0165-0513
+SP  - 360-367
+ST  - Synthesis and Spectroscopic Study of 1,1'-Methylene-2,2'-Pyrromethen-5[1h]-One and Its 3,4-Dihydro and 2,3,4,6-Tetrahydro Derivative
+T2  - Rec. Trav. Chim.
+TI  - Synthesis and Spectroscopic Study of 1,1'-Methylene-2,2'-Pyrromethen-5[1h]-One and Its 3,4-Dihydro and 2,3,4,6-Tetrahydro Derivative
+UR  - <Go to ISI>://WOS:A1986E900400005
+VL  - 105
+ID  - 21
+ER  - 
+
+TY  - JOUR
+AB  - Nutritional factors which exhibit antioxidant properties, such as those contained in green plants, may be protective against cancer. Chlorophyll and other tetrapyrrolic compounds which are structurally related to heme and bilirubin (a bile pigment with antioxidant activity) are among those molecules which are purportedly responsible for these effects. Therefore, the aim of our study was to assess both the antiproliferative and antioxidative effects of chlorophylls (chlorophyll a/b, chlorophyllin, and pheophytin a) in experimental pancreatic cancer. Chlorophylls have been shown to produce antiproliferative effects in pancreatic cancer cell lines (PaTu-8902, MiaPaCa-2, and BxPC-3) in a dose-dependent manner (10-125 mumol/L). Chlorophylls also have been observed to inhibit heme oxygenase (HMOX) mRNA expression and HMOX enzymatic activity, substantially affecting the redox environment of pancreatic cancer cells, including the production of mitochondrial/whole-cell reactive oxygen species, and alter the ratio of reduced-to-oxidized glutathione. Importantly, chlorophyll-mediated suppression of pancreatic cancer cell viability has been replicated in in vivo experiments, where the administration of chlorophyll a resulted in the significant reduction of pancreatic tumor size in xenotransplanted nude mice. In conclusion, this data suggests that chlorophyll-mediated changes on the redox status of pancreatic cancer cells might be responsible for their antiproliferative and anticancer effects and thus contribute to the decreased incidence of cancer among individuals who consume green vegetables.
+AD  - Institute of Medical Biochemistry and Laboratory Diagnostics, 1st Faculty of Medicine, Charles University, Prague, Czech Republic.
+Department of Biochemistry and Microbiology, University of Chemistry and Technology Prague, Prague, Czech Republic.
+Institute of Microbiology, Academy of Sciences of the Czech Republic, Prague, Czech Republic.
+4th Department of Internal Medicine, 1st Faculty of Medicine, Charles University, Prague, Czech Republic.
+AN  - 30057678
+AU  - Vankova, K.
+AU  - Markova, I.
+AU  - Jasprova, J.
+AU  - Dvorak, A.
+AU  - Subhanova, I.
+AU  - Zelenka, J.
+AU  - Novosadova, I.
+AU  - Rasl, J.
+AU  - Vomastek, T.
+AU  - Sobotka, R.
+AU  - Muchova, L.
+AU  - Vitek, L.
+C2  - PMC6051000
+DO  - 10.1155/2018/4069167
+ET  - 2018/07/31
+KW  - Antineoplastic Agents/*pharmacology
+Antioxidants/metabolism
+Cell Line, Tumor
+Cell Survival/drug effects
+Chlorophyll/*pharmacology
+Extracellular Signal-Regulated MAP Kinases/metabolism
+Glutathione/metabolism
+Glutathione Disulfide/metabolism
+Heme Oxygenase (Decyclizing)/metabolism
+Humans
+Hydrogen Peroxide/metabolism
+Mitochondria/drug effects/metabolism
+Oxidation-Reduction/drug effects
+Pancreatic Neoplasms/*metabolism
+Pheophytins/metabolism
+Real-Time Polymerase Chain Reaction
+Superoxides/metabolism
+Synechocystis/chemistry
+N1  - Vankova, Katerina
+Markova, Ivana
+Jasprova, Jana
+Dvorak, Ales
+Subhanova, Iva
+Zelenka, Jaroslav
+Novosadova, Iva
+Rasl, Jan
+Vomastek, Tomas
+Sobotka, Roman
+Muchova, Lucie
+Vitek, Libor
+eng
+Oxid Med Cell Longev. 2018 Jul 2;2018:4069167. doi: 10.1155/2018/4069167. eCollection 2018.
+PY  - 2018
+SN  - 1942-0994 (Electronic)
+1942-0994 (Linking)
+SP  - 4069167
+ST  - Chlorophyll-Mediated Changes in the Redox Status of Pancreatic Cancer Cells Are Associated with Its Anticancer Effects
+T2  - Oxid. Med. Cell. Longev.
+TI  - Chlorophyll-Mediated Changes in the Redox Status of Pancreatic Cancer Cells Are Associated with Its Anticancer Effects
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/30057678
+VL  - 2018
+ID  - 73
+ER  - 
+
+TY  - JOUR
+AB  - The Z-E isomerization of.-alkylidenebutenolide analogues to natural nostoclides and other natural butenolides was investigated using H-1 nuclear magnetic resonance (NMR) and high performance liquid chromatography ( HPLC) data as well as density functional theory (DFT) calculations at the omega B97x-D/6-31G(d,p) level, including solvent effects with the polarizable continuum solvation approach. The experimental data supported the Z to E isomerization of gamma-alkylidenebutenolides under acid catalysis. Newly prepared samples have predominantly Z configuration, which partially isomerizes to the E isomer under acidic conditions. Density functional theory studies corroborate the experimental findings. While neutral gamma-alkylidenebutenolides are more stable in the Z form, protonation of the.-lactone carbonyl group results in preferential stabilization of the E isomer.
+AD  - Univ Fed Vicosa, Dept Quim, Av Peter Henry Rolfs S-N, BR-36570900 Vicosa, MG, Brazil
+Univ Fed Minas Gerais, Dept Quim, Campus Pampulha,Av Pres Antonio Carlos 6627, BR-31270901 Belo Horizonte, MG, Brazil
+Univ Fed Fluminense, Dept Quim Inorgan, BR-24020141 Niteroi, RJ, Brazil
+Univ Fed Maranhao, Campus Balsas,Rua Jose Leao 484, BR-65800000 Balsas, Maranhao, Brazil
+AN  - WOS:000503379700010
+AU  - Varejao, J. O. S.
+AU  - Barbosa, L. C. A.
+AU  - Varejao, E. V. V.
+AU  - Souza, A. H.
+AU  - Lage, M. R.
+AU  - Carneiro, J. W. M.
+DA  - Jan
+DO  - 10.21577/0103-5053.20190131
+IS  - 1
+J2  - J Brazil Chem Soc
+KW  - nostoclide
+z-e isomerization
+butenolides
+gamma-lactone
+dft calculations
+acid catalysis
+stereoselective-synthesis
+structural-characterization
+nostoclide
+metabolites
+inhibitors
+bromine
+LA  - English
+N1  - Jw9qh
+Times Cited:0
+Cited References Count:40
+PY  - 2020
+SN  - 0103-5053
+SP  - 90-99
+ST  - Acid-Catalyzed Z-E Isomerization of gamma-Alkylidenebutenolides: An Experimental and DFT Study
+T2  - Journal of the Brazilian Chemical Society
+TI  - Acid-Catalyzed Z-E Isomerization of gamma-Alkylidenebutenolides: An Experimental and DFT Study
+UR  - <Go to ISI>://WOS:000503379700010
+VL  - 31
+ID  - 81
+ER  - 
+
+TY  - JOUR
+AB  - SciPy is an open-source scientific computing library for the Python programming language. Since its initial release in 2001, SciPy has become a de facto standard for leveraging scientific algorithms in Python, with over 600 unique code contributors, thousands of dependent packages, over 100,000 dependent repositories and millions of downloads per year. In this work, we provide an overview of the capabilities and development practices of SciPy 1.0 and highlight some recent technical developments.
+AD  - University of Jyvaskyla, Jyvaskyla, Finland.
+Quansight LLC, Austin, TX, USA. scipy.articles@gmail.com.
+Quansight LLC, Austin, TX, USA.
+Ultrasound Imaging, Mayo Clinic, Rochester, MN, USA.
+Electrical Engineering, Brigham Young University, Provo, UT, USA.
+Enthought, Inc., Austin, TX, USA.
+Anaconda Inc., Austin, TX, USA.
+BioResource and Agricultural Engineering Department, California Polytechnic State University, San Luis Obispo, CA, USA. scipy.articles@gmail.com.
+Department of Mathematics, University of California Los Angeles, Los Angeles, CA, USA. scipy.articles@gmail.com.
+Los Alamos National Laboratory, Los Alamos, NM, USA. scipy.articles@gmail.com.
+Independent researcher, Tokyo, Japan.
+National Research University Higher School of Economics, Moscow, Russia.
+Independent researcher, Saue, Estonia.
+Department of Mechanics and Applied Mathematics, Institute of Cybernetics at Tallinn Technical University, Tallinn, Estonia.
+Berkeley Institute for Data Science, University of California Berkeley, Berkeley, CA, USA.
+Independent researcher, New York, NY, USA.
+School of Psychology, University of Birmingham, Edgbaston, Birmingham, UK.
+Independent researcher, San Francisco, CA, USA.
+Division of Biostatistics, University of California Berkeley, Berkeley, CA, USA.
+WayRay LLC, Skolkovo Innovation Center, Moscow, Russia.
+Australian Nuclear Science and Technology Organisation, Lucas Heights, NSW, Australia.
+Institute for Learning and Brain Sciences, University of Washington, Seattle, WA, USA.
+College of Information and Computing Sciences, University of Massachusetts Amherst, Amherst, MA, USA.
+Independent researcher, Amsterdam, the Netherlands.
+Berkeley Center for Cosmological Physics, University of California Berkeley, Berkeley, CA, USA.
+Bruker Biospin Corp., Billerica, MA, USA.
+University of Washington, Seattle, WA, USA.
+Independent researcher, Toulouse, France.
+Independent researcher, Montreal, Quebec, Canada.
+New Technologies Research Centre, University of West Bohemia, Plzen, Czech Republic.
+Department of Mathematics, Brigham Young University, Provo, UT, USA.
+Oden Institute for Computational Engineering and Sciences, The University of Texas at Austin, Austin, TX, USA.
+Independent researcher, Belmont, Massachusetts, USA.
+Space Dynamics Laboratory, North Logan, UT, USA.
+Independent researcher, Logan, Utah, USA.
+Anton Pannekoek Institute, Amsterdam, The Netherlands.
+Graduate Program in Electrical Engineering, Universidade Federal de Minas Gerais, Belo Horizonte, Brazil.
+Google LLC, Montreal, Quebec, Canada.
+Google LLC, Cambridge, MA, USA.
+AN  - 32015543
+AU  - Virtanen, P.
+AU  - Gommers, R.
+AU  - Oliphant, T. E.
+AU  - Haberland, M.
+AU  - Reddy, T.
+AU  - Cournapeau, D.
+AU  - Burovski, E.
+AU  - Peterson, P.
+AU  - Weckesser, W.
+AU  - Bright, J.
+AU  - van der Walt, S. J.
+AU  - Brett, M.
+AU  - Wilson, J.
+AU  - Millman, K. J.
+AU  - Mayorov, N.
+AU  - Nelson, A. R. J.
+AU  - Jones, E.
+AU  - Kern, R.
+AU  - Larson, E.
+AU  - Carey, C. J.
+AU  - Polat, I.
+AU  - Feng, Y.
+AU  - Moore, E. W.
+AU  - VanderPlas, J.
+AU  - Laxalde, D.
+AU  - Perktold, J.
+AU  - Cimrman, R.
+AU  - Henriksen, I.
+AU  - Quintero, E. A.
+AU  - Harris, C. R.
+AU  - Archibald, A. M.
+AU  - Ribeiro, A. H.
+AU  - Pedregosa, F.
+AU  - van Mulbregt, P.
+AU  - SciPy, Contributors
+C2  - PMC7056644
+DA  - Mar
+DO  - 10.1038/s41592-019-0686-2
+ET  - 2020/02/06
+IS  - 3
+N1  - Virtanen, Pauli
+Gommers, Ralf
+Oliphant, Travis E
+Haberland, Matt
+Reddy, Tyler
+Cournapeau, David
+Burovski, Evgeni
+Peterson, Pearu
+Weckesser, Warren
+Bright, Jonathan
+van der Walt, Stefan J
+Brett, Matthew
+Wilson, Joshua
+Millman, K Jarrod
+Mayorov, Nikolay
+Nelson, Andrew R J
+Jones, Eric
+Kern, Robert
+Larson, Eric
+Carey, C J
+Polat, Ilhan
+Feng, Yu
+Moore, Eric W
+VanderPlas, Jake
+Laxalde, Denis
+Perktold, Josef
+Cimrman, Robert
+Henriksen, Ian
+Quintero, E A
+Harris, Charles R
+Archibald, Anne M
+Ribeiro, Antonio H
+Pedregosa, Fabian
+van Mulbregt, Paul
+eng
+Review
+Nat Methods. 2020 Mar;17(3):261-272. doi: 10.1038/s41592-019-0686-2. Epub 2020 Feb 3.
+PY  - 2020
+SN  - 1548-7105 (Electronic)
+1548-7091 (Linking)
+SP  - 261-272
+ST  - SciPy 1.0: fundamental algorithms for scientific computing in Python
+T2  - Nature Methods
+TI  - SciPy 1.0: fundamental algorithms for scientific computing in Python
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/32015543
+VL  - 17
+ID  - 82
+ER  - 
+
+TY  - JOUR
+AB  - For long time bilirubin was only considered as a potentially dangerous sign of liver diseases, but it now appears clear that it is also a powerful signaling molecule. Together with potent antioxidant activities that were only reported in the last few decades, many other biological effects have now been clearly described. These include especially profound inhibitory effects on almost all effectors of the immune system, with their clinical consequences in the bilirubin-mediated protection against autoimmune and inflammatory diseases. Separate from these, bilirubin activates various nuclear and cytoplasmic receptors, resembling the endocrine activities of actual hormonal substances. This is true for the "classical" hepatic nuclear receptors, including the aryl hydrocarbon receptor, or the constitutive androstane receptor; and also for some lesser-explored receptors such as peroxisome proliferator-activated receptors alpha and gamma; Mas-related G protein-coupled receptor; or other signaling molecules including fatty acid binding protein 1, apolipoprotein D, or reactive oxygen species. All of these targets have broad metabolic effects, which in turn may offer protection against obesity, diabetes mellitus, and other metabolic diseases. The (mostly experimental) data are also supported by clinical evidence. In fact, data from the last three decades have convincingly demonstrated the protective effects of mildly elevated serum bilirubin concentrations against various "diseases of civilization." Additionally, even tiny, micromolar changes of serum bilirubin concentrations have been associated with substantial alteration in the risks of these diseases. It is highly likely that all of the biological activities of bilirubin have yet to be exhaustively explored, and thus we can expect further clinical discoveries about this evolutionarily old molecule into the future.
+AD  - 4th Department of Internal Medicine and Institute of Medical Biochemistry and Laboratory Diagnostics, General Faculty Hospital and 1st Faculty of Medicine, Charles University, Prague, Czech Republic.
+AN  - 32017160
+AU  - Vitek, L.
+DA  - Feb 4
+DO  - 10.1002/med.21660
+ET  - 2020/02/06
+KW  - bilirubin
+cell signalization
+civilization diseases
+endocrine effects
+metabolism
+N1  - Vitek, Libor
+eng
+RVO-VFN64165/2019/Czech Ministry of Health
+16-27317A/Agentura Pro Zdravotnicky Vyzkum Ceske Republiky
+Q25/LF1/Charles University PROGRES
+Review
+Med Res Rev. 2020 Feb 4. doi: 10.1002/med.21660.
+PY  - 2020
+SN  - 1098-1128 (Electronic)
+0198-6325 (Linking)
+ST  - Bilirubin as a signaling molecule
+T2  - Med. Res. Rev.
+TI  - Bilirubin as a signaling molecule
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/32017160
+ID  - 83
+ER  - 
+
+TY  - JOUR
+AB  - Unconjugated bilirubin (UCB), the principal mammalian bile pigment, is the end product of heme catabolism. Both belong to the superfamily of tetrapyrrolic compounds that serve multiple biological functions in animals and plants. Its six internal hydrogen bonds give UCB a unique structure responsible for its physico-chemical properties and biological effects. Like many weakly-polar, poorly-soluble compounds, UCB is transported in blood tightly bound to albumin, with less than 0.01% of total bilirubin circulating in an unbound form (free bilirubin, Bf). This fraction governs the diffusion of UCB into tissues, and therefore Bf is responsible for both its beneficial and toxic effects on cells. Although, UCB was long thought to be a non-functional waste product, recent studies have shown that the antioxidant effects of mildly elevated serum bilirubin levels, as well as activation of heme oxygenase, may protect against diseases associated with oxidative stress, such as atherosclerosis. By contrast, markedly elevated serum UCB levels may cause severe neurological damage, especially in neonates. The regulation of cellular UCB content, by its conjugation, oxidation, and export, are, therefore of paramount importance to cellular health.
+AD  - 4th Department of Internal Medicine and Institute of Clinical Biochemistry and Laboratory Diagnostics, Charles University in Prague, Czech Republic. vitek@cesnet.cz
+AN  - 19754364
+AU  - Vitek, L.
+AU  - Ostrow, J. D.
+DO  - 10.2174/138161209789058237
+ET  - 2009/09/17
+IS  - 25
+KW  - Animals
+Bilirubin/blood/chemistry/*metabolism
+Biological Transport
+Central Nervous System Diseases/*etiology/metabolism
+Heme/metabolism
+Humans
+Hyperbilirubinemia/*complications/metabolism
+Hyperbilirubinemia, Neonatal/complications/metabolism
+Infant, Newborn
+Liver/*metabolism
+Molecular Structure
+Oxidation-Reduction
+Oxidative Stress
+Structure-Activity Relationship
+N1  - Vitek, Libor
+Ostrow, J Donald
+eng
+Research Support, Non-U.S. Gov't
+Review
+United Arab Emirates
+Curr Pharm Des. 2009;15(25):2869-83. doi: 10.2174/138161209789058237.
+PY  - 2009
+SN  - 1873-4286 (Electronic)
+1381-6128 (Linking)
+SP  - 2869-83
+ST  - Bilirubin chemistry and metabolism; harmful and protective aspects
+T2  - Curr. Pharm. Des.
+TI  - Bilirubin chemistry and metabolism; harmful and protective aspects
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/19754364
+VL  - 15
+ID  - 59
+ER  - 
+
+TY  - JOUR
+AB  - BACKGROUND: The action spectrum for bilirubin photodegradation has been intensively studied. However, questions still remain regarding which light wavelength most efficiently photodegrades bilirubin. In this study, we determined the in vitro effects of different irradiation wavelength ranges on bilirubin photodegradation. METHODS: In our in vitro method, normalized absolute irradiance levels of 4.2 x 10(15) photons/cm(2)/s from light-emitting diodes (ranging from 390-530 nm) and 10-nm band-pass filters were used to irradiate bilirubin solutions (25 mg/dL in 4% human serum albumin). Bilirubin and its major photoisomer concentrations were determined; the half-life time of bilirubin (t1/2) was calculated for each wavelength range, and the spectral characteristics for bilirubin photodegradation products were obtained for key wavelengths. RESULTS: The in vitro photodegradation of bilirubin at 37 degrees C decreased linearly as the wavelength was increased from 390 to 500 nm with t1/2 decreasing from 63 to 17 min, respectively. At 460 +/- 10 nm, a significantly lower rate of photodegradation and thus higher t1/2 (31 min) than that at 500 nm (17 min) was demonstrated. CONCLUSION: In our system, the optimum bilirubin photodegradation and lumirubin production rates occurred between 490 and 500 nm. Spectra shapes were remarkably similar, suggesting that lumirubin production was the major process of bilirubin photodegradation.
+AD  - Department of Pediatrics, Stanford University School of Medicine, 300 Pasteur Drive, Room S214, Stanford, CA, 94305, USA. henk.vreman@stanford.edu.
+Department of Pediatrics, Stanford University School of Medicine, 300 Pasteur Drive, Room S214, Stanford, CA, 94305, USA.
+Institute of Medical Biochemistry and Laboratory Diagnostics, 1st Faculty of Medicine, Charles University, Katerinska 32, 120 00, Prague, Czech Republic.
+Department of Chemistry and RECETOX, Faculty of Science, Masaryk University, Kamenice 5, 625 00, Brno, Czech Republic.
+Institute of Medical Biochemistry and Laboratory Diagnostics, 1st Faculty of Medicine, Charles University, Katerinska 32, 120 00, Prague, Czech Republic. vitek@cesnet.cz.
+AN  - 30710116
+AU  - Vreman, H. J.
+AU  - Kourula, S.
+AU  - Jasprova, J.
+AU  - Ludvikova, L.
+AU  - Klan, P.
+AU  - Muchova, L.
+AU  - Vitek, L.
+AU  - Cline, B. K.
+AU  - Wong, R. J.
+AU  - Stevenson, D. K.
+DA  - May
+DO  - 10.1038/s41390-019-0310-2
+ET  - 2019/02/03
+IS  - 6
+N1  - Vreman, Hendrik J
+Kourula, Stephanie
+Jasprova, Jana
+Ludvikova, Lucie
+Klan, Petr
+Muchova, Lucie
+Vitek, Libor
+Cline, Benjamin K
+Wong, Ronald J
+Stevenson, David K
+eng
+Research Support, Non-U.S. Gov't
+Pediatr Res. 2019 May;85(6):865-873. doi: 10.1038/s41390-019-0310-2. Epub 2019 Jan 26.
+PY  - 2019
+SN  - 1530-0447 (Electronic)
+0031-3998 (Linking)
+SP  - 865-873
+ST  - The Effect of Light Wavelength on in Vitro Bilirubin Photodegradation and Photoisomer Production
+T2  - Pediatric Research
+TI  - The Effect of Light Wavelength on in Vitro Bilirubin Photodegradation and Photoisomer Production
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/30710116
+VL  - 85
+ID  - 79
+ER  - 
+
+TY  - JOUR
+AB  - Most of the carbon monoxide (CO) produced by mammals is a product of the heme oxygenase (HO) reaction, the rate-limiting step in the heme degradation pathway leading to the generation of bilirubin in man. However, some CO is derived from other sources. We studied the association of CO production with lipid peroxidation in tissue preparations from adult male Wistar rats. Supernatants, from 20% tissue homogenates in potassium phosphate buffer, centrifuged for 1 min at 13,000 x g, were incubated for 30 min at 37 degrees C in septum-sealed vials in the dark with ascorbate (100 microM) and Fe(II) (6 microM) and (or) Fe(III) (60 microM). Butylated hydroxytoluene (BHT, 100 microM) was added for the blank reaction. CO produced into the headspace was quantitated by gas chromatography. Thiobarbituric acid reactive substances (TBARS), conjugated dienes (CD), and lipid hydroperoxides (LOOH) in the reaction medium were quantitated by spectrophotometry. Of the tissues studied, CO and TBARS formation was greatest for brain, followed by kidney, lung, spleen, and blood, but no CO or TBARS formation was detected for testes, intestine, liver, and heart. Cell fractionation studies indicated that these differences might be due to the presence of endogenous soluble antioxidants in the latter tissues. Furthermore, these studies demonstrated that CO was exclusively generated by subcellular fractions that contained membranes. The magnitude of the rate of product formation in brain supernatants depended on the concentration of Fe(II) and (or) Fe(III). The formation of CO, TBARS, CD, and LOOH increased linearly with time for up to 30 min, but the rates of product formation were different. Product formation was completely inhibited by BHT (100 microM), biliverdin (50 microM), bilirubin (50 microM), citrate (100 microM), and the Fe(II) chelators, desferrioxamine mesylate (100 microM) and diethylenetriaminepentaacetate, but not by 10 microM of the HO inhibitor, zinc deuteroporphyrin bis glycol. We conclude that CO generation is associated with the process of in vitro lipid peroxidation in tissues with limited antioxidant reserves.
+AD  - Department of Pediatrics, Neonatal and Developmental Medicine Laboratory, Stanford University School of Medicine, CA 94305-5208, USA. henk.vreman@stanford.edu
+AN  - 10326826
+AU  - Vreman, H. J.
+AU  - Wong, R. J.
+AU  - Sanesi, C. A.
+AU  - Dennery, P. A.
+AU  - Stevenson, D. K.
+DA  - Dec
+DO  - 10.1139/cjpp-76-12-1057
+ET  - 1999/05/18
+IS  - 12
+KW  - Animals
+Brain/metabolism
+Carbon Monoxide/*metabolism
+Iron Compounds/*metabolism
+Lipid Peroxidation/*physiology
+Liver/metabolism
+Male
+Rats
+Rats, Wistar
+Reaction Time/drug effects
+Thiobarbituric Acid Reactive Substances/*metabolism
+N1  - Vreman, H J
+Wong, R J
+Sanesi, C A
+Dennery, P A
+Stevenson, D K
+eng
+HD14426/HD/NICHD NIH HHS/
+Research Support, Non-U.S. Gov't
+Research Support, U.S. Gov't, P.H.S.
+Canada
+Can J Physiol Pharmacol. 1998 Dec;76(12):1057-65. doi: 10.1139/cjpp-76-12-1057.
+PY  - 1998
+SN  - 0008-4212 (Print)
+0008-4212 (Linking)
+SP  - 1057-65
+ST  - Simultaneous production of carbon monoxide and thiobarbituric acid reactive substances in rat tissue preparations by an iron-ascorbate system
+T2  - Can. J. Physiol. Pharmacol.
+TI  - Simultaneous production of carbon monoxide and thiobarbituric acid reactive substances in rat tissue preparations by an iron-ascorbate system
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/10326826
+VL  - 76
+ID  - 43
+ER  - 
+
+TY  - JOUR
+AD  - Univ Leiden,Dept Org Chem,Leiden,Netherlands
+AN  - WOS:A1973P643900023
+AU  - Vroegop, P. J.
+AU  - Lugtenbu.J
+AU  - Havinga, E.
+DO  - Doi 10.1016/S0040-4020(01)83160-4
+IS  - 10
+J2  - Tetrahedron
+LA  - English
+N1  - P6439
+Times Cited:87
+Cited References Count:13
+PY  - 1973
+SN  - 0040-4020
+SP  - 1393-1398
+ST  - Conformational Equilibrium and Photochemistry of Hexa-1,3,5-Trienes
+T2  - Tetrahedron
+TI  - Conformational Equilibrium and Photochemistry of Hexa-1,3,5-Trienes
+UR  - <Go to ISI>://WOS:A1973P643900023
+VL  - 29
+ID  - 2
+ER  - 
+
+TY  - JOUR
+AN  - WOS:A1989T274800049
+AU  - Whitesell, J. K.
+AU  - Minton, M. A.
+AU  - Tran, V. D.
+DA  - Feb 15
+DO  - DOI 10.1021/ja00186a049
+IS  - 4
+J2  - J Am Chem Soc
+LA  - English
+N1  - T2748
+Times Cited:13
+Cited References Count:16
+PY  - 1989
+SN  - 0002-7863
+SP  - 1473-1476
+ST  - The Neer Principle - Ground-State Conformational Bias in Triene Photocyclizations
+T2  - Journal of the American Chemical Society
+TI  - The Neer Principle - Ground-State Conformational Bias in Triene Photocyclizations
+UR  - <Go to ISI>://WOS:A1989T274800049
+VL  - 111
+ID  - 28
+ER  - 
+
+TY  - JOUR
+AB  - A new class of highly fluorescent (phi(F) 0.3-0.8) low molecular weight water-soluble cholephilic compounds has been synthesized in two steps from dipyrrinones. The dipyrrinone nitrogens are first bridged by reaction with 1, 1'-carbonyldiimidazole to form an N,N'-carbonyldipyrrinone (3H,5H-dipyrrolo[1,2-c:2',1'-f]pyrimidine-3,5-dione) nucleus, and a sulfonic acid group is then introduced at C(8) by reaction with concd H2SO4. The resulting sulfonated N,N'-carbonyl-bridged dipyrrinones ("sulfoglows") are isolated as their sodium salts. When the alkyl substituents of the lactam ring are lengthened from ethyl to decyl, sulfoglows become increasingly lipophilic while maintaining water solubility. Low molecular weight sulfoglows were rapidly excreted intact in both bile and urine after intravenous infusion into rats, but higher molecular weight sulfoglows were excreted more selectively in bile. Hepatobiliary excretion of sulfoglows was partially, but not completely, blocked in mutant rats deficient in the multidrug-resistance associated transport protein Mrp2 (ABCC2). These observations point to the feasibility of developing simple sulfoglows with clinical diagnostic potential that are normally excreted in bile but appear in urine when hepatic elimination is impaired by cholestatic liver disease.
+AD  - Univ Nevada, Dept Chem, Reno, NV 89557 USA
+Univ Calif San Francisco, Div Gastroenterol, San Francisco, CA 94143 USA
+Univ Calif San Francisco, Ctr Liver, San Francisco, CA 94143 USA
+AN  - WOS:000232405500021
+AU  - Woydziak, Z. R.
+AU  - Boiadjiev, S. E.
+AU  - Norona, W. S.
+AU  - McDonagh, A. F.
+AU  - Lightner, D. A.
+DA  - Oct 14
+DO  - 10.1021/jo0511041
+IS  - 21
+J2  - J Org Chem
+KW  - spectroscopic properties
+transhepatic transport
+xanthobilirubic acid
+methyl-ester
+tr-rats
+bilirubin
+phototherapy
+pyrroles
+glucuronidation
+conformation
+LA  - English
+N1  - 971sr
+Times Cited:17
+Cited References Count:33
+PY  - 2005
+SN  - 0022-3263
+SP  - 8417-8423
+ST  - Synthesis and hepatic transport of strongly fluorescent cholephilic dipyrrinones
+T2  - Journal of Organic Chemistry
+TI  - Synthesis and hepatic transport of strongly fluorescent cholephilic dipyrrinones
+UR  - <Go to ISI>://WOS:000232405500021
+VL  - 70
+ID  - 54
+ER  - 
+
+TY  - JOUR
+AB  - Spectral analyses of vinylneoxantho- and vinylisoneoxanthobilirubic acid methyl esters, with endo and exo-vinyl groups respectively, show that the exo-vinyl group causes (1) a greater bathochromic and hyperchromic shift of the long wavelength UV-vis absorption and (2) a smaller dimer association constant in CDCl3 than does the endo-vinyl in these pyrromethenones.
+AN  - WOS:A1992JU55900014
+AU  - Xie, M. Q.
+AU  - Lightner, D. A.
+DO  - Doi 10.1080/00387019208018215
+IS  - 7
+J2  - Spectrosc Lett
+KW  - vinyl(iso)neoxanthobilirubic acid methyl ester
+bilirubin
+uv-visible
+h-1-nmr spectroscopy
+bilirubin
+esters
+phototherapy
+LA  - English
+N1  - Ju559
+Times Cited:3
+Cited References Count:22
+PY  - 1992
+SN  - 0038-7010
+SP  - 1057-1066
+ST  - Influence of Vinyl Groups on the Uv-Visible Spectra and Self-Dimerization of Pyrromethenones
+T2  - Spectroscopy Letters
+TI  - Influence of Vinyl Groups on the Uv-Visible Spectra and Self-Dimerization of Pyrromethenones
+UR  - <Go to ISI>://WOS:A1992JU55900014
+VL  - 25
+ID  - 32
+ER  - 
+
+TY  - JOUR
+AB  - Mitochondria are well known for their roles as energy and metabolic factory. Mitochondrial reactive oxygen species (mtROS) refer to superoxide anion radical ((*)O2(-)) and hydrogen peroxide (H2O2). They are byproducts of electron transport in mitochondrial respiratory chain and are implicated in the regulation of physiological and pathological signal transduction. Especially when mitochondrial (*)O2(-)/H2O2 production is disturbed, this disturbance is closely related to the occurrence and development of metabolic diseases. In this review, the sources of mitochondrial (*)O2(-)/H2O2 as well as mitochondrial antioxidant mechanisms are summarized. Furthermore, we particularly emphasize the essential role of mitochondrial (*)O2(-)/H2O2 in metabolic diseases. Specifically, perturbed mitochondrial (*)O2(-)/H2O2 regulation aggravates the progression of metabolic diseases, including diabetes, gout and nonalcoholic fatty liver disease (NAFLD). Given the deleterious effect of mitochondrial (*)O2(-)/H2O2 in the development of metabolic diseases, antioxidants targeting mitochondrial (*)O2(-)/H2O2 might be an attractive therapeutic approach for the prevention and treatment of metabolic diseases.
+AD  - Institute of Pharmacy and Pharmacology, Learning Key Laboratory for Pharmacoproteomics, Hunan Province Cooperative Innovation Center for Molecular Target New Drug Study, University of South China, Hengyang, 421001, China.
+Department of Pharmacy, The First Affiliated Hospital, University of South China, Hengyang, China. Electronic address: luhe1989@126.com.
+Institute of Pharmacy and Pharmacology, Learning Key Laboratory for Pharmacoproteomics, Hunan Province Cooperative Innovation Center for Molecular Target New Drug Study, University of South China, Hengyang, 421001, China. Electronic address: lxchen6@126.com.
+AN  - 32160947
+AU  - Yan, J.
+AU  - Jiang, J.
+AU  - He, L.
+AU  - Chen, L.
+DA  - Mar 8
+DO  - 10.1016/j.freeradbiomed.2020.02.029
+ET  - 2020/03/13
+KW  - Antioxidants
+Diabetes
+Gout
+Mitochondrial (*)O(2)(-)/H(2)O(2)
+NAFLD
+of interests.
+N1  - Yan, Jialong
+Jiang, Jinyong
+He, Lu
+Chen, Linxi
+eng
+Review
+Free Radic Biol Med. 2020 Mar 8;152:33-42. doi: 10.1016/j.freeradbiomed.2020.02.029.
+PY  - 2020
+SN  - 1873-4596 (Electronic)
+0891-5849 (Linking)
+SP  - 33-42
+ST  - Mitochondrial superoxide/hydrogen peroxide: An emerging therapeutic target for metabolic diseases
+T2  - Free. Radic. Biol. Med.
+TI  - Mitochondrial superoxide/hydrogen peroxide: An emerging therapeutic target for metabolic diseases
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/32160947
+VL  - 152
+ID  - 84
+ER  - 
+
+TY  - JOUR
+AB  - Mild constitutive hyperbilirubinemia is associated with a reduced risk of cardiovascular diseases, diabetes, and cancer. Since these pathologies are associated with aging, inflammation, and oxidative stress, we investigated whether hyperbilirubinemia interferes with ROS homeostasis in cell cultures and with inflammation, senescence, and mitochondrial dysfunction in aged rats. Human embryonic kidney cells and rat primary fibroblasts showed a dose-dependent decrease in the ratio of oxidized/reduced glutathione, intracellular H2O2 levels, and mitochondrial ROS production, with increasing bilirubin concentrations in the culture media. Compared to their normobilirubinemic siblings, aged hyperbilirubinemic Gunn rats showed significantly smaller amounts of visceral fat, better glucose tolerance, and decreased serum levels of proinflammatory cytokines TNFalpha, IL-1beta, and IL-18. Simultaneously, livers from Gunn rats showed decreased expression of senescence markers and cell cycle inhibitors p21 and p16. Mitochondria from aged Gunn rats showed higher respiration and lower H2O2 production compared to controls. In conclusion, we demonstrated that mildly elevated serum bilirubin is generally associated with attenuation of oxidative stress and with better anthropometric parameters, decreased inflammatory status, increased glucose tolerance, fewer signs of cellular senescence, and enhanced mitochondrial function in aged rats.
+AD  - Department of Biochemistry and Microbiology, University of Chemistry and Technology Prague, Technicka 5, 166 28 Prague, Czech Republic.
+Institute of Physiology, Czech Academy of Sciences, Videnska 1083, 142 20 Prague, Czech Republic; Institute of Medical Biochemistry and Laboratory Diagnostics, 1st Faculty of Medicine, Charles University in Prague, Na Bojisti 3, 128 08 Prague, Czech Republic.
+Institute of Physiology, Czech Academy of Sciences, Videnska 1083, 142 20 Prague, Czech Republic.
+Institute of Biophysics, 1st Faculty of Medicine, Charles University in Prague, Salmovska 1, 128 08 Prague, Czech Republic.
+Institute of Medical Biochemistry and Laboratory Diagnostics, 1st Faculty of Medicine, Charles University in Prague, Na Bojisti 3, 128 08 Prague, Czech Republic; Institute of Endocrinology, Narodni 8, 116 94 Prague, Czech Republic.
+Institute of Medical Biochemistry and Laboratory Diagnostics, 1st Faculty of Medicine, Charles University in Prague, Na Bojisti 3, 128 08 Prague, Czech Republic; 4th Department of Internal Medicine, 1st Faculty of Medicine, Charles University in Prague, U Nemocnice 2, 128 08 Prague, Czech Republic.
+AN  - 27547293
+AU  - Zelenka, J.
+AU  - Dvorak, A.
+AU  - Alan, L.
+AU  - Zadinova, M.
+AU  - Haluzik, M.
+AU  - Vitek, L.
+C2  - PMC4983390
+DO  - 10.1155/2016/6190609
+ET  - 2016/08/23
+KW  - Aging/*pathology
+Animals
+Bilirubin/blood
+Cells, Cultured
+Fibroblasts/metabolism/pathology
+Hyperbilirubinemia/blood/*pathology
+Inflammation/*complications/*pathology
+Intracellular Space/metabolism
+Metabolic Diseases/*complications/*pathology
+Mitochondria/metabolism
+Rats, Gunn
+Reactive Oxygen Species/metabolism
+N1  - Zelenka, Jaroslav
+Dvorak, Ales
+Alan, Lukas
+Zadinova, Marie
+Haluzik, Martin
+Vitek, Libor
+eng
+Oxid Med Cell Longev. 2016;2016:6190609. doi: 10.1155/2016/6190609. Epub 2016 Jul 31.
+PY  - 2016
+SN  - 1942-0994 (Electronic)
+1942-0994 (Linking)
+SP  - 6190609
+ST  - Hyperbilirubinemia Protects against Aging-Associated Inflammation and Metabolic Deterioration
+T2  - Oxid. Med. Cell. Longev.
+TI  - Hyperbilirubinemia Protects against Aging-Associated Inflammation and Metabolic Deterioration
+UR  - https://www.ncbi.nlm.nih.gov/pubmed/27547293
+VL  - 2016
+ID  - 69
+ER  - 
+

@@ -10,6 +10,7 @@ import glob
 from scipy.interpolate import interp1d
 from scipy.special import erfc
 from scipy.linalg import lstsq
+from matplotlib.ticker import *
 
 from sklearn import linear_model as lm
 # from numba import njit, prange
@@ -66,7 +67,7 @@ class MinorSymLogLocator(Locator):
         # add temporary major tick locs at either end of the current range
         # to fill in minor tick gaps
         dmlower = majorlocs[1] - majorlocs[0]  # major tick difference at lower end
-        dmupper = majorlocs[-1] - majorlocs[-2]  # major tick difference at upper end
+        dmupper = majorlocs[-1] - majorlocs[-2]  # major tick difference at upper e	nd
 
         # add temporary major tick location at the lower end
         if majorlocs[0] != 0. and ((majorlocs[0] != self.linthresh and dmlower > self.linthresh) or (
@@ -166,13 +167,13 @@ def register_seismic__cmap(zmin, zmax):
 
 
 # read dir to get all a? files
-def get_groups(directory, condition=lambda grp_len: True):
+def get_groups(directory, ext='a?', condition=lambda grp_len: True):
     """Finds all *.a? files in a `directory` and sorts then into groups."""
 
     groups = []
     last_group = []
     last_name = ''
-    for file in glob.glob(os.path.join(directory + '\*.a?')):
+    for file in glob.glob(os.path.join(directory + f'\*.{ext}')):
 
         path = os.path.splitext(file)[0]
         name = os.path.split(path)[1]
@@ -259,7 +260,7 @@ def load_groups(groups, **kwargs):
     return data
 
 
-def plot_matrix(data, t_axis_mul=1, t_unit='$ps$', cmap='diverging', z_unit='$\Delta A$ ($m$OD)'):
+def plot_matrix(data, t_axis_mul=1, t_unit='$ps$', cmap='diverging', z_unit='$\Delta A$ (mOD)'):
     """data are matrix of loaded datasets"""
 
     assert isinstance(data, np.ndarray)
@@ -303,10 +304,10 @@ def plot_matrix(data, t_axis_mul=1, t_unit='$ps$', cmap='diverging', z_unit='$\D
 #     plt.savefig(fname='output.png', format='png', transparent=True, dpi=500)
 
 
-def plot_data(data, symlog=False, title='TA data', t_unit='$ps$',
-              z_unit='$\Delta A$ (mOD)', cmap='diverging', z_lim=(None, None),
+def plot_data(data, symlog=False, title='TA data', t_unit='ps',
+              z_unit='$10^3\ \Delta A$', cmap='diverging', z_lim=(None, None),
               t_lim=(None, None), w_lim=(None, None), fig_size=(6, 4), dpi=500, filepath=None, transparent=True,
-              linthresh=10, linscale=1, D_mul_factor=1e3):
+              linthresh=10, linscale=1, D_mul_factor=1e3, y_major_formatter=ScalarFormatter()):
     """data is individual dataset"""
 
     assert type(data) == Data
@@ -348,13 +349,15 @@ def plot_data(data, symlog=False, title='TA data', t_unit='$ps$',
 
     plt.colorbar(label=z_unit)
     plt.title(title)
-    plt.ylabel(f'$\leftarrow$ Time delay ({t_unit})')
-    plt.xlabel(r'Wavelength ($nm$) $\rightarrow$')
+    plt.ylabel(f'$\leftarrow$ Time delay / {t_unit}')
+    plt.xlabel(r'Wavelength / nm $\rightarrow$')
 
     plt.ylim(t_lim)
     plt.xlim(w_lim)
 
     plt.gca().invert_yaxis()
+    if y_major_formatter:
+        plt.gca().yaxis.set_major_formatter(y_major_formatter)
 
     if symlog:
         plt.yscale('symlog', subsy=[2, 3, 4, 5, 6, 7, 8, 9], linscaley=linscale, linthreshy=linthresh)
@@ -391,7 +394,7 @@ def average(data, keepdims=True):
     return data_avrg[:, None] if keepdims else data_avrg
 
 
-def merge(data_avrg):
+def merge(data_avrg, average_same=True):
     """Merges multiple datasets and returns one matrix as Data object"""
 
     assert isinstance(data_avrg, np.ndarray)
@@ -411,15 +414,16 @@ def merge(data_avrg):
 
     # find indices and counts of same values in new_times
     vals, indices, counts = np.unique(new_times, return_index=True, return_counts=True)
+    
+    if average_same:
+        for i in range(indices.shape[0]):
+            if counts[i] < 2:
+                continue
 
-    for i in range(indices.shape[0]):
-        if counts[i] < 2:
-            continue
+            idx = indices[i]
 
-        idx = indices[i]
-
-        # replace the first occurrence by average of all of them
-        new_D[idx] = new_D[idx:idx + counts[i], :].mean(axis=0)
+            # replace the first occurrence by average of all of them
+            new_D[idx] = new_D[idx:idx + counts[i], :].mean(axis=0)
 
     # select only that elements of first occurrences
     new_times = new_times[indices]
