@@ -207,7 +207,7 @@ class Data:
         self.fname = None
 
         if fname is not None:
-            data = np.genfromtxt(fname, delimiter=delimiter, skip_header=skiprows, dtype=np.float64)
+            data = np.genfromtxt(fname, delimiter=delimiter, skip_header=skiprows, dtype=np.float64, filling_values=0)
             self.wavelengths = data[1:, 0] if transpose else data[0, 1:]
             self.times = data[0, 1:] if transpose else data[1:, 0]
             self.times *= t_axis_mul
