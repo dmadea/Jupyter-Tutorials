@@ -260,7 +260,9 @@ def load_groups(groups, **kwargs):
     return data
 
 
-def plot_matrix(data, t_axis_mul=1, t_unit='$ps$', cmap='diverging', z_unit='$\Delta A$ (mOD)'):
+def plot_matrix(data, t_axis_mul=1, t_unit='ps', cmap='diverging', z_unit='$\Delta A$ / $10^{-3}$',
+               linthresh=10, linscale=1, symlog=False, y_major_formatter=ScalarFormatter(),
+               t_lim=(None, None), w_lim=(None, None), z_lim=(None, None)):
     """data are matrix of loaded datasets"""
 
     assert isinstance(data, np.ndarray)
@@ -277,11 +279,15 @@ def plot_matrix(data, t_axis_mul=1, t_unit='$ps$', cmap='diverging', z_unit='$\D
 
             if data[i, j] is None:
                 continue
+                
+            t_lim = (data[i, j].times[0] if t_lim[0] is None else t_lim[0], data[i, j].times[-1] if t_lim[1] is None else t_lim[1])
+            w_lim = (
+            data[i, j].wavelengths[0] if w_lim[0] is None else w_lim[0], data[i, j].wavelengths[-1] if w_lim[1] is None else w_lim[1])
 
             fname = data[i, j].fname
 
-            zmin = data[i, j].D.min()
-            zmax = data[i, j].D.max()
+            zmin = np.min(data[i, j].D) if z_lim[0] is None else z_lim[0]
+            zmax = np.max(data[i, j].D) if z_lim[1] is None else z_lim[1]
 
             register_div_cmap(zmin, zmax)
 
@@ -293,15 +299,23 @@ def plot_matrix(data, t_axis_mul=1, t_unit='$ps$', cmap='diverging', z_unit='$\D
             plt.pcolormesh(x, y, data[i, j].D, cmap=cmap, vmin=zmin, vmax=zmax)
             plt.colorbar(label=z_unit)
             plt.title(os.path.split(fname)[1])
-            plt.ylabel(f'$\leftarrow$ Time delay ({t_unit})')
-            plt.xlabel(r'Wavelength ($nm$) $\rightarrow$')
+            plt.ylabel(f'$\leftarrow$ Time delay / {t_unit}')
+            plt.xlabel(r'Wavelength / nm $\rightarrow$')
+            plt.ylim(t_lim)
+            plt.xlim(w_lim)
 
             plt.gca().invert_yaxis()
+            
+            if symlog:
+                plt.yscale('symlog', subsy=[2, 3, 4, 5, 6, 7, 8, 9], linscaley=linscale, linthreshy=linthresh)
+                yaxis = plt.gca().yaxis
+                yaxis.set_minor_locator(MinorSymLogLocator(linthresh))
+                
+            if y_major_formatter:
+                plt.gca().yaxis.set_major_formatter(y_major_formatter)
 
     plt.tight_layout()
     plt.show()
-
-#     plt.savefig(fname='output.png', format='png', transparent=True, dpi=500)
 
 
 def plot_data(data, symlog=False, title='TA data', t_unit='ps',
