@@ -370,13 +370,15 @@ def plot_data(data, symlog=False, title='TA data', t_unit='ps',
     plt.xlim(w_lim)
 
     plt.gca().invert_yaxis()
-    if y_major_formatter:
-        plt.gca().yaxis.set_major_formatter(y_major_formatter)
+    
 
     if symlog:
         plt.yscale('symlog', subsy=[2, 3, 4, 5, 6, 7, 8, 9], linscaley=linscale, linthreshy=linthresh)
         yaxis = plt.gca().yaxis
         yaxis.set_minor_locator(MinorSymLogLocator(linthresh))
+        
+    if y_major_formatter:
+        plt.gca().yaxis.set_major_formatter(y_major_formatter)
 
     plt.tight_layout()
 
