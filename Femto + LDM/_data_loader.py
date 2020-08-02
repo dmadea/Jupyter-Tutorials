@@ -301,8 +301,8 @@ def plot_matrix(data, t_axis_mul=1, t_unit='ps', cmap='diverging', z_unit='$\Del
             plt.title(os.path.split(fname)[1])
             plt.ylabel(f'$\leftarrow$ Time delay / {t_unit}')
             plt.xlabel(r'Wavelength / nm $\rightarrow$')
-            plt.ylim(t_lim)
-            plt.xlim(w_lim)
+#             plt.ylim(t_lim)
+#             plt.xlim(w_lim)
 
             plt.gca().invert_yaxis()
             
