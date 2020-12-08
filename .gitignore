@@ -7,11 +7,9 @@
 !.gitignore
 !README.md
 
-!MCR-FMIN/animations/
 
 !*.ipynb
 !*.py
-!*.png
 !*.c
 !*.cpp
 !*.so
