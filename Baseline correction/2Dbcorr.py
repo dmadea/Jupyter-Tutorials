@@ -1,5 +1,13 @@
 #!/usr/bin/python3
 
+# Loads data matrix and performs two dimensional baseline correction using asymmetrically reweighted penalized least 
+# squares (arPLS) method, solved with discrete cosine transform (DCT). DCT method is based on the Robust smoother in
+# the following paper: 10.1016/j.csda.2009.09.020. arPLS method for optimising the weights is described here: 10.1039/c4an01061b.
+# Matlab implementation of smoothing algorithm is here: https://www.biomecardio.com/matlab/smoothn.m
+
+# It basically smooths the data where there is no signal and interpolates the points where the signal is. This is ensured 
+# by the zero weights in those regions.
+
 import argparse
 import sys
 import os
@@ -130,16 +138,7 @@ if __name__ == '__main__':
 
     parser.add_argument('files',  nargs=argparse.ONE_OR_MORE)
 
-    args, unparsed_args = parser.parse_known_args()
-    # print(args.lam0)
-    # print(args.lam1)
-    # print(args.delimiter)
-    # print(args.niter)
-    # print(args.tol)
-    # print(args.save_baseline)
-    # print(args.transpose)
-    # print(args.save_weights)
-    # print(args.files)
+    args, _ = parser.parse_known_args()
     fnames = []
     for fname in args.files:
         fnames += glob(fname)
