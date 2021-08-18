@@ -16,6 +16,8 @@ import numpy as np
 from numpy.linalg import norm
 from scipy.fftpack import dct, idct
 
+from typing import Union, Iterable, List
+
 
 # from https://stackoverflow.com/questions/40104377/issiue-with-implementation-of-2d-discrete-cosine-transform-in-python
 def dct2(block):
@@ -30,6 +32,32 @@ def idct2(block):
     Computes 2D inverse discrete cosine transform. 
     """
     return idct(idct(block.T, norm='ortho').T, norm='ortho')
+
+
+def fi(array: np.ndarray, values: Union[int, float, Iterable]) -> Union[int, List[int]]:
+    """
+    Finds index of nearest `value` in `array`. If value >  max(array), the last index of array
+    is returned, if value < min(array), 0 is returned. Array must be sorted. Also works for value
+    to be array, then array of indexes is returned.
+
+    Parameters
+    ----------
+    array : ndarray
+        Array to be searched.
+    values : {int, float, list}
+        Value or values to look for.
+
+    Returns
+    -------
+    out : int, np.ndarray
+        Found nearest index/es to value/s.
+    """
+    if not np.iterable(values):
+        values = [values]
+
+    ret_idx = [np.argmin(np.abs(array - i)) for i in values]
+
+    return ret_idx[0] if len(ret_idx) == 1 else ret_idx
 
 
 def load_matrix(fname, encoding='utf8', delimiter=','):
@@ -81,23 +109,23 @@ def baseline_2D_arPLS(Y: np.ndarray, lam0: float = 1e7, lam1: float = 0.01, nite
 
     N = Y.shape[0]
     K = Y.shape[1]
-    
+
     W = np.ones_like(Y)  # weight matrix
 
     l0 = np.sqrt(lam0) * (2 - 2 * np.cos(np.arange(N) * np.pi / N))  # eigenvalues of diff matrix for 1st dimension
     l1 = np.sqrt(lam1) * (2 - 2 * np.cos(np.arange(K) * np.pi / K))  # eigenvalues of diff matrix for 2nd dimension
-    
+
     gamma = 1 / (1 + (l0[:, None] + l1[None, :]) ** 2)
-    
+
     Z = Y  # intialize the baseline
     D = None
-    
+
     i = 0
     crit = 1
 
     while crit > tol and i < niter:
         Z = idct2(gamma * dct2(W * (Y - Z) + Z))  # calculate the baseline
-        
+
         D = Y - Z  # data corrected for baseline
         Dn = D[D < 0]  # negative data values
 
@@ -109,15 +137,30 @@ def baseline_2D_arPLS(Y: np.ndarray, lam0: float = 1e7, lam1: float = 0.01, nite
         crit = norm(new_W - W) / norm(W)
         W = new_W
 
-        if (i+1) % int(np.sqrt(niter)) == 0:
-            print(f'Iteration={i+1}, {crit=:.2g}')
+        if (i + 1) % int(np.sqrt(niter)) == 0:
+            print(f'Iteration={i + 1}, {crit=:.2g}')
         i += 1
-        
+
     return Z, D, W
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+
+    parser.add_argument("--delimiter", nargs="?", default=',', type=str,
+                        help="Delimiter in input text files, default is ','.")
+    parser.add_argument("--transpose", action="store_true",
+                        help="If specified, transposes the input matrix.")
+
+    parser.add_argument("--w0", nargs="?", default=None, type=float,
+                        help="Start wavelength to crop the data.")
+    parser.add_argument("--w1", nargs="?", default=None, type=float,
+                        help="End wavelength to crop the data.")
+
+    parser.add_argument("--t0", nargs="?", default=None, type=float,
+                        help="Start time to crop the data.")
+    parser.add_argument("--t1", nargs="?", default=None, type=float,
+                        help="End time to crop the data.")
 
     parser.add_argument("--lam0", nargs="?", default=1e7, type=float,
                         help="Smoothing parameter in the first dimension (axis == 0), default is 1e7.")
@@ -127,23 +170,23 @@ if __name__ == '__main__':
                         help="Maximum number of iterations, default is 100.")
     parser.add_argument("--tol", nargs="?", default=2e-3, type=float,
                         help="Tolerance for convergence based on weight matrix, default is 2e-3.")
-    parser.add_argument("--delimiter", nargs="?", default=',', type=str,
-                        help="Delimiter in input text files, default is ','.")
-    parser.add_argument("--transpose", action="store_true",
-                        help="If specified, transposes the input matrix.")
+
     parser.add_argument("--save_baseline", action="store_true",
                         help="If specified, saves estimated baseline.")
     parser.add_argument("--save_weights", action="store_true",
                         help="If specified, saves final weight matrix.")
 
-    parser.add_argument('files',  nargs=argparse.ONE_OR_MORE)
+    parser.add_argument('files', nargs=argparse.ONE_OR_MORE)
 
     args, _ = parser.parse_known_args()
+
+    # print(f'{args.w0=},{args.w1=},{args.t0=},{args.t1=}')
+
     fnames = []
     for fname in args.files:
         fnames += glob(fname)
 
-    assert len(fnames) > 0, "No filename specified"
+    # assert len(fnames) > 0, "No filename specified"
     assert args.niter > 0, "Number of iterations must be > 1"
 
     for fpath in fnames:
@@ -160,6 +203,19 @@ if __name__ == '__main__':
             times, wavelengths = wavelengths, times
             data = data.T
 
+        # crop the data if provided
+        # find indicies
+        it0 = fi(times, args.t0) if args.t0 is not None else 0
+        ti1 = fi(times, args.t1) + 1 if args.t1 is not None else data.shape[0]
+
+        iw0 = fi(wavelengths, args.w0) if args.w0 is not None else 0
+        iw1 = fi(wavelengths, args.w1) + 1 if args.w1 is not None else data.shape[1]
+
+        # crop
+        data = data[it0:ti1, iw0:iw1]
+        times = times[it0:ti1]
+        wavelengths = wavelengths[iw0:iw1]
+
         # perform baseline correction
         Z, D, W = baseline_2D_arPLS(data, args.lam0, args.lam1, args.niter, args.tol)
 
@@ -172,4 +228,3 @@ if __name__ == '__main__':
             save_mat2csv(os.path.join(_dir, f'{fname}-b_corr_weights.csv'), W, times, wavelengths, unit='min')
 
         print(f'\'{fname}{ext}\' finished.\n')
-
