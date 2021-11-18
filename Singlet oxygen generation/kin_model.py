@@ -1,19 +1,13 @@
 
-
-# import warnings
-# warnings.filterwarnings("ignore")
-
-
-from sympy import Function, symbols, solve, Eq
+from sympy import Function, symbols, solve, Eq, factor, simplify
 from IPython.display import display, Math
-from typing import Iterable, List, Union
+from typing import List, Union, Tuple
+import re
 
-
-import numpy as np
-import matplotlib.pyplot as plt
+# import numpy as np
+# import matplotlib.pyplot as plt
 # import json
 # from scipy.integrate import odeint
-import re
 
 
 # inspiration from https://stackoverflow.com/questions/4998629/split-string-with-multiple-delimiters-in-python
@@ -51,7 +45,13 @@ class PhotoKineticSymbolicModel:
         # self.initial_conditions = {}
         self.elem_reactions = []  # list of dictionaries of elementary reactions
         self.scheme = ""
-        # self.func = None  # function that returns dc_dt for current c and t for build model
+        self.last_SS_solution = []
+
+        self.symbols = dict(compartments=[],
+                            equations=[],
+                            rate_constants=[],
+                            time=None,
+                            flux=None)
 
     @classmethod
     def from_text(cls, scheme: str):
@@ -116,7 +116,7 @@ class PhotoKineticSymbolicModel:
 
                     number = 1
                     if match is not None:  # number in front of a token
-                        str_num = match.group(1)  #  get the number in front of the entry name
+                        str_num = match.group(1)   #  get the number in front of the entry name
                         entry = entry[len(str_num):]
                         number = int(str_num)
 
@@ -155,9 +155,7 @@ class PhotoKineticSymbolicModel:
                         r_name = next(rate_iterator)
                     _model.add_elementary_reaction(ps, [], type=r_type, rate_constant_name=r_name)
 
-        # comps = _model.get_compartments()
-        # init = [1 if i == 0 else 0 for i in range(len(comps))]
-        # _model.initial_conditions = dict(zip(comps, init))
+        _model.build_equations()
 
         return _model
 
@@ -185,14 +183,23 @@ class PhotoKineticSymbolicModel:
             products = ' + '.join([f'\\mathrm{{{comp}}}' for comp in el['to_comp']])
 
             r_name = el['rate_constant_name']
-            # if r_name is None:
-            #     r_name = f'k_{{{reactants}\\rightarrow{products}}}'
 
             latex_eq += f'{reactants} &\\xrightarrow{{{r_name}}} {products} \\\\'
 
         latex_eq = r'\begin{align}' + latex_eq + r'\end{align}'
         display(Math(latex_eq))
 
+    def pprint_equations(self, subs: List[tuple] = None):
+        if self.symbols['equations'] is None:
+            return
+
+        for eq in self.symbols['equations']:
+            _eq = eq
+            if subs:
+                for old, new in subs:
+                    _eq = _eq.subs(old, new)
+
+            display(_eq)
 
     def get_compartments(self):
         """
@@ -209,182 +216,127 @@ class PhotoKineticSymbolicModel:
                     names.append(c)
         return names
 
-    def build_equation(self):
+    def steady_state_approx(self, compartments: Union[List[str], Tuple[str]],
+                            subs: List[tuple] = None):
+        if self.symbols['equations'] is None:
+            return
+
+        self.last_SS_solution.clear()
+
+        eq2solve = []
+        variables = []
+
+        for comp, eq, f in zip(self.get_compartments(), self.symbols['equations'], self.symbols['compartments']):
+            if comp in compartments:
+                eq2solve.append(Eq(eq.rhs, 0))
+                variables.append(f)
+            else:
+                eq2solve.append(eq)
+                variables.append(f.diff(self.symbols['time']))
+
+        solution = solve(eq2solve, variables)
+
+        for var, expression in solution.items():
+            eq = Eq(var, expression)
+            eq = factor(simplify(eq))
+
+            if subs:
+                for old, new in subs:
+                    eq = eq.subs(old, new)
+
+            self.last_SS_solution.append(eq)
+            display(eq)
+
+    def clear_model(self):
+        self.symbols['compartments'].clear()
+        self.symbols['equations'].clear()
+        self.symbols['rate_constants'].clear()
+        self.symbols['time'] = None
+        self.symbols['flux'] = None
+
+    def build_equations(self):
+        self.clear_model()
+
         comps = self.get_compartments()
-        n = len(comps)
 
-        s_functions = []
-        # s_equations = []
-        s_rhss = n * [0]
+        # right hand side of diff. equations
+        sym_rhss = len(comps) * [0]
 
-        s_t, s_J = symbols('t J')  # time and concetrations of absorbed photons J
+        # time and concentrations of absorbed photons J
+        self.symbols['time'], self.symbols['flux'] = symbols('t J')
 
         for c in comps:
-            f = Function(f'[{{{c}}}]')(s_t)
-            # s_equations.append(Eq(f(s_t).diff(s_t), 0))  # intialize differential equations
-            s_functions.append(f)
-
+            # f = Function(f'[{{{c}}}]')(s_t)
+            f = Function(f'c_{{{c}}}')(self.symbols['time'])
+            self.symbols['compartments'].append(f)
 
         idx_dict = dict(enumerate(comps))
         inv_idx = dict(zip(idx_dict.values(), idx_dict.keys()))
 
-        # symbolic compartments dictionary
-        # s_comps_dict = dict(zip(inv_idx.keys(), s_functions))
-
         r_names = list(map(lambda el: el['rate_constant_name'], filter(lambda el: el['type'] == 'reaction', self.elem_reactions)))
-        s_rates = symbols(' '.join(r_names))
+        self.symbols['rate_constants'] = list(symbols(' '.join(r_names)))
 
         # symbolic rate constants dictionary
-        s_rates_dict = dict(zip(r_names, s_rates))   # 'k_S': sympy k_S
-
-
-        # symbols of rate constants
-
-        # idx_from = []  # arrays of arrays of indexes for each elementary reaction
-        # idx_to = []  # arrays of arrays of indexes for each elementary reaction
+        s_rates_dict = dict(zip(r_names, self.symbols['rate_constants']))
 
         for el in self.elem_reactions:
-            i_from = map(lambda com: inv_idx[com], el['from_comp'])  # list of indexes of starting materials
-            i_to = map(lambda com: inv_idx[com], el['to_comp'])  # list of indexes of reaction products
+            i_from = list(map(lambda com: inv_idx[com], el['from_comp']))  # list of indexes of starting materials
+            i_to = list(map(lambda com: inv_idx[com], el['to_comp']))  # list of indexes of reaction products
 
             if el['type'] == 'absorption':
                 for k in i_from:
-                    s_rhss[k] -= s_J
+                    sym_rhss[k] -= self.symbols['flux']
 
                 for k in i_to:
-                    s_rhss[k] += s_J
+                    sym_rhss[k] += self.symbols['flux']
 
                 continue
 
             forward_prod = s_rates_dict[el['rate_constant_name']]
 
             for k in i_from:
-                forward_prod = forward_prod * s_functions[k]  # forward rate products, eg. k_AB * [A] * [B]
+                forward_prod *= self.symbols['compartments'][k]  # forward rate products, eg. k_AB * [A] * [B]
 
             for k in i_from:
-                s_rhss[k] += -forward_prod  # reactants
+                sym_rhss[k] -= forward_prod   # reactants
 
             for k in i_to:
-                s_rhss[k] += forward_prod   # products
+                sym_rhss[k] += forward_prod   # products
 
-        # return s_rhss
-
-        for rhs in s_rhss:
-            display(rhs)
-
-    def build_func(self):
-        """
-        Builds model and returns the function that takes c, t and rates as an argument
-        and can be directly used for odeint numerical integration method.
-        """
-
-        comps = self.get_compartments()
-
-        idx_dict = dict(enumerate(comps))
-        inv_idx = dict(zip(idx_dict.values(), idx_dict.keys()))  # comp: index
-
-        r = len(self.elem_reactions)
-        idx_from = []  # arrays of arrays of indexes for each elementary reaction
-        idx_to = []  # arrays of arrays of indexes for each elementary reaction
-        _rates = np.empty((r, 2), dtype=np.float64)
-
-        # build the lists of indexes and so on...
-        for i, el in enumerate(self.elem_reactions):
-            i_from = list(map(lambda com: inv_idx[com], el['from_comp']))  # list of indexes of starting materials
-            i_to = list(map(lambda com: inv_idx[com], el['to_comp']))  # list of indexes of reaction products
-
-            idx_from.append(i_from)
-            idx_to.append(i_to)
-
-            _rates[i, 0] = el['forward_rate']
-            _rates[i, 1] = el['backward_rate']
-
-        # TODO: possible space for optimization if found too slow for odeint, probably some Cython or C code would be
-        # TODO: needed
-        def func(c, t, rates=None):
-            """Rates if provided must be (r x 2) matrix, where in first column are forward rates and second column
-            backward rates. r is number of elementary reactions."""
-
-            rates = _rates if rates is None else rates
-
-            dc_dt = np.zeros_like(c)
-
-            for i in range(r):
-                forward_prod, backward_prod = rates[i]
-
-                # eg. for elementary step A + B = C + D
-                for k in idx_from[i]:
-                    forward_prod *= c[k]  # forward rate products, eg. k_AB * [A] * [B]
-
-                for k in idx_to[i]:
-                    backward_prod *= c[k]  # backward rate products, eg. k_CD * [C] * [D]
-
-                for k in idx_from[i]:
-                    dc_dt[k] += backward_prod - forward_prod  # reactants
-
-                for k in idx_to[i]:
-                    dc_dt[k] += forward_prod - backward_prod  # products
-
-            return dc_dt
-
-        self.func = func
-        return func
+        for f, rhs in zip(self.symbols['compartments'], sym_rhss):
+            # construct differential equation
+            _eq = Eq(f.diff(self.symbols['time']), rhs)
+            self.symbols['equations'].append(_eq)
 
     def print_text_model(self):
         print(f'Scheme: {self.scheme}')
-        # print(f'Initial conditions: {self.initial_conditions}')
 
         for el in self.elem_reactions:
-            print(f"Elementary reaction: {' + '.join(el['from_comp'])} \u2192 {' + '.join(el['to_comp'])}, "
-                  f"forward_rate: {el['forward_rate']}, backward_rate: {el['backward_rate']}")
-
-
+            rate = el['rate_constant_name'] if el['type'] == 'reaction' else None
+            print(f"{el['type'].capitalize()}: {' + '.join(el['from_comp'])} \u2192 {' + '.join(el['to_comp'])}, "
+                  f"{rate=}")
 
 
 if __name__ == '__main__':
 
     model = """
-
     BR -hv-> ^1BR --> BR // k_S  # population of singlet state and decay to GS with rate k_S
-
     ^1BR --> ^3BR --> BR  // k_{isc}; k_T
-
     ^3BR + ^3O_2 --> ^1O_2 + BR  // k_{TT}
-
     ^1O_2 --> ^3O_2  // k_d
-
     BR + ^1O_2 --> // k_r
-
     """
 
-    reaction = """
-    
-    
-    2A --> B -hv-> D --> 5C // k_{r} ; k_obs  # koasddd
-    
-    """
-    # reaction = 'BP = zero, 2 BP = zero + BP'
-    # SIR = 'Susceptible + Infected = 2 Infected, Infected = Recovered, Infected = Dead'
+    # model = """
+    # A -hv-> B --> A // k_S
+    # B --> // k_d
+    # """
 
     model = PhotoKineticSymbolicModel.from_text(model)
-    print(model.get_compartments())
-    # print(model.elem_reactions)
-    print(model.pprint_model())
+    print(model.print_text_model())
 
-    model.build_equation()
-    #
-    # model.elem_reactions[1]['forward_rate'] = 0.1
-    # model.elem_reactions[2]['forward_rate'] = 0.01
-    #
-    # times = np.linspace(0, 50, 1000, dtype=np.float64)
-    #
-    # model.simulate_model(times, [1, 0.01, 0, 0])
-    #
-    # print(model.get_compartments())
-    # print(model.get_rate_names())
-    #
-    #
-    #
+
+
 
 
 
