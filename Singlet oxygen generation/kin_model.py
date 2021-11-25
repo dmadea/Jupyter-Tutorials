@@ -137,23 +137,24 @@ class PhotoKineticSymbolicModel:
                 sp_rates = num_of_reactions * [None]
 
             rate_iterator = iter(sp_rates)
-            for i in range(len(tokens) - 1):
+            for i in range(len(tokens)):
                 rs, r_del = tokens[i]
-                ps, p_del = tokens[i + 1]
+                ps, _ = tokens[i + 1] if i < len(tokens) - 1 else ([], None)
+
+                if r_del == '':
+                    continue
 
                 r_type = inv_delimiters[r_del]
                 r_name = next(rate_iterator) if r_type == 'reaction' else 'h\\nu'
 
                 if r_name is None:
-                    r_name = f"k_{{{'+'.join(rs)} {'+'.join(ps)} }}"
+                    r_name = f"k_{{{'+'.join(rs)}{'+'.join(ps)}}}"
+                    print(r_name)
+
+                if r_type == 'absorption' and len(ps) == 0:
+                    raise ValueError(f"Missing a species after absorption arrow ({cls.delimiters['absorption']}).")
 
                 _model.add_elementary_reaction(rs, ps, type=r_type, rate_constant_name=r_name)
-
-                if i == len(tokens) - 2 and p_del != '':
-                    r_type = inv_delimiters[p_del]
-                    if r_type == 'reaction':
-                        r_name = next(rate_iterator)
-                    _model.add_elementary_reaction(ps, [], type=r_type, rate_constant_name=r_name)
 
         _model.build_equations()
 
@@ -274,7 +275,7 @@ class PhotoKineticSymbolicModel:
         inv_idx = dict(zip(idx_dict.values(), idx_dict.keys()))
 
         r_names = list(map(lambda el: el['rate_constant_name'], filter(lambda el: el['type'] == 'reaction', self.elem_reactions)))
-        self.symbols['rate_constants'] = list(symbols(' '.join(r_names)))
+        self.symbols['rate_constants'] = symbols(r_names)
 
         # symbolic rate constants dictionary
         s_rates_dict = dict(zip(r_names, self.symbols['rate_constants']))
@@ -312,32 +313,37 @@ class PhotoKineticSymbolicModel:
         print(f'Scheme: {self.scheme}')
 
         for el in self.elem_reactions:
-            rate = el['rate_constant_name'] if el['type'] == 'reaction' else None
+            rate = el['rate_constant_name']# if el['type'] == 'reaction' else None
             print(f"{el['type'].capitalize()}: {' + '.join(el['from_comp'])} \u2192 {' + '.join(el['to_comp'])}, "
                   f"{rate=}")
 
 
 if __name__ == '__main__':
 
+    # model = """
+    # ^1BR --> BR // k_S  # population of singlet state and decay to GS with rate k_S
+    # ^1BR --> ^3BR --> BR -hv-> ^1BR  // k_{isc}; k_T
+    # ^3BR + ^3O_2 --> ^1O_2 + BR  // k_{TT}
+    # ^1O_2 --> ^3O_2  // k_d
+    # BR + ^1O_2 --> // k_r
+    
+    # """
+
     model = """
     BR -hv-> ^1BR --> BR // k_S  # population of singlet state and decay to GS with rate k_S
-    ^1BR --> ^3BR --> BR  // k_{isc}; k_T
-    ^3BR + ^3O_2 --> ^1O_2 + BR  // k_{TT}
-    ^1O_2 --> ^3O_2  // k_d
-    BR + ^1O_2 --> // k_r
+    ^1BR -hv-> 
     """
 
-    # model = """
-    # A -hv-> B --> A // k_S
-    # B --> // k_d
-    # """
+    model = """
+    A -hv-> B
+    B + A --> C 
+    C -->   
+    D --> 
+
+    """
 
     model = PhotoKineticSymbolicModel.from_text(model)
     print(model.print_text_model())
-
-
-
-
 
 
 
