@@ -4009,6 +4009,10 @@ Journal of Physical Chemistry	J. Phys. Chem.
 Journal of Physical Chemistry A	J. Phys. Chem. A
 Journal of Physical Chemistry B	J. Phys. Chem. B
 Journal of Physical Chemistry C	J. Phys. Chem. C
+The Journal of Physical Chemistry	J. Phys. Chem.
+The Journal of Physical Chemistry A	J. Phys. Chem. A
+The Journal of Physical Chemistry B	J. Phys. Chem. B
+The Journal of Physical Chemistry C	J. Phys. Chem. C
 Journal of Physical Chemistry Letters	J. Phys. Chem. Lett.
 Journal of Physical Oceanography	J. Phys. Oceanogr.
 Journal of Physical Organic Chemistry	J. Phys. Org. Chem.
@@ -6503,3 +6507,8 @@ Zoological Journal of the Linnean Society	Zool. J. Linn. Soc.
 Zoological Letters	Zool. Lett.
 Zoologischer Anzeiger	Zool. Anz.
 Zoosystematics and Evolution	Zoosyst. Evol.
+Journal of Statistical Software	J. Stat. Softw.
+Journal of the Chemical Society-Chemical Communications	J. Chem. Soc., Chem. Commun.
+Numerical Algorithms	Numer. Algorithms
+Computational Statistics & Data Analysis	Comput. Stat. Data Anal.
+Journal of Photochemistry and Photobiology A: Chemistry	J. Photochem. Photobiol. A: Chem.
