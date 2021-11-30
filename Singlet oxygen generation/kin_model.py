@@ -1,5 +1,5 @@
 
-from sympy import Function, symbols, solve, Eq, factor, simplify
+from sympy import Function, solve, Eq, factor, simplify, Symbol, symbols
 from IPython.display import display, Math
 from typing import List, Union, Tuple
 import re
@@ -35,6 +35,12 @@ def split_delimiters(text: str, delimiters: Union[list, tuple]) -> List[tuple]:
 
 
 class PhotoKineticSymbolicModel:
+    """
+    
+    
+    
+    
+    """
 
     delimiters = {
         'absorption': '-hv->',
@@ -56,17 +62,24 @@ class PhotoKineticSymbolicModel:
     @classmethod
     def from_text(cls, scheme: str):
         """
-        Expected format is single or multiline, reactions are denoted with equal sign,
-        which allows for forward and backward rates. Names of species are case sensitive and can contain numbers.
-        Eg. decay of triplet benzophenone with mixed 1st and 2nd order (self TT annihilation),
-        here zero represents the ground state BP:
-            BP3 = BP_GS  # decay of triplet BP to GS
-            2BP3 = BP3 + BP_GS  # selfquenching of triplet BP
+        Takes a text-based model and returns the instance of PhotoKineticSymbolicModel with
+        parsed photokinetic model.
 
-        Eg. pandemic SIR model:
-            Susceptible + Infected = 2Infected
-            Infected = Recovered
-            Infected = Dead
+        Expected format is single or multiline, forward reactions and absorptions are denoted with 
+        '-->' and '-hv->' signs, respecively. Names of species are case sensitive. It is possible to
+        denote the sub- or superscirpts with latex notation, e.g. ^1S or H_2O, etc.
+
+        Rate constants for individual reactions can be taken from the text input. They are denoted
+        at the end of the each line after '//' characters and are separated by semicolon ';'. If the rate
+        constant name is not specified, default name using the reactants and products will be used.
+        Comments are denoted by '#'. All characters after this symbol will be ignored.
+
+        Eg. absorption and formation of singlet state, triplet and then photoproducts which
+        irreversibly reacts with the ground state
+            GS -hv-> S_1 --> GS // k_S  # absorption and singlet state decay
+            S_1 --> T_0 --> GS // k_{isc} ; k_T  # intersystem crossing and triplet decay
+            T_0 --> P // k_P  # reaction from triplet state to form the products
+            P + GS -->  // k_r  # products reacts irreversibly with the ground state
 
         :param scheme:
             input text-based model
@@ -87,10 +100,11 @@ class PhotoKineticSymbolicModel:
 
         for line in filter(None, scheme.split('\n')):  # filter removes empty entries from split
             line = line.strip()
+            
+            line = line.split('#')[0]  # remove comments, take only the characters before possible #
+
             if line == '':
                 continue
-
-            line = list(filter(None, line.split('#')))[0]  # remove comments, take only the characters before possible #
 
             line, *rates = list(filter(None, line.split('//')))  # split to extract rate constant names
 
@@ -162,7 +176,7 @@ class PhotoKineticSymbolicModel:
 
     def add_elementary_reaction(self, from_comp=('A', 'A'), to_comp=('B', 'C'), type='reaction', rate_constant_name=None):
         """
-        type: 'reaction' or 'absorption'
+        Adds the elementary reaction to the model. type can be either 'reaction' or 'absorption'.
         """
         from_comp = from_comp if isinstance(from_comp, (list, tuple)) else [from_comp]
         to_comp = to_comp if isinstance(to_comp, (list, tuple)) else [to_comp]
@@ -175,7 +189,7 @@ class PhotoKineticSymbolicModel:
         self.elem_reactions.append(el)
 
     def pprint_model(self):
-        """Pretty prints model."""
+        """Pretty prints model. Will work only in Jupyter notebook or QtConsole environment."""
 
         latex_eq = ''
 
@@ -191,6 +205,8 @@ class PhotoKineticSymbolicModel:
         display(Math(latex_eq))
 
     def pprint_equations(self, subs: List[tuple] = None):
+        """Pretty prints the equations. Will work only in Jupyter notebook or QtConsole environment."""
+
         if self.symbols['equations'] is None:
             return
 
@@ -219,6 +235,9 @@ class PhotoKineticSymbolicModel:
 
     def steady_state_approx(self, compartments: Union[List[str], Tuple[str]],
                             subs: List[tuple] = None):
+        """Performs the steady state approximation for the given species and displays the 
+        result."""
+
         if self.symbols['equations'] is None:
             return
 
@@ -256,6 +275,8 @@ class PhotoKineticSymbolicModel:
         self.symbols['flux'] = None
 
     def build_equations(self):
+        """Builds the equations. Converts the elementary reactions reperezentation to sympy differential equations."""
+
         self.clear_model()
 
         comps = self.get_compartments()
@@ -275,7 +296,7 @@ class PhotoKineticSymbolicModel:
         inv_idx = dict(zip(idx_dict.values(), idx_dict.keys()))
 
         r_names = list(map(lambda el: el['rate_constant_name'], filter(lambda el: el['type'] == 'reaction', self.elem_reactions)))
-        self.symbols['rate_constants'] = symbols(r_names)
+        self.symbols['rate_constants'] = list(map(lambda n: Symbol(n), r_names))
 
         # symbolic rate constants dictionary
         s_rates_dict = dict(zip(r_names, self.symbols['rate_constants']))
@@ -310,6 +331,7 @@ class PhotoKineticSymbolicModel:
             self.symbols['equations'].append(_eq)
 
     def print_text_model(self):
+        """Print the model as text."""
         print(f'Scheme: {self.scheme}')
 
         for el in self.elem_reactions:
@@ -336,13 +358,22 @@ if __name__ == '__main__':
 
     model = """
     A -hv-> B
-    B + A --> C 
-    C -->   
+    2B + A --> 3C 
+    2C -->   
     D --> 
 
     """
 
-    model = PhotoKineticSymbolicModel.from_text(model)
+    str_model = """
+    ArO_2 --> Ar + ^1O_2             // k_1  # absorption and singlet state decay
+    ^1O_2 --> ^3O_2                  // k_d
+    #  ^1O_2 + Ar --> Ar + ^3O_2         // k_{q,Ar}
+    #  ^1O_2 + ArO_2 --> ArO_2 + ^3O_2     // k_{q,ArO_2}
+    ^1O_2 + S --> S + ^3O_2           // k_{q,S}
+    S + ^1O_2 -->                      // k_r
+    """
+
+    model = PhotoKineticSymbolicModel.from_text(str_model)
     print(model.print_text_model())
 
 
