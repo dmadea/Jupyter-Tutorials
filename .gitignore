@@ -20,3 +20,5 @@
 !*.bib
 !*.pdf
 !*.docx
+!Baseline correction/*
+!Baseline correction/*/*.pdf
