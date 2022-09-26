@@ -162,9 +162,9 @@ if __name__ == '__main__':
     parser.add_argument("--t1", nargs="?", default=None, type=float,
                         help="End time to crop the data.")
 
-    parser.add_argument("--lam0", nargs="?", default=1e7, type=float,
+    parser.add_argument("--lam0", nargs="?", default=1e6, type=float,
                         help="Smoothing parameter in the first dimension (axis == 0), default is 1e7.")
-    parser.add_argument("--lam1", nargs="?", default=0.01, type=float,
+    parser.add_argument("--lam1", nargs="?", default=0.0, type=float,
                         help="Smoothing parameter in the second dimension (axis == 1), default is 0.01.")
     parser.add_argument("--niter", nargs="?", default=100, type=int,
                         help="Maximum number of iterations, default is 100.")
