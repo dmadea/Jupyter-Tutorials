@@ -11,7 +11,7 @@
 # new implementation suitable for HPLC data, stds and means are calculated for each trace (axis=0)
 
 import argparse
-import sys
+# import sys
 import os
 from glob import glob
 import numpy as np
@@ -94,7 +94,7 @@ def save_mat2csv(fname, matrix, times=None, wls=None, unit='', delimiter=','):
         f.write(buffer)
 
 
-def baseline_2D_arPLS(Y: np.ndarray, lam0: float = 1e7, lam1: float = 0.01, niter: int = 100, tol: float = 2e-3):
+def baseline_2D_arPLS(Y: np.ndarray, lam0: float = 1e7, lam1: float = 0.01, niter: int = 100, tol: float = 2e-3, fixend: bool = True):
     """
     Performs two dimensional baseline correction using asymmetrically reweighted penalized least squares (arPLS) method,
     solved with discrete cosine transform (DCT). DCT method is based on the Robust smoother in the following
@@ -144,6 +144,14 @@ def baseline_2D_arPLS(Y: np.ndarray, lam0: float = 1e7, lam1: float = 0.01, nite
         s = np.std(Wd, axis=0, keepdims=False)
         
         new_W = logistic(D, m, s)
+
+        if fixend and lam0 > 0:
+            new_W[0, :] = 1
+            new_W[-1, :] = 1
+
+        if fixend and lam1 > 0:
+            new_W[:, 0] = 1
+            new_W[:, -1] = 1       
         
         Z = idct2(gamma * dct2(W * (Y - Z) + Z))  # calculate the baseline
 
@@ -197,6 +205,9 @@ if __name__ == '__main__':
     parser.add_argument("--save_weights", action="store_true",
                         help="If specified, saves final weight matrix.")
 
+    parser.add_argument("--fixend", action="store_true", default=False,
+                        help="Fixes the weights of end points and sets them to 1.")
+
     parser.add_argument('files', nargs=argparse.ONE_OR_MORE)
 
     args, _ = parser.parse_known_args()
@@ -238,7 +249,7 @@ if __name__ == '__main__':
         wavelengths = wavelengths[iw0:iw1]
 
         # perform baseline correction
-        Z, D, W = baseline_2D_arPLS(data, args.lam0, args.lam1, args.niter, args.tol)
+        Z, D, W = baseline_2D_arPLS(data, args.lam0, args.lam1, args.niter, args.tol, args.fixend)
 
         save_mat2csv(os.path.join(_dir, f'{fname}-b_corr.csv'), D, times, wavelengths, unit='min')
 
