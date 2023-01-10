@@ -1,0 +1,51 @@
+CAS	Count	Link to 1st product
+2197-01-5	1	https://www.sigmaaldrich.com/CZ/en/product/sial/390410
+2244-11-3	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/a7413
+2321-07-5	5	https://www.sigmaaldrich.com/CZ/en/product/sigma/46955
+2459-09-8	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/m52950
+2924-09-6	0	
+3483-12-3	19	https://www.sigmaaldrich.com/CZ/en/product/sial/d0632
+4885-02-3	2	https://www.sigmaaldrich.com/CZ/en/product/aldrich/d65658
+5188-07-8	3	https://www.sigmaaldrich.com/CZ/en/product/aldrich/281018
+5470-11-1	8	https://www.sigmaaldrich.com/CZ/en/product/sigald/159417
+5720-06-9	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/445231
+6089-09-4	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/232211
+6132-04-3	17	https://www.sigmaaldrich.com/CZ/en/product/sial/s4641
+6258-06-6	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/456063
+7021-09-2	3	https://www.sigmaaldrich.com/CZ/en/product/aldrich/248975
+7153-08-4	0	
+7440-09-7	12	https://www.sigmaaldrich.com/CZ/en/product/aldrich/244864
+7446-08-4	5	https://www.sigmaaldrich.com/CZ/en/product/aldrich/325473
+7623-09-8	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/157139
+7647-10-1	10	https://www.sigmaaldrich.com/CZ/en/product/aldrich/205885
+7698-05-7	3	https://www.sigmaaldrich.com/CZ/en/product/aldrich/543047
+7719-09-7	3	https://www.sigmaaldrich.com/CZ/en/product/sial/230464
+7758-01-2	2	https://www.sigmaaldrich.com/CZ/en/product/sigald/309087
+7758-02-3	14	https://www.sigmaaldrich.com/CZ/en/product/sigald/221864
+7758-05-6	8	https://www.sigmaaldrich.com/CZ/en/product/sigald/215929
+7758-11-4	16	https://www.sigmaaldrich.com/CZ/en/product/sigald/p3786
+7773-01-5	9	https://www.sigmaaldrich.com/CZ/en/product/sigma/m1787
+7783-06-4	2	https://www.sigmaaldrich.com/CZ/en/product/aldrich/742546
+7789-09-5	2	https://www.sigmaaldrich.com/CZ/en/product/sigald/402826
+7791-03-9	4	https://www.sigmaaldrich.com/CZ/en/product/aldrich/634565
+100-00-5	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/c59122
+100-01-6	11	https://www.sigmaaldrich.com/CZ/en/product/aldrich/185310
+100-02-7	19	https://www.sigmaaldrich.com/CZ/en/product/aldrich/241326
+100-06-1	3	https://www.sigmaaldrich.com/CZ/en/product/aldrich/117374
+100-07-2	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/a88476
+100-09-4	6	https://www.sigmaaldrich.com/CZ/en/product/aldrich/117390
+100-10-7	10	https://www.sigmaaldrich.com/CZ/en/product/sial/156477
+100-11-8	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/n13054
+100-17-4	2	https://www.sigmaaldrich.com/CZ/en/product/aldrich/103543
+100-19-6	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/n9608
+100-22-1	0	
+10022-31-8	3	https://www.sigmaaldrich.com/CZ/en/product/sigald/217581
+100-23-2	0	
+1002345-50-7	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/703028
+10024-97-2	2	https://www.sigmaaldrich.com/CZ/en/product/aldrich/295590
+10025-69-1	8	https://www.sigmaaldrich.com/CZ/en/product/sigald/243523
+10025-77-1	6	https://www.sigmaaldrich.com/CZ/en/product/sigald/236489
+10025-78-2	1	https://www.sigmaaldrich.com/CZ/en/product/aldrich/175552
+10025-87-3	3	https://www.sigmaaldrich.com/CZ/en/product/aldrich/201170
+10026-04-7	5	https://www.sigmaaldrich.com/CZ/en/product/aldrich/215120
+10026-13-8	3	https://www.sigmaaldrich.com/CZ/en/product/sial/157775

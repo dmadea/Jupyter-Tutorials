@@ -8,56 +8,74 @@ from selenium.common.exceptions import NoSuchElementException
 
 driver = webdriver.Chrome('./chromedriver')
 
-# import requests
+with open('CAS.txt') as file:
+    CAS_list = [line.rstrip() for line in file]
 
-CAS_list = [
-    '121-44-8', 
-    '95-56-7',
-    '591-20-8',
-    '106-41-2',
-    '121-446-8',
-    '785-225-1145',
-]
 
-results = {}
+# CAS_list_test = [
+#     '121-44-8', 
+#     '95-56-7',
+#     '591-20-8',
+#     '106-41-2',
+#     '121-446-8',
+#     '785-225-1145',
+# ]
+
+# results = {}
 
 get_url = lambda cas: f"https://www.sigmaaldrich.com/CZ/en/search/{cas}?focus=products&page=1&perpage=60&sort=relevance&term={cas}&type=product"
 
-for i, cas in enumerate(CAS_list):
-    url = get_url(cas)
-    driver.get(url)
 
-    if i == 0:
-        # accept all cookies
-        driver.implicitly_wait(10)
-        driver.find_element(By.XPATH, "//button[@id='onetrust-accept-btn-handler']").click()
+with open('results.txt', 'w') as file:
 
-    # find number of results
-    driver.implicitly_wait(3)
-    count = None
+    def write_line(text):
+        file.write(text + "\n")
 
-    try:
-        element = driver.find_element(By.XPATH, "//div[@data-testid='srp-result-count']")
-        split = element.text.split(' ')
-        count = int(split[3])  # take 4th word and parse it to int
-        results[cas] = dict(available=True, count=count)
-        print(f"Number of found products: {count}")
-    except NoSuchElementException as e:
-        print('CAS was not found.')
-        results[cas] = dict(available=False, count=0)
+    write_line("CAS\tCount\tLink to 1st product")
+    for i, cas in enumerate(CAS_list[:50]):
+        url = get_url(cas)
+        driver.get(url)
 
-    time.sleep(1)
+        if i == 0:
+            # accept all cookies
+            driver.implicitly_wait(10)
+            driver.find_element(By.XPATH, "//button[@id='onetrust-accept-btn-handler']").click()
 
+        # find number of results
+        driver.implicitly_wait(3)
+        count = 0
 
-print(results)
+        try:
+            element = driver.find_element(By.XPATH, "//div[@data-testid='srp-result-count']")
+            split = element.text.split(' ')
+            count = int(split[3])  # take 4th word and parse it to int
+            # results[cas] = dict(available=True, count=count)
+            print(f"Number of found products for {cas}: {count}")
+        except NoSuchElementException as e:
+            print(f'CAS {cas} was not found.')
+            # results[cas] = dict(available=False, count=0)
 
-time.sleep(50)
+        driver.implicitly_wait(3)
+        href = ""
 
-# url = "https://dataquestio.github.io/web-scraping-pages/simple.html"
+        try:
+            element = driver.find_element(By.XPATH, "//*[@id='__next']/div/div[2]/div[1]/div[1]/div/div[2]/div[4]/div[1]/div[1]/div[2]/ul/li/h3/a")
+            href = element.get_attribute('href')
+        except NoSuchElementException as e:
+            print('No href found.')
+        except Exception as e:
+            print(e)
 
-# page = requests.get(url, timeout=10)
+        write_line(f"{cas}\t{count}\t{href}")
 
-# print(page.content)
-# # soup = BeautifulSoup(page.content, "html.parser")
+        time.sleep(1)
+
+        if i > 0 and i % 10 == 0:
+            time.sleep(10)
+
+        if i > 0 and i % 100 == 0:
+            time.sleep(300)
+
+# time.sleep(50)
 
 
