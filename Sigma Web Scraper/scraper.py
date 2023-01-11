@@ -1,4 +1,4 @@
-# from bs4 import BeautifulSoup
+#!python3.10
 
 import time
 
@@ -32,7 +32,7 @@ with open('results.txt', 'w') as file:
         file.write(text + "\n")
 
     write_line("CAS\tCount\tLink to 1st product")
-    for i, cas in enumerate(CAS_list[:50]):
+    for i, cas in enumerate(CAS_list):
         url = get_url(cas)
         driver.get(url)
 
@@ -42,7 +42,7 @@ with open('results.txt', 'w') as file:
             driver.find_element(By.XPATH, "//button[@id='onetrust-accept-btn-handler']").click()
 
         # find number of results
-        driver.implicitly_wait(3)
+        driver.implicitly_wait(20)
         count = 0
 
         try:
@@ -67,11 +67,12 @@ with open('results.txt', 'w') as file:
             print(e)
 
         write_line(f"{cas}\t{count}\t{href}")
+        file.flush()
 
         time.sleep(1)
 
         if i > 0 and i % 10 == 0:
-            time.sleep(10)
+            time.sleep(20)
 
         if i > 0 and i % 100 == 0:
             time.sleep(300)
